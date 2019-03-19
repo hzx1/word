@@ -1,5 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <title>医院管理系统登录</title>
 
 <link href="${ctx}/assets/stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />

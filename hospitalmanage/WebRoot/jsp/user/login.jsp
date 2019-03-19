@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <!DOCTYPE html>
 <html lang="en">  
 	<head>
@@ -13,7 +13,7 @@
     		<input id="gritter-light" checked="" type="checkbox" class="ace-switch ace-switch-5" />
       		<div class="login-container">
         		<h1>用户登录</h1>
-        		<form id="validation-form" >
+        		<form id="validation-form"  onsubmit="formValidate()" >
           			<div class="form-group">
 		           		<input class="form-control" placeholder="用户名" type="text" name="employeecode">
 		         	</div>
