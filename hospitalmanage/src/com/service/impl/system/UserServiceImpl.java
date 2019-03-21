@@ -10,11 +10,12 @@ import com.service.system.UserService;
 @Transactional
 @Service(value="userService")
 public class UserServiceImpl implements UserService{
+	
 	@Autowired
 	private UserMapping userMapping;
 	@Override
 	public Employee selectEmployee(Employee employee) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stubddddddddddddddddddddddd
 		return userMapping.selectEmployee(employee);
 	}
 
