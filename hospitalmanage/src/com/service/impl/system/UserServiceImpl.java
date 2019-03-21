@@ -15,7 +15,7 @@ public class UserServiceImpl implements UserService{
 	private UserMapping userMapping;
 	@Override
 	public Employee selectEmployee(Employee employee) {
-		// TODO Auto-generated method stubddddddddddddddddddddddd
+		// TODO Auto-generated method 
 		return userMapping.selectEmployee(employee);
 	}
 
