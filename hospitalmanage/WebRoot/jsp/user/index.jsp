@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -23,10 +23,10 @@
 
 						<li class="light-black">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img style="width:36px;height:36px;" class="nav-user-photo" src="${pfuserinfo.picture}" alt="" />
+								<%-- <img style="width:36px;height:36px;" class="nav-user-photo" src="${employye.picture}" alt="" /> --%>
 								<span class="user-info">
 									<small>欢迎您,</small>
-									${pfuserinfo.employeename}
+									${employye.employeename}
 								</span>
 
 								<i class="icon-caret-down"></i>
@@ -120,7 +120,7 @@
 					<ul id="breadcrumb" class="breadcrumb">
 						<li>
 							<i class="icon-home home-icon"></i>
-							<a href="javascript:location.href='${ctx}/indexController/toinitial.do';">首页</a>
+						 	<a href="javascript:location.href='${ctx}/indexController/toinitial.do';">首页</a>
 						</li>
 						<li></li>
 					</ul><!--.breadcrumb-->
@@ -193,7 +193,9 @@
 			
 			//iframe加载内容
 			function onSrc(src){
+		
 				$("#iframe_web").attr("src",src);
+				alert(src+"")
 			}
 			
 			//点击菜单获取相应路径

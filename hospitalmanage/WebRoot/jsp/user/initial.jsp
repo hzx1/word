@@ -5,7 +5,7 @@
 <html>
   <head></head>
   <script type="text/javascript">
-  	top.location.href="${ctx}/indexController/tologin.do";
+  	top.location.href="${ctx}/indexController/toindex.do";
   </script>
   <body>
   </body>

@@ -39,8 +39,8 @@
   	<script type="text/javascript">
 	  	$(function(){
 	  		//开启表单验证
-	  		formValidate();
-	  		$("input[name='employeecode']")[0].focus();
+	  		formValidate(); 
+	  		 $("input[name='employeecode']")[0].focus(); 
 	  	}); 
 	  	
 	  	function spsw(){
@@ -78,10 +78,11 @@
 			                dataFilter: function (data, type) {
 			                //判断控制器返回的内容
 			                var json=JSON.parse(data);
-		                    	if (json.valid == "1") {
+			               
+		                    	if (json == "true") {
 		                        	return true;   
 		                    	}
-		                    	else if(json.valid == "0"){
+		                    	else if(json == "false"){
 		                        	return false;
 		                    	}
 		                 	}
@@ -94,6 +95,9 @@
 				        maxlength:16
 			   	  	}
 			    },
+			    
+			    
+			    
 			    messages:{
 			    	employeecode:{
 			    		required:"请输入用户名",
@@ -105,7 +109,9 @@
 			    },
 				//重写提交方式
 				submitHandler:function(){
+				
 					formSubmit();
+					
 				}		    
 		    });
 		}
@@ -113,19 +119,22 @@
 		
 	  	//提交事件
 	  	function isubmit(){
+	  	
 	  		$("#btnsubmit").click();
+	  		
 	  	}
 	  	
 	  	//ajax提交
 	  	function formSubmit(){
+	  	 
 	  		$.post("${ctx}/indexController/login.do",
 			{employeecode:$("input[name='employeecode']").val(),
 			 psw:$("input[name='psw']").val()},
 			function(data){
-				if(data.msg == "1"){
+				if(data == "1"){
 					document.forms[1].submit();
 	 			}else{ 				
-	 				hint(data.msg);
+	 				hint(data);
 	 				$("input[name='psw']").val("");
 	 			}
 			});

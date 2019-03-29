@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,67 +49,67 @@
 							<table>
 								<tr class="tr-b">
 									<td class="td-l">个人编号</td>
-									<td class="td-r">${user.employeecode}</td>
+									<td class="td-r">${employye.employeecode}</td>
 									<td class="td-l">真实姓名</td>
-									<td class="td-r">${user.employeename}</td>
+									<td class="td-r">${employye.employeename}</td>
 									<td rowspan="5" colspan="2">
-										<img style="min-width:210px; width:100%; height:262px;" src="${user.picture}"/>
+										<img style="min-width:210px; width:100%; height:262px;" src="${employye.picture}"/>
 									</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">拼音简码</td>
-									<td class="td-r">${user.pinyincode}</td>
+									<td class="td-r">${employye.pinyincode}</td>
 									<td class="td-l">身份证号</td>
-									<td class="td-r">${user.idcard}</td>
+									<td class="td-r">${employye.idcard}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">医务职称</td>
-									<td class="td-r">${user.jobtitlename}</td>
+							<%-- 		<td class="td-r">${employye.jobtitlename}</td> --%>
 									<td class="td-l">管理职务</td>
-									<td class="td-r">${user.positionname}</td>
+									<%-- <td class="td-r">${employye.positionname}</td> --%>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">所属科室</td>
-									<td class="td-r">${user.departmentname}</td>
-									<td class="td-l">联系电话</td>
-									<td class="td-r">${user.tel}</td>
+								<%-- 	<td class="td-r">${employye.departmentname}</td> --%>
+								<%-- 	<td class="td-l">联系电话</td>
+									<td class="td-r">${employye.tel}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">电子邮件</td>
-									<td class="td-r">${user.email}</td>
+									<td class="td-r">${employye.email}</td>
 									<td class="td-l">政治面貌</td>
-									<td class="td-r">${user.politicsstatusname}</td>
+									<td class="td-r">${employye.politicsstatusname}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">出生日期</td>
-									<td class="td-r"><fmt:formatDate value="${user.birthday}"/></td>
+									<td class="td-r"><fmt:formatDate value="${employye.birthday}"/></td>
 									<td class="td-l">入职时间</td>
-									<td class="td-r"><fmt:formatDate value="${user.inductiontime}"/></td>
+									<td class="td-r"><fmt:formatDate value="${employye.inductiontime}"/></td>
 									<td class="td-l">性别</td>
-									<td class="td-r-b">${user.sex == 1 ? "男" : "女"}</td>
+									<td class="td-r-b">${employye.sex == 1 ? "男" : "女"}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">最高学历</td>
-									<td class="td-r">${user.maxeducationname}</td>
+									<td class="td-r">${employye.maxeducationname}</td>
 									<td class="td-l">学习专业</td>
-									<td class="td-r">${user.majorname}</td>
+									<td class="td-r">${employye.majorname}</td>
 									<td class="td-l">工作状态</td>
-									<td class="td-r-b">${user.workstatus == 1 ? "在职" : "离职"}</td>
+									<td class="td-r-b">${employye.workstatus == 1 ? "在职" : "离职"}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">是否医生</td>
-									<td class="td-r">${user.isdoctor == 1 ? "是" : "不是"}</td>
+									<td class="td-r">${employye.isdoctor == 1 ? "是" : "不是"}</td>
 									<td class="td-l">是否护士</td>
-									<td class="td-r">${user.isnurse == 1 ? "是" : "不是"}</td>
+									<td class="td-r">${employye.isnurse == 1 ? "是" : "不是"}</td>
 									<td class="td-l">操作员</td>
-									<td class="td-r-b">${user.isoperator == 1 ? "是" : "不是"}</td>
+									<td class="td-r-b">${employye.isoperator == 1 ? "是" : "不是"}</td>
 								</tr>
 								<tr>
 									<td class="td-l">备注</td>
-									<td class="td-r">${user.note}</td>
+									<td class="td-r">${employye.note}</td>
 									<td class="td-l">联系地址</td>
-									<td colspan="3" class="td-r-b">${user.address}</td>
-								</tr>
+									<td colspan="3" class="td-r-b">${employye.address}</td>
+								</tr> --%>
 							</table>
 						</div>
 				</div><!--/.page-content-->
