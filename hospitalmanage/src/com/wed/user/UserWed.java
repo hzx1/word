@@ -57,7 +57,7 @@ public class UserWed {
 	 */
 	@ResponseBody
 	@RequestMapping(value="/login", produces="application/json;charset=utf-8")
-	public Object login(Employee bo,HttpServletRequest request){	
+	public Object login( Employee bo,HttpServletRequest request){	
 	
 		String msg = "";
 		Employee  em = userService.selectEmployee(bo);
@@ -75,7 +75,8 @@ public class UserWed {
 		}
 		return JSONArray.toJSONString(msg);
 	}
-	@RequestMapping("/tologin")
+	//登录跳转的页面
+	@RequestMapping("/toindex")
 	public String tologin(HttpServletRequest request){
 		Object obj=request.getSession().getAttribute("employye");
 		//判断是否登录
@@ -89,13 +90,7 @@ public class UserWed {
 		return "/user/login";
 	}
 	
-	//登录跳转的页面
-	@RequestMapping(value="toindex")
-	public String toindex(HttpServletRequest request){
-		String link = tologin(request);
-		System.out.println(link);
-		return link;
-	}
+	
 	//退出
 	@RequestMapping(value="loginout")
 	public String loginout(HttpServletRequest request){
