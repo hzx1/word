@@ -14,12 +14,12 @@ public class userfoController {
 		System.out.println("fff");
 		return "/user/userinfo";
 	}
+	//修改密码跳转到jsp页面
 	@RequestMapping("/toeditpsw")
 	public String finduser(){
 		
-		return "/user/userinfo";
+		return "/user/editpsw.jsp";
 	}
-	//修改密码跳转
-	
 	//判断用户原密码是否正确
+	
 }
