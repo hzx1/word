@@ -26,7 +26,7 @@
 								<%-- <img style="width:36px;height:36px;" class="nav-user-photo" src="${employye.picture}" alt="" /> --%>
 								<span class="user-info">
 									<small>欢迎您,</small>
-									${employye.employeename}
+									${employye.employeeName}
 								</span>
 
 								<i class="icon-caret-down"></i>

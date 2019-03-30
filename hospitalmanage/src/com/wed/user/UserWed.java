@@ -28,7 +28,6 @@ public class UserWed {
 	//初始页面
 	@RequestMapping(value="toinitial")
 	public String toinitial(HttpServletRequest request){
-		System.out.println("dddddd");
 		return "/user/initial";
 	}
 	/**
@@ -57,9 +56,11 @@ public class UserWed {
 	 */
 	@ResponseBody
 	@RequestMapping(value="/login", produces="application/json;charset=utf-8")
-	public Object login( Employee bo,HttpServletRequest request){	
+	public Object login( String employeecode,HttpServletRequest request){	
 		String msg = "";
-		Employee  em = userService.selectEmployee(bo);
+		Employee e=new Employee();
+		e.setEmployeeCode(employeecode);
+		Employee  em = userService.selectEmployee(e);
 		if(em != null){
 		 //把权限存到session里面 positionid
 			Role r= roleService.rolePositionid(em.getId());

@@ -4,8 +4,8 @@
 	<select id="selectEmployee" resultType="com.po.Employee">
 		SELECT * FROM  employee 
 		<where >
-			<if test="employeecode != null and employeecode != ''">
-				 AND `employeecode` = #{employeecode}
+			<if test="employeeCode != null and employeeCode != ''">
+				 AND `employeecode` = #{employeeCode}
 			</if>
 			<if test="psw != null and psw != ''">
 				 AND `psw` = #{psw}
