@@ -11,7 +11,6 @@ public class userfoController {
 	//个人信息跳转
 	@RequestMapping(value="/finduser")
 	public String finduser(HttpServletRequest request){
-		System.out.println("fff");
 		return "/user/userinfo";
 	}
 	@RequestMapping("/toeditpsw")

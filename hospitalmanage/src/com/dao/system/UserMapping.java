@@ -1,8 +1,10 @@
 package com.dao.system;
 
+import java.util.List;
+
 import com.po.Employee;
 
 public interface UserMapping {
 	//登录
-	public Employee selectEmployee(Employee employee);
+	public List<Employee> selectEmployee(Employee employee);
 }

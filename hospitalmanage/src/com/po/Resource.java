@@ -3,71 +3,73 @@ package com.po;
 public class Resource {
     private Integer id;
 
-    private Integer resourcesuperiorid;
+    private Integer resourceSuperiorId;
 
-    private String resourcename;
+    private String resourceName;
 
-    private String resourceurl;
+    private String resourceUrl;
 
-    private String resourceicon;
+    private String resourceIcon;
 
     private Integer rank;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
-    public Integer getId() {
-        return id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public Integer getResourcesuperiorid() {
-        return resourcesuperiorid;
-    }
+	public Integer getResourceSuperiorId() {
+		return resourceSuperiorId;
+	}
 
-    public void setResourcesuperiorid(Integer resourcesuperiorid) {
-        this.resourcesuperiorid = resourcesuperiorid;
-    }
+	public void setResourceSuperiorId(Integer resourceSuperiorId) {
+		this.resourceSuperiorId = resourceSuperiorId;
+	}
 
-    public String getResourcename() {
-        return resourcename;
-    }
+	public String getResourceName() {
+		return resourceName;
+	}
 
-    public void setResourcename(String resourcename) {
-        this.resourcename = resourcename == null ? null : resourcename.trim();
-    }
+	public void setResourceName(String resourceName) {
+		this.resourceName = resourceName;
+	}
 
-    public String getResourceurl() {
-        return resourceurl;
-    }
+	public String getResourceUrl() {
+		return resourceUrl;
+	}
 
-    public void setResourceurl(String resourceurl) {
-        this.resourceurl = resourceurl == null ? null : resourceurl.trim();
-    }
+	public void setResourceUrl(String resourceUrl) {
+		this.resourceUrl = resourceUrl;
+	}
 
-    public String getResourceicon() {
-        return resourceicon;
-    }
+	public String getResourceIcon() {
+		return resourceIcon;
+	}
 
-    public void setResourceicon(String resourceicon) {
-        this.resourceicon = resourceicon == null ? null : resourceicon.trim();
-    }
+	public void setResourceIcon(String resourceIcon) {
+		this.resourceIcon = resourceIcon;
+	}
 
-    public Integer getRank() {
-        return rank;
-    }
+	public Integer getRank() {
+		return rank;
+	}
 
-    public void setRank(Integer rank) {
-        this.rank = rank;
-    }
+	public void setRank(Integer rank) {
+		this.rank = rank;
+	}
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+   
 }

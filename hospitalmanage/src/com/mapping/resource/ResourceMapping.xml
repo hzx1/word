@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.resource.Resource" >
+	<select id="initLogin" resultType="com.po.Resource">
+		SELECT resourcename FROM role 
+		LEFT JOIN resource 
+		ON role.resourceid = resource.resourcesuperiorid
+		WHERE role.id={id}
+	</select>
+</mapper>

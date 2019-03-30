@@ -26,7 +26,7 @@
 								<%-- <img style="width:36px;height:36px;" class="nav-user-photo" src="${employye.picture}" alt="" /> --%>
 								<span class="user-info">
 									<small>欢迎您,</small>
-									${employye.employeename}
+									${employye.employeeName}
 								</span>
 
 								<i class="icon-caret-down"></i>
@@ -75,7 +75,7 @@
 				</div><!--#sidebar-shortcuts-->
 
 				<ul class="nav nav-list" onresize="ulresize()" style="overflow:auto;">
-					<c:forEach var="menus" items="${pfuserinfo.menulist}">
+					<c:forEach var="menus" items="${menulist}">
 						<c:if test="${empty menus.resourceurl || menus.resourceurl == ''}">
 							<li>							
 								<a href="#" class="dropdown-toggle" >
