@@ -40,7 +40,7 @@ public class UserWed {
 	@RequestMapping(value="/verify", produces="application/json")
 	public Object verify(String employeecode){
 		Employee e=new Employee();
-		e.setEmployeecode(employeecode);
+	e.setEmployeeCode(employeecode);
 		String valid="true";
 		Employee  em = userService.selectEmployee(e);
 		if(em != null){
@@ -58,7 +58,6 @@ public class UserWed {
 	@ResponseBody
 	@RequestMapping(value="/login", produces="application/json;charset=utf-8")
 	public Object login( Employee bo,HttpServletRequest request){	
-	
 		String msg = "";
 		Employee  em = userService.selectEmployee(bo);
 		if(em != null){
@@ -81,7 +80,6 @@ public class UserWed {
 		Object obj=request.getSession().getAttribute("employye");
 		//判断是否登录
 		if(obj != null){
-			System.out.println("ddd");
 			return "/user/index";
 		}
 		//清除session

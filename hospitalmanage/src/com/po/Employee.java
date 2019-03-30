@@ -5,271 +5,273 @@ import java.util.Date;
 public class Employee {
     private Integer id;
 
-    private String employeecode;
+    private String employeeCode;
 
-    private String employeename;
+    private String employeeName;
 
     private String psw;
 
-    private String pinyincode;
+    private String pinYinCode;
 
-    private String wubicode;
+    private String wuBiCode;
 
-    private Integer jobtitleid;
+    private Integer jobtitleId;
 
-    private Integer positionid;
+    private Integer positionId;
 
     private Integer sex;
 
     private String tel;
 
-    private Integer departmentid;
+    private Integer departmentId;
 
     private String email;
 
-    private String idcard;
+    private String idCard;
 
     private String address;
 
-    private Date birthday;
+    private Date birthDay;
 
-    private Date inductiontime;
+    private Date inductionTime;
 
-    private Date dimissiontime;
+    private Date dimissionTime;
 
-    private Integer maxeducationid;
+    private Integer maxEducationId;
 
-    private Integer majorid;
+    private Integer majorId;
 
-    private Integer politicsstatusid;
+    private Integer politicsstatusId;
 
-    private Integer isoperator;
+    private Integer isOperator;
 
-    private Integer isdoctor;
+    private Integer isDoctor;
 
-    private Integer isnurse;
+    private Integer isNurse;
 
-    private Integer workstatus;
+    private Integer workStatus;
 
     private String picture;
 
     private String note;
 
-    private Integer isvalid;
+    private Integer isValId;
 
-    public Integer getId() {
-        return id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getEmployeecode() {
-        return employeecode;
-    }
+	public String getEmployeeCode() {
+		return employeeCode;
+	}
 
-    public void setEmployeecode(String employeecode) {
-        this.employeecode = employeecode == null ? null : employeecode.trim();
-    }
+	public void setEmployeeCode(String employeeCode) {
+		this.employeeCode = employeeCode;
+	}
 
-    public String getEmployeename() {
-        return employeename;
-    }
+	public String getEmployeeName() {
+		return employeeName;
+	}
 
-    public void setEmployeename(String employeename) {
-        this.employeename = employeename == null ? null : employeename.trim();
-    }
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
 
-    public String getPsw() {
-        return psw;
-    }
+	public String getPsw() {
+		return psw;
+	}
 
-    public void setPsw(String psw) {
-        this.psw = psw == null ? null : psw.trim();
-    }
+	public void setPsw(String psw) {
+		this.psw = psw;
+	}
 
-    public String getPinyincode() {
-        return pinyincode;
-    }
+	public String getPinYinCode() {
+		return pinYinCode;
+	}
 
-    public void setPinyincode(String pinyincode) {
-        this.pinyincode = pinyincode == null ? null : pinyincode.trim();
-    }
+	public void setPinYinCode(String pinYinCode) {
+		this.pinYinCode = pinYinCode;
+	}
 
-    public String getWubicode() {
-        return wubicode;
-    }
+	public String getWuBiCode() {
+		return wuBiCode;
+	}
 
-    public void setWubicode(String wubicode) {
-        this.wubicode = wubicode == null ? null : wubicode.trim();
-    }
+	public void setWuBiCode(String wuBiCode) {
+		this.wuBiCode = wuBiCode;
+	}
 
-    public Integer getJobtitleid() {
-        return jobtitleid;
-    }
+	public Integer getJobtitleId() {
+		return jobtitleId;
+	}
 
-    public void setJobtitleid(Integer jobtitleid) {
-        this.jobtitleid = jobtitleid;
-    }
+	public void setJobtitleId(Integer jobtitleId) {
+		this.jobtitleId = jobtitleId;
+	}
 
-    public Integer getPositionid() {
-        return positionid;
-    }
+	public Integer getPositionId() {
+		return positionId;
+	}
 
-    public void setPositionid(Integer positionid) {
-        this.positionid = positionid;
-    }
+	public void setPositionId(Integer positionId) {
+		this.positionId = positionId;
+	}
 
-    public Integer getSex() {
-        return sex;
-    }
+	public Integer getSex() {
+		return sex;
+	}
 
-    public void setSex(Integer sex) {
-        this.sex = sex;
-    }
+	public void setSex(Integer sex) {
+		this.sex = sex;
+	}
 
-    public String getTel() {
-        return tel;
-    }
+	public String getTel() {
+		return tel;
+	}
 
-    public void setTel(String tel) {
-        this.tel = tel == null ? null : tel.trim();
-    }
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
 
-    public Integer getDepartmentid() {
-        return departmentid;
-    }
+	public Integer getDepartmentId() {
+		return departmentId;
+	}
 
-    public void setDepartmentid(Integer departmentid) {
-        this.departmentid = departmentid;
-    }
+	public void setDepartmentId(Integer departmentId) {
+		this.departmentId = departmentId;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getIdcard() {
-        return idcard;
-    }
+	public String getIdCard() {
+		return idCard;
+	}
 
-    public void setIdcard(String idcard) {
-        this.idcard = idcard == null ? null : idcard.trim();
-    }
+	public void setIdCard(String idCard) {
+		this.idCard = idCard;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	public String getAddress() {
+		return address;
+	}
 
-    public void setAddress(String address) {
-        this.address = address == null ? null : address.trim();
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public Date getBirthday() {
-        return birthday;
-    }
+	public Date getBirthDay() {
+		return birthDay;
+	}
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
+	public void setBirthDay(Date birthDay) {
+		this.birthDay = birthDay;
+	}
 
-    public Date getInductiontime() {
-        return inductiontime;
-    }
+	public Date getInductionTime() {
+		return inductionTime;
+	}
 
-    public void setInductiontime(Date inductiontime) {
-        this.inductiontime = inductiontime;
-    }
+	public void setInductionTime(Date inductionTime) {
+		this.inductionTime = inductionTime;
+	}
 
-    public Date getDimissiontime() {
-        return dimissiontime;
-    }
+	public Date getDimissionTime() {
+		return dimissionTime;
+	}
 
-    public void setDimissiontime(Date dimissiontime) {
-        this.dimissiontime = dimissiontime;
-    }
+	public void setDimissionTime(Date dimissionTime) {
+		this.dimissionTime = dimissionTime;
+	}
 
-    public Integer getMaxeducationid() {
-        return maxeducationid;
-    }
+	public Integer getMaxEducationId() {
+		return maxEducationId;
+	}
 
-    public void setMaxeducationid(Integer maxeducationid) {
-        this.maxeducationid = maxeducationid;
-    }
+	public void setMaxEducationId(Integer maxEducationId) {
+		this.maxEducationId = maxEducationId;
+	}
 
-    public Integer getMajorid() {
-        return majorid;
-    }
+	public Integer getMajorId() {
+		return majorId;
+	}
 
-    public void setMajorid(Integer majorid) {
-        this.majorid = majorid;
-    }
+	public void setMajorId(Integer majorId) {
+		this.majorId = majorId;
+	}
 
-    public Integer getPoliticsstatusid() {
-        return politicsstatusid;
-    }
+	public Integer getPoliticsstatusId() {
+		return politicsstatusId;
+	}
 
-    public void setPoliticsstatusid(Integer politicsstatusid) {
-        this.politicsstatusid = politicsstatusid;
-    }
+	public void setPoliticsstatusId(Integer politicsstatusId) {
+		this.politicsstatusId = politicsstatusId;
+	}
 
-    public Integer getIsoperator() {
-        return isoperator;
-    }
+	public Integer getIsOperator() {
+		return isOperator;
+	}
 
-    public void setIsoperator(Integer isoperator) {
-        this.isoperator = isoperator;
-    }
+	public void setIsOperator(Integer isOperator) {
+		this.isOperator = isOperator;
+	}
 
-    public Integer getIsdoctor() {
-        return isdoctor;
-    }
+	public Integer getIsDoctor() {
+		return isDoctor;
+	}
 
-    public void setIsdoctor(Integer isdoctor) {
-        this.isdoctor = isdoctor;
-    }
+	public void setIsDoctor(Integer isDoctor) {
+		this.isDoctor = isDoctor;
+	}
 
-    public Integer getIsnurse() {
-        return isnurse;
-    }
+	public Integer getIsNurse() {
+		return isNurse;
+	}
 
-    public void setIsnurse(Integer isnurse) {
-        this.isnurse = isnurse;
-    }
+	public void setIsNurse(Integer isNurse) {
+		this.isNurse = isNurse;
+	}
 
-    public Integer getWorkstatus() {
-        return workstatus;
-    }
+	public Integer getWorkStatus() {
+		return workStatus;
+	}
 
-    public void setWorkstatus(Integer workstatus) {
-        this.workstatus = workstatus;
-    }
+	public void setWorkStatus(Integer workStatus) {
+		this.workStatus = workStatus;
+	}
 
-    public String getPicture() {
-        return picture;
-    }
+	public String getPicture() {
+		return picture;
+	}
 
-    public void setPicture(String picture) {
-        this.picture = picture == null ? null : picture.trim();
-    }
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	public String getNote() {
+		return note;
+	}
 
-    public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
-    }
+	public void setNote(String note) {
+		this.note = note;
+	}
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public Integer getIsValId() {
+		return isValId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public void setIsValId(Integer isValId) {
+		this.isValId = isValId;
+	}
+
+    
 }
