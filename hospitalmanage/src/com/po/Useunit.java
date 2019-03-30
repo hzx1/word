@@ -3,21 +3,21 @@ package com.po;
 public class Useunit {
     private Integer id;
 
-    private String unitname;
+    private String unitName;
 
     private String tel;
 
-    private Integer postcode;
+    private Integer postCode;
 
     private String phone;
 
     private String fax;
 
-    private String address;
+    private String addRess;
 
-    private Integer bankid;
+    private Integer bankId;
 
-    private String bankaccount;
+    private String bankacCount;
 
     private String email;
 
@@ -30,11 +30,11 @@ public class Useunit {
     }
 
     public String getUnitname() {
-        return unitname;
+        return unitName;
     }
 
     public void setUnitname(String unitname) {
-        this.unitname = unitname == null ? null : unitname.trim();
+        this.unitName = unitname == null ? null : unitname.trim();
     }
 
     public String getTel() {
@@ -46,11 +46,11 @@ public class Useunit {
     }
 
     public Integer getPostcode() {
-        return postcode;
+        return postCode;
     }
 
     public void setPostcode(Integer postcode) {
-        this.postcode = postcode;
+        this.postCode = postcode;
     }
 
     public String getPhone() {
@@ -70,27 +70,27 @@ public class Useunit {
     }
 
     public String getAddress() {
-        return address;
+        return addRess;
     }
 
     public void setAddress(String address) {
-        this.address = address == null ? null : address.trim();
+        this.addRess = address == null ? null : address.trim();
     }
 
     public Integer getBankid() {
-        return bankid;
+        return bankId;
     }
 
     public void setBankid(Integer bankid) {
-        this.bankid = bankid;
+        this.bankId = bankid;
     }
 
     public String getBankaccount() {
-        return bankaccount;
+        return bankacCount;
     }
 
     public void setBankaccount(String bankaccount) {
-        this.bankaccount = bankaccount == null ? null : bankaccount.trim();
+        this.bankacCount = bankaccount == null ? null : bankaccount.trim();
     }
 
     public String getEmail() {

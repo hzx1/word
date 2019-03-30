@@ -5,13 +5,13 @@ import java.util.Date;
 public class Dispensing {
     private Integer id;
 
-    private Integer chargeid;
+    private Integer chargeId;
 
-    private Integer dispensingstatus;
+    private Integer dispenSingStatus;
 
-    private Date dispensingtime;
+    private Date dispenSingTime;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -22,34 +22,34 @@ public class Dispensing {
     }
 
     public Integer getChargeid() {
-        return chargeid;
+        return chargeId;
     }
 
     public void setChargeid(Integer chargeid) {
-        this.chargeid = chargeid;
+        this.chargeId = chargeid;
     }
 
     public Integer getDispensingstatus() {
-        return dispensingstatus;
+        return dispenSingStatus;
     }
 
     public void setDispensingstatus(Integer dispensingstatus) {
-        this.dispensingstatus = dispensingstatus;
+        this.dispenSingStatus = dispensingstatus;
     }
 
     public Date getDispensingtime() {
-        return dispensingtime;
+        return dispenSingTime;
     }
 
     public void setDispensingtime(Date dispensingtime) {
-        this.dispensingtime = dispensingtime;
+        this.dispenSingTime = dispensingtime;
     }
 
     public Integer getIsvalid() {
-        return isvalid;
+        return isvalId;
     }
 
     public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
+        this.isvalId = isvalid;
     }
 }

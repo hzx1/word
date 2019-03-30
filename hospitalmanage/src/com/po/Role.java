@@ -3,15 +3,15 @@ package com.po;
 public class Role {
     private Integer id;
 
-    private String rolename;
+    private String roleName;
 
-    private String positionid;
+    private String positionId;
 
-    private String resourceid;
+    private String resourceId;
 
     private String note;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -22,27 +22,27 @@ public class Role {
     }
 
     public String getRolename() {
-        return rolename;
+        return roleName;
     }
 
     public void setRolename(String rolename) {
-        this.rolename = rolename == null ? null : rolename.trim();
+        this.roleName = rolename == null ? null : rolename.trim();
     }
 
     public String getPositionid() {
-        return positionid;
+        return positionId;
     }
 
     public void setPositionid(String positionid) {
-        this.positionid = positionid == null ? null : positionid.trim();
+        this.positionId = positionid == null ? null : positionid.trim();
     }
 
     public String getResourceid() {
-        return resourceid;
+        return resourceId;
     }
 
     public void setResourceid(String resourceid) {
-        this.resourceid = resourceid == null ? null : resourceid.trim();
+        this.resourceId = resourceid == null ? null : resourceid.trim();
     }
 
     public String getNote() {
@@ -54,10 +54,10 @@ public class Role {
     }
 
     public Integer getIsvalid() {
-        return isvalid;
+        return isvalId;
     }
 
     public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
+        this.isvalId = isvalid;
     }
 }

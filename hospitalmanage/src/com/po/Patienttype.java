@@ -3,13 +3,13 @@ package com.po;
 public class Patienttype {
     private Integer id;
 
-    private String typecode;
+    private String typeCode;
 
-    private String typename;
+    private String typeName;
 
-    private Integer typediscount;
+    private Integer typedIscount;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     private String note;
 
@@ -21,39 +21,41 @@ public class Patienttype {
         this.id = id;
     }
 
-    public String getTypecode() {
-        return typecode;
-    }
+   
 
-    public void setTypecode(String typecode) {
-        this.typecode = typecode == null ? null : typecode.trim();
-    }
+    public String getTypeCode() {
+		return typeCode;
+	}
 
-    public String getTypename() {
-        return typename;
-    }
+	public void setTypeCode(String typeCode) {
+		this.typeCode = typeCode;
+	}
 
-    public void setTypename(String typename) {
-        this.typename = typename == null ? null : typename.trim();
-    }
+	public String getTypeName() {
+		return typeName;
+	}
 
-    public Integer getTypediscount() {
-        return typediscount;
-    }
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
 
-    public void setTypediscount(Integer typediscount) {
-        this.typediscount = typediscount;
-    }
+	public Integer getTypedIscount() {
+		return typedIscount;
+	}
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public void setTypedIscount(Integer typedIscount) {
+		this.typedIscount = typedIscount;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public String getNote() {
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+	public String getNote() {
         return note;
     }
 

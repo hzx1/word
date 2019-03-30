@@ -5,21 +5,21 @@ import java.math.BigDecimal;
 public class Department {
     private Integer id;
 
-    private String departmentcode;
+    private String deparTmentCode;
 
-    private String departmentname;
+    private String deparTmentName;
 
-    private String pinyincode;
+    private String pinyinCode;
 
-    private String wubicode;
+    private String wubiCode;
 
-    private BigDecimal registersum;
+    private BigDecimal regisTersum;
 
     private String site;
 
-    private Integer isregister;
+    private Integer isregIster;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     private String note;
 
@@ -32,43 +32,43 @@ public class Department {
     }
 
     public String getDepartmentcode() {
-        return departmentcode;
+        return deparTmentCode;
     }
 
     public void setDepartmentcode(String departmentcode) {
-        this.departmentcode = departmentcode == null ? null : departmentcode.trim();
+        this.deparTmentCode = departmentcode == null ? null : departmentcode.trim();
     }
 
     public String getDepartmentname() {
-        return departmentname;
+        return deparTmentName;
     }
 
     public void setDepartmentname(String departmentname) {
-        this.departmentname = departmentname == null ? null : departmentname.trim();
+        this.deparTmentName = departmentname == null ? null : departmentname.trim();
     }
 
     public String getPinyincode() {
-        return pinyincode;
+        return pinyinCode;
     }
 
     public void setPinyincode(String pinyincode) {
-        this.pinyincode = pinyincode == null ? null : pinyincode.trim();
+        this.pinyinCode = pinyincode == null ? null : pinyincode.trim();
     }
 
     public String getWubicode() {
-        return wubicode;
+        return wubiCode;
     }
 
     public void setWubicode(String wubicode) {
-        this.wubicode = wubicode == null ? null : wubicode.trim();
+        this.wubiCode = wubicode == null ? null : wubicode.trim();
     }
 
     public BigDecimal getRegistersum() {
-        return registersum;
+        return regisTersum;
     }
 
     public void setRegistersum(BigDecimal registersum) {
-        this.registersum = registersum;
+        this.regisTersum = registersum;
     }
 
     public String getSite() {
@@ -80,19 +80,19 @@ public class Department {
     }
 
     public Integer getIsregister() {
-        return isregister;
+        return isregIster;
     }
 
     public void setIsregister(Integer isregister) {
-        this.isregister = isregister;
+        this.isregIster = isregister;
     }
 
     public Integer getIsvalid() {
-        return isvalid;
+        return isvalId;
     }
 
     public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
+        this.isvalId = isvalid;
     }
 
     public String getNote() {

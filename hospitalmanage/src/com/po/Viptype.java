@@ -3,11 +3,11 @@ package com.po;
 public class Viptype {
     private Integer id;
 
-    private String typecode;
+    private String typeCode;
 
-    private String typename;
+    private String typeName;
 
-    private Integer typediscount;
+    private Integer typeDiscount;
 
     private String note;
 
@@ -20,27 +20,27 @@ public class Viptype {
     }
 
     public String getTypecode() {
-        return typecode;
+        return typeCode;
     }
 
     public void setTypecode(String typecode) {
-        this.typecode = typecode == null ? null : typecode.trim();
+        this.typeCode = typecode == null ? null : typecode.trim();
     }
 
     public String getTypename() {
-        return typename;
+        return typeName;
     }
 
     public void setTypename(String typename) {
-        this.typename = typename == null ? null : typename.trim();
+        this.typeName = typename == null ? null : typename.trim();
     }
 
     public Integer getTypediscount() {
-        return typediscount;
+        return typeDiscount;
     }
 
     public void setTypediscount(Integer typediscount) {
-        this.typediscount = typediscount;
+        this.typeDiscount = typediscount;
     }
 
     public String getNote() {

@@ -3,19 +3,19 @@ package com.po;
 public class Supplier {
     private Integer id;
 
-    private String suppliercode;
+    private String supplierCode;
 
-    private String suppliername;
+    private String supplierName;
 
-    private String pinyincode;
+    private String pinyinCode;
 
-    private String wubicode;
+    private String wubiCode;
 
     private Integer isuse;
 
-    private Integer postcode;
+    private Integer postCode;
 
-    private String supplieraddress;
+    private String supplierAddRess;
 
     private String contacts;
 
@@ -25,23 +25,23 @@ public class Supplier {
 
     private String email;
 
-    private Integer bankid;
+    private Integer bankId;
 
-    private String bankaccount;
+    private String bankacCount;
 
-    private Integer clearingformid;
+    private Integer clearingFormid;
 
-    private Integer regionid;
+    private Integer regionId;
 
     private String url;
 
-    private Integer rankid;
+    private Integer rankId;
 
-    private Integer clearingday;
+    private Integer clearingDay;
 
     private String note;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -51,163 +51,165 @@ public class Supplier {
         this.id = id;
     }
 
-    public String getSuppliercode() {
-        return suppliercode;
-    }
+	public String getSupplierCode() {
+		return supplierCode;
+	}
 
-    public void setSuppliercode(String suppliercode) {
-        this.suppliercode = suppliercode == null ? null : suppliercode.trim();
-    }
+	public void setSupplierCode(String supplierCode) {
+		this.supplierCode = supplierCode;
+	}
 
-    public String getSuppliername() {
-        return suppliername;
-    }
+	public String getSupplierName() {
+		return supplierName;
+	}
 
-    public void setSuppliername(String suppliername) {
-        this.suppliername = suppliername == null ? null : suppliername.trim();
-    }
+	public void setSupplierName(String supplierName) {
+		this.supplierName = supplierName;
+	}
 
-    public String getPinyincode() {
-        return pinyincode;
-    }
+	public String getPinyinCode() {
+		return pinyinCode;
+	}
 
-    public void setPinyincode(String pinyincode) {
-        this.pinyincode = pinyincode == null ? null : pinyincode.trim();
-    }
+	public void setPinyinCode(String pinyinCode) {
+		this.pinyinCode = pinyinCode;
+	}
 
-    public String getWubicode() {
-        return wubicode;
-    }
+	public String getWubiCode() {
+		return wubiCode;
+	}
 
-    public void setWubicode(String wubicode) {
-        this.wubicode = wubicode == null ? null : wubicode.trim();
-    }
+	public void setWubiCode(String wubiCode) {
+		this.wubiCode = wubiCode;
+	}
 
-    public Integer getIsuse() {
-        return isuse;
-    }
+	public Integer getIsuse() {
+		return isuse;
+	}
 
-    public void setIsuse(Integer isuse) {
-        this.isuse = isuse;
-    }
+	public void setIsuse(Integer isuse) {
+		this.isuse = isuse;
+	}
 
-    public Integer getPostcode() {
-        return postcode;
-    }
+	public Integer getPostCode() {
+		return postCode;
+	}
 
-    public void setPostcode(Integer postcode) {
-        this.postcode = postcode;
-    }
+	public void setPostCode(Integer postCode) {
+		this.postCode = postCode;
+	}
 
-    public String getSupplieraddress() {
-        return supplieraddress;
-    }
+	public String getSupplierAddRess() {
+		return supplierAddRess;
+	}
 
-    public void setSupplieraddress(String supplieraddress) {
-        this.supplieraddress = supplieraddress == null ? null : supplieraddress.trim();
-    }
+	public void setSupplierAddRess(String supplierAddRess) {
+		this.supplierAddRess = supplierAddRess;
+	}
 
-    public String getContacts() {
-        return contacts;
-    }
+	public String getContacts() {
+		return contacts;
+	}
 
-    public void setContacts(String contacts) {
-        this.contacts = contacts == null ? null : contacts.trim();
-    }
+	public void setContacts(String contacts) {
+		this.contacts = contacts;
+	}
 
-    public String getTel() {
-        return tel;
-    }
+	public String getTel() {
+		return tel;
+	}
 
-    public void setTel(String tel) {
-        this.tel = tel == null ? null : tel.trim();
-    }
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
 
-    public String getFax() {
-        return fax;
-    }
+	public String getFax() {
+		return fax;
+	}
 
-    public void setFax(String fax) {
-        this.fax = fax == null ? null : fax.trim();
-    }
+	public void setFax(String fax) {
+		this.fax = fax;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public Integer getBankid() {
-        return bankid;
-    }
+	public Integer getBankId() {
+		return bankId;
+	}
 
-    public void setBankid(Integer bankid) {
-        this.bankid = bankid;
-    }
+	public void setBankId(Integer bankId) {
+		this.bankId = bankId;
+	}
 
-    public String getBankaccount() {
-        return bankaccount;
-    }
+	public String getBankacCount() {
+		return bankacCount;
+	}
 
-    public void setBankaccount(String bankaccount) {
-        this.bankaccount = bankaccount == null ? null : bankaccount.trim();
-    }
+	public void setBankacCount(String bankacCount) {
+		this.bankacCount = bankacCount;
+	}
 
-    public Integer getClearingformid() {
-        return clearingformid;
-    }
+	public Integer getClearingFormid() {
+		return clearingFormid;
+	}
 
-    public void setClearingformid(Integer clearingformid) {
-        this.clearingformid = clearingformid;
-    }
+	public void setClearingFormid(Integer clearingFormid) {
+		this.clearingFormid = clearingFormid;
+	}
 
-    public Integer getRegionid() {
-        return regionid;
-    }
+	public Integer getRegionId() {
+		return regionId;
+	}
 
-    public void setRegionid(Integer regionid) {
-        this.regionid = regionid;
-    }
+	public void setRegionId(Integer regionId) {
+		this.regionId = regionId;
+	}
 
-    public String getUrl() {
-        return url;
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public void setUrl(String url) {
-        this.url = url == null ? null : url.trim();
-    }
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
-    public Integer getRankid() {
-        return rankid;
-    }
+	public Integer getRankId() {
+		return rankId;
+	}
 
-    public void setRankid(Integer rankid) {
-        this.rankid = rankid;
-    }
+	public void setRankId(Integer rankId) {
+		this.rankId = rankId;
+	}
 
-    public Integer getClearingday() {
-        return clearingday;
-    }
+	public Integer getClearingDay() {
+		return clearingDay;
+	}
 
-    public void setClearingday(Integer clearingday) {
-        this.clearingday = clearingday;
-    }
+	public void setClearingDay(Integer clearingDay) {
+		this.clearingDay = clearingDay;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	public String getNote() {
+		return note;
+	}
 
-    public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
-    }
+	public void setNote(String note) {
+		this.note = note;
+	}
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+  
 }

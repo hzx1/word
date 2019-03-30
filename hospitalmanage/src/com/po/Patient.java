@@ -3,25 +3,25 @@ package com.po;
 public class Patient {
     private Integer id;
 
-    private String cardcode;
+    private String cardCode;
 
-    private String patientname;
+    private String patientName;
 
     private Integer sex;
 
-    private Integer maritalstatusid;
+    private Integer maritalstatusId;
 
     private String job;
 
-    private Integer patienttypeid;
+    private Integer patienttypeId;
 
     private Integer age;
 
-    private Integer insuretypeid;
+    private Integer insuretypeId;
 
-    private String medicarecode;
+    private String medicareCode;
 
-    private Integer viptypeid;
+    private Integer viptypeId;
 
     private String tel;
 
@@ -29,7 +29,7 @@ public class Patient {
 
     private String taboo;
 
-    private String drugallergyhistory;
+    private String drugallergyHistory;
 
     public Integer getId() {
         return id;
@@ -39,21 +39,7 @@ public class Patient {
         this.id = id;
     }
 
-    public String getCardcode() {
-        return cardcode;
-    }
-
-    public void setCardcode(String cardcode) {
-        this.cardcode = cardcode == null ? null : cardcode.trim();
-    }
-
-    public String getPatientname() {
-        return patientname;
-    }
-
-    public void setPatientname(String patientname) {
-        this.patientname = patientname == null ? null : patientname.trim();
-    }
+   
 
     public Integer getSex() {
         return sex;
@@ -63,13 +49,7 @@ public class Patient {
         this.sex = sex;
     }
 
-    public Integer getMaritalstatusid() {
-        return maritalstatusid;
-    }
-
-    public void setMaritalstatusid(Integer maritalstatusid) {
-        this.maritalstatusid = maritalstatusid;
-    }
+  
 
     public String getJob() {
         return job;
@@ -79,13 +59,7 @@ public class Patient {
         this.job = job == null ? null : job.trim();
     }
 
-    public Integer getPatienttypeid() {
-        return patienttypeid;
-    }
-
-    public void setPatienttypeid(Integer patienttypeid) {
-        this.patienttypeid = patienttypeid;
-    }
+    
 
     public Integer getAge() {
         return age;
@@ -95,31 +69,72 @@ public class Patient {
         this.age = age;
     }
 
-    public Integer getInsuretypeid() {
-        return insuretypeid;
-    }
 
-    public void setInsuretypeid(Integer insuretypeid) {
-        this.insuretypeid = insuretypeid;
-    }
+    public String getCardCode() {
+		return cardCode;
+	}
 
-    public String getMedicarecode() {
-        return medicarecode;
-    }
+	public void setCardCode(String cardCode) {
+		this.cardCode = cardCode;
+	}
 
-    public void setMedicarecode(String medicarecode) {
-        this.medicarecode = medicarecode == null ? null : medicarecode.trim();
-    }
+	public String getPatientName() {
+		return patientName;
+	}
 
-    public Integer getViptypeid() {
-        return viptypeid;
-    }
+	public void setPatientName(String patientName) {
+		this.patientName = patientName;
+	}
 
-    public void setViptypeid(Integer viptypeid) {
-        this.viptypeid = viptypeid;
-    }
+	public Integer getMaritalstatusId() {
+		return maritalstatusId;
+	}
 
-    public String getTel() {
+	public void setMaritalstatusId(Integer maritalstatusId) {
+		this.maritalstatusId = maritalstatusId;
+	}
+
+	public Integer getPatienttypeId() {
+		return patienttypeId;
+	}
+
+	public void setPatienttypeId(Integer patienttypeId) {
+		this.patienttypeId = patienttypeId;
+	}
+
+	public Integer getInsuretypeId() {
+		return insuretypeId;
+	}
+
+	public void setInsuretypeId(Integer insuretypeId) {
+		this.insuretypeId = insuretypeId;
+	}
+
+	public String getMedicareCode() {
+		return medicareCode;
+	}
+
+	public void setMedicareCode(String medicareCode) {
+		this.medicareCode = medicareCode;
+	}
+
+	public Integer getViptypeId() {
+		return viptypeId;
+	}
+
+	public void setViptypeId(Integer viptypeId) {
+		this.viptypeId = viptypeId;
+	}
+
+	public String getDrugallergyHistory() {
+		return drugallergyHistory;
+	}
+
+	public void setDrugallergyHistory(String drugallergyHistory) {
+		this.drugallergyHistory = drugallergyHistory;
+	}
+
+	public String getTel() {
         return tel;
     }
 
@@ -143,11 +158,5 @@ public class Patient {
         this.taboo = taboo == null ? null : taboo.trim();
     }
 
-    public String getDrugallergyhistory() {
-        return drugallergyhistory;
-    }
-
-    public void setDrugallergyhistory(String drugallergyhistory) {
-        this.drugallergyhistory = drugallergyhistory == null ? null : drugallergyhistory.trim();
-    }
+   
 }

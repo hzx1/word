@@ -3,23 +3,23 @@ package com.po;
 public class Prescriptiontemplatedetail {
     private Integer id;
 
-    private Integer prescriptiontemplateid;
+    private Integer prescriptiontemplateId;
 
-    private Integer drugid;
+    private Integer drugId;
 
-    private Integer eachdosage;
+    private Integer eachDosage;
 
-    private Integer dosagequantity;
+    private Integer dosageQuantity;
 
-    private Integer medicineformid;
+    private Integer medicineformId;
 
-    private Integer medicinefrequencyid;
+    private Integer medicineFrequencyId;
 
-    private Integer medicineamount;
+    private Integer medicineAmount;
 
     private String note;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -29,75 +29,76 @@ public class Prescriptiontemplatedetail {
         this.id = id;
     }
 
-    public Integer getPrescriptiontemplateid() {
-        return prescriptiontemplateid;
-    }
+	public Integer getPrescriptiontemplateId() {
+		return prescriptiontemplateId;
+	}
 
-    public void setPrescriptiontemplateid(Integer prescriptiontemplateid) {
-        this.prescriptiontemplateid = prescriptiontemplateid;
-    }
+	public void setPrescriptiontemplateId(Integer prescriptiontemplateId) {
+		this.prescriptiontemplateId = prescriptiontemplateId;
+	}
 
-    public Integer getDrugid() {
-        return drugid;
-    }
+	public Integer getDrugId() {
+		return drugId;
+	}
 
-    public void setDrugid(Integer drugid) {
-        this.drugid = drugid;
-    }
+	public void setDrugId(Integer drugId) {
+		this.drugId = drugId;
+	}
 
-    public Integer getEachdosage() {
-        return eachdosage;
-    }
+	public Integer getEachDosage() {
+		return eachDosage;
+	}
 
-    public void setEachdosage(Integer eachdosage) {
-        this.eachdosage = eachdosage;
-    }
+	public void setEachDosage(Integer eachDosage) {
+		this.eachDosage = eachDosage;
+	}
 
-    public Integer getDosagequantity() {
-        return dosagequantity;
-    }
+	public Integer getDosageQuantity() {
+		return dosageQuantity;
+	}
 
-    public void setDosagequantity(Integer dosagequantity) {
-        this.dosagequantity = dosagequantity;
-    }
+	public void setDosageQuantity(Integer dosageQuantity) {
+		this.dosageQuantity = dosageQuantity;
+	}
 
-    public Integer getMedicineformid() {
-        return medicineformid;
-    }
+	public Integer getMedicineformId() {
+		return medicineformId;
+	}
 
-    public void setMedicineformid(Integer medicineformid) {
-        this.medicineformid = medicineformid;
-    }
+	public void setMedicineformId(Integer medicineformId) {
+		this.medicineformId = medicineformId;
+	}
 
-    public Integer getMedicinefrequencyid() {
-        return medicinefrequencyid;
-    }
+	public Integer getMedicineFrequencyId() {
+		return medicineFrequencyId;
+	}
 
-    public void setMedicinefrequencyid(Integer medicinefrequencyid) {
-        this.medicinefrequencyid = medicinefrequencyid;
-    }
+	public void setMedicineFrequencyId(Integer medicineFrequencyId) {
+		this.medicineFrequencyId = medicineFrequencyId;
+	}
 
-    public Integer getMedicineamount() {
-        return medicineamount;
-    }
+	public Integer getMedicineAmount() {
+		return medicineAmount;
+	}
 
-    public void setMedicineamount(Integer medicineamount) {
-        this.medicineamount = medicineamount;
-    }
+	public void setMedicineAmount(Integer medicineAmount) {
+		this.medicineAmount = medicineAmount;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	public String getNote() {
+		return note;
+	}
 
-    public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
-    }
+	public void setNote(String note) {
+		this.note = note;
+	}
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+    
 }

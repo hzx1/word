@@ -6,25 +6,25 @@ import java.util.Date;
 public class Register {
     private Integer id;
 
-    private Integer patientid;
+    private Integer patientId;
 
-    private Integer registertypeid;
+    private Integer registerTypeId;
 
-    private String registercode;
+    private String registerCode;
 
-    private Integer departmentid;
+    private Integer departmentId;
 
-    private Integer doctorid;
+    private Integer doctorId;
 
-    private BigDecimal registersum;
+    private BigDecimal registerSum;
 
-    private Date registertime;
+    private Date registerTime;
 
-    private Integer registerstatus;
+    private Integer registerStatus;
 
-    private Integer registerpersonid;
+    private Integer registerPersonId;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     private String note;
 
@@ -36,87 +36,89 @@ public class Register {
         this.id = id;
     }
 
-    public Integer getPatientid() {
-        return patientid;
-    }
+ 
 
-    public void setPatientid(Integer patientid) {
-        this.patientid = patientid;
-    }
+    public Integer getPatientId() {
+		return patientId;
+	}
 
-    public Integer getRegistertypeid() {
-        return registertypeid;
-    }
+	public void setPatientId(Integer patientId) {
+		this.patientId = patientId;
+	}
 
-    public void setRegistertypeid(Integer registertypeid) {
-        this.registertypeid = registertypeid;
-    }
+	public Integer getRegisterTypeId() {
+		return registerTypeId;
+	}
 
-    public String getRegistercode() {
-        return registercode;
-    }
+	public void setRegisterTypeId(Integer registerTypeId) {
+		this.registerTypeId = registerTypeId;
+	}
 
-    public void setRegistercode(String registercode) {
-        this.registercode = registercode == null ? null : registercode.trim();
-    }
+	public String getRegisterCode() {
+		return registerCode;
+	}
 
-    public Integer getDepartmentid() {
-        return departmentid;
-    }
+	public void setRegisterCode(String registerCode) {
+		this.registerCode = registerCode;
+	}
 
-    public void setDepartmentid(Integer departmentid) {
-        this.departmentid = departmentid;
-    }
+	public Integer getDepartmentId() {
+		return departmentId;
+	}
 
-    public Integer getDoctorid() {
-        return doctorid;
-    }
+	public void setDepartmentId(Integer departmentId) {
+		this.departmentId = departmentId;
+	}
 
-    public void setDoctorid(Integer doctorid) {
-        this.doctorid = doctorid;
-    }
+	public Integer getDoctorId() {
+		return doctorId;
+	}
 
-    public BigDecimal getRegistersum() {
-        return registersum;
-    }
+	public void setDoctorId(Integer doctorId) {
+		this.doctorId = doctorId;
+	}
 
-    public void setRegistersum(BigDecimal registersum) {
-        this.registersum = registersum;
-    }
+	public BigDecimal getRegisterSum() {
+		return registerSum;
+	}
 
-    public Date getRegistertime() {
-        return registertime;
-    }
+	public void setRegisterSum(BigDecimal registerSum) {
+		this.registerSum = registerSum;
+	}
 
-    public void setRegistertime(Date registertime) {
-        this.registertime = registertime;
-    }
+	public Date getRegisterTime() {
+		return registerTime;
+	}
 
-    public Integer getRegisterstatus() {
-        return registerstatus;
-    }
+	public void setRegisterTime(Date registerTime) {
+		this.registerTime = registerTime;
+	}
 
-    public void setRegisterstatus(Integer registerstatus) {
-        this.registerstatus = registerstatus;
-    }
+	public Integer getRegisterStatus() {
+		return registerStatus;
+	}
 
-    public Integer getRegisterpersonid() {
-        return registerpersonid;
-    }
+	public void setRegisterStatus(Integer registerStatus) {
+		this.registerStatus = registerStatus;
+	}
 
-    public void setRegisterpersonid(Integer registerpersonid) {
-        this.registerpersonid = registerpersonid;
-    }
+	public Integer getRegisterPersonId() {
+		return registerPersonId;
+	}
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public void setRegisterPersonId(Integer registerPersonId) {
+		this.registerPersonId = registerPersonId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public String getNote() {
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+	public String getNote() {
         return note;
     }
 

@@ -5,31 +5,31 @@ import java.util.Date;
 public class Medicalrecord {
     private Integer id;
 
-    private Integer registerid;
+    private Integer registerId;
 
-    private String medicalrecordcode;
+    private String medicalrecordCode;
 
-    private String medicalrecordname;
+    private String medicalrecordName;
 
-    private Integer doctorid;
+    private Integer doctorId;
 
-    private Integer diseaseid;
+    private Integer diseaseId;
 
     private String note;
 
-    private String patientappeal;
+    private String patienappeal;
 
     private String medicalhistory;
 
     private String physicalstatus;
 
-    private String primarydiagnosis;
+    private String primaryDiagnosis;
 
     private String opinion;
 
-    private Date recordtime;
+    private Date recordTime;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -39,107 +39,109 @@ public class Medicalrecord {
         this.id = id;
     }
 
-    public Integer getRegisterid() {
-        return registerid;
-    }
+	public Integer getRegisterId() {
+		return registerId;
+	}
 
-    public void setRegisterid(Integer registerid) {
-        this.registerid = registerid;
-    }
+	public void setRegisterId(Integer registerId) {
+		this.registerId = registerId;
+	}
 
-    public String getMedicalrecordcode() {
-        return medicalrecordcode;
-    }
+	public String getMedicalrecordCode() {
+		return medicalrecordCode;
+	}
 
-    public void setMedicalrecordcode(String medicalrecordcode) {
-        this.medicalrecordcode = medicalrecordcode == null ? null : medicalrecordcode.trim();
-    }
+	public void setMedicalrecordCode(String medicalrecordCode) {
+		this.medicalrecordCode = medicalrecordCode;
+	}
 
-    public String getMedicalrecordname() {
-        return medicalrecordname;
-    }
+	public String getMedicalrecordName() {
+		return medicalrecordName;
+	}
 
-    public void setMedicalrecordname(String medicalrecordname) {
-        this.medicalrecordname = medicalrecordname == null ? null : medicalrecordname.trim();
-    }
+	public void setMedicalrecordName(String medicalrecordName) {
+		this.medicalrecordName = medicalrecordName;
+	}
 
-    public Integer getDoctorid() {
-        return doctorid;
-    }
+	public Integer getDoctorId() {
+		return doctorId;
+	}
 
-    public void setDoctorid(Integer doctorid) {
-        this.doctorid = doctorid;
-    }
+	public void setDoctorId(Integer doctorId) {
+		this.doctorId = doctorId;
+	}
 
-    public Integer getDiseaseid() {
-        return diseaseid;
-    }
+	public Integer getDiseaseId() {
+		return diseaseId;
+	}
 
-    public void setDiseaseid(Integer diseaseid) {
-        this.diseaseid = diseaseid;
-    }
+	public void setDiseaseId(Integer diseaseId) {
+		this.diseaseId = diseaseId;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	public String getNote() {
+		return note;
+	}
 
-    public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
-    }
+	public void setNote(String note) {
+		this.note = note;
+	}
 
-    public String getPatientappeal() {
-        return patientappeal;
-    }
+	public String getPatienappeal() {
+		return patienappeal;
+	}
 
-    public void setPatientappeal(String patientappeal) {
-        this.patientappeal = patientappeal == null ? null : patientappeal.trim();
-    }
+	public void setPatienappeal(String patienappeal) {
+		this.patienappeal = patienappeal;
+	}
 
-    public String getMedicalhistory() {
-        return medicalhistory;
-    }
+	public String getMedicalhistory() {
+		return medicalhistory;
+	}
 
-    public void setMedicalhistory(String medicalhistory) {
-        this.medicalhistory = medicalhistory == null ? null : medicalhistory.trim();
-    }
+	public void setMedicalhistory(String medicalhistory) {
+		this.medicalhistory = medicalhistory;
+	}
 
-    public String getPhysicalstatus() {
-        return physicalstatus;
-    }
+	public String getPhysicalstatus() {
+		return physicalstatus;
+	}
 
-    public void setPhysicalstatus(String physicalstatus) {
-        this.physicalstatus = physicalstatus == null ? null : physicalstatus.trim();
-    }
+	public void setPhysicalstatus(String physicalstatus) {
+		this.physicalstatus = physicalstatus;
+	}
 
-    public String getPrimarydiagnosis() {
-        return primarydiagnosis;
-    }
+	public String getPrimaryDiagnosis() {
+		return primaryDiagnosis;
+	}
 
-    public void setPrimarydiagnosis(String primarydiagnosis) {
-        this.primarydiagnosis = primarydiagnosis == null ? null : primarydiagnosis.trim();
-    }
+	public void setPrimaryDiagnosis(String primaryDiagnosis) {
+		this.primaryDiagnosis = primaryDiagnosis;
+	}
 
-    public String getOpinion() {
-        return opinion;
-    }
+	public String getOpinion() {
+		return opinion;
+	}
 
-    public void setOpinion(String opinion) {
-        this.opinion = opinion == null ? null : opinion.trim();
-    }
+	public void setOpinion(String opinion) {
+		this.opinion = opinion;
+	}
 
-    public Date getRecordtime() {
-        return recordtime;
-    }
+	public Date getRecordTime() {
+		return recordTime;
+	}
 
-    public void setRecordtime(Date recordtime) {
-        this.recordtime = recordtime;
-    }
+	public void setRecordTime(Date recordTime) {
+		this.recordTime = recordTime;
+	}
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+ 
 }
