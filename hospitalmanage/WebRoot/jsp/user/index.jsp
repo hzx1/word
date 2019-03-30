@@ -75,7 +75,7 @@
 				</div><!--#sidebar-shortcuts-->
 
 				<ul class="nav nav-list" onresize="ulresize()" style="overflow:auto;">
-					<c:forEach var="menus" items="${pfuserinfo.menulist}">
+					<c:forEach var="menus" items="${menulist}">
 						<c:if test="${empty menus.resourceurl || menus.resourceurl == ''}">
 							<li>							
 								<a href="#" class="dropdown-toggle" >

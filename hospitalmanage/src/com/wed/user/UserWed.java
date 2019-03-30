@@ -2,7 +2,6 @@ package com.wed.user;
 
 import java.util.List;
 
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSONArray;
 import com.po.Employee;
+import com.po.Resource;
 import com.po.Role;
+import com.service.resource.ResourceService;
 import com.service.system.RoleService;
 import com.service.system.UserService;
 
@@ -24,6 +25,8 @@ public class UserWed {
 	private UserService userService;
 	@Autowired
 	private RoleService roleService;
+	@javax.annotation.Resource
+	private ResourceService resourceService;
 	
 	//初始页面
 	@RequestMapping(value="toinitial")
@@ -37,11 +40,11 @@ public class UserWed {
 	 */
 	@ResponseBody
 	@RequestMapping(value="/verify", produces="application/json")
-	public Object verify(String employeecode){
+	public Object verify(String employeeCode){
 		Employee e=new Employee();
-	e.setEmployeeCode(employeecode);
+		e.setEmployeeCode(employeeCode);
 		String valid="true";
-		Employee  em = userService.selectEmployee(e);
+		Employee  em = userService.selectEmployee(e).get(0);
 		if(em != null){
 			return JSONArray.toJSONString(valid);
 		}
@@ -56,11 +59,9 @@ public class UserWed {
 	 */
 	@ResponseBody
 	@RequestMapping(value="/login", produces="application/json;charset=utf-8")
-	public Object login( String employeecode,HttpServletRequest request){	
+	public Object login( Employee bo,HttpServletRequest request){	
 		String msg = "";
-		Employee e=new Employee();
-		e.setEmployeeCode(employeecode);
-		Employee  em = userService.selectEmployee(e);
+		Employee  em = userService.selectEmployee(bo).get(0);
 		if(em != null){
 		 //把权限存到session里面 positionid
 			Role r= roleService.rolePositionid(em.getId());
@@ -81,10 +82,12 @@ public class UserWed {
 		Object obj=request.getSession().getAttribute("employye");
 		//判断是否登录
 		if(obj != null){
+//			Employee employee = (Employee) request.getSession().getAttribute("employye");
+//			List<Resource> menulist = resourceService.initLogin(employee.getId());
+//			request.getSession().setAttribute("menulist.", menulist);
 			return "/user/index";
 		}
 		//清除session
-		System.out.println("gggg");
 		request.getSession().invalidate();
 		return "/user/login";
 	}

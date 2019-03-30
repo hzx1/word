@@ -11,8 +11,5 @@
 				 AND `psw` = #{psw}
 			</if>
 		</where>
-		 
-		
-		
 	</select>
 </mapper>
