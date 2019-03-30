@@ -131,12 +131,12 @@
 				$.post("${ctx}/userinfoController/editpswnext.do",
 					{psw:$("#formerpsw").val()},
 					function(data){
-						if(data.msg == "true"){
+						if(data == "true"){
 							$("#validation-form1").hide();
 							$("#validation-form2").show();
 							$("#loginpsw")[0].focus();
 						}else{
-							hint(data.msg);
+							hint(data);
 							$("#formerpsw").val("");
 						}
 					});				
@@ -207,7 +207,7 @@
 						$("#validation-form1").show();
 						$("#validation-form2").hide();
 						$("#formerpsw").val("");
-						hint(data.msg);
+						hint(data);
 					});	
 				});
 			}

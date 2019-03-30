@@ -46,8 +46,8 @@ public class UserWed {
 		Employee e=new Employee();
 		e.setEmployeeCode(employeeCode);
 		String valid="true";
-		Employee  em = userService.selectEmployee(e).get(0);
-		if(em != null){
+		List<Employee>  em = userService.selectEmployee(e);
+		if(em != null && em.size()>0){
 			return JSONArray.toJSONString(valid);
 		}
 		valid="false";
@@ -63,14 +63,15 @@ public class UserWed {
 	@RequestMapping(value="/login", produces="application/json;charset=utf-8")
 	public Object login( Employee bo,HttpServletRequest request){	
 		String msg = "";
-		Employee  em = userService.selectEmployee(bo).get(0);
-		if(em != null){
+		List<Employee>  em = userService.selectEmployee(bo);
+		if(em != null && em.size()>0){
+			Employee ems=em.get(0);
 		 //把权限存到session里面 positionid
-			Role r= roleService.rolePositionid(em.getId());
+			Role r= roleService.rolePositionid(ems.getId());
 			//保存用户的权限
 			request.getSession().setAttribute("role", r);
 			//保持用户的信息
-			request.getSession().setAttribute("employye", em);
+			request.getSession().setAttribute("employye", ems);
 			
 			msg = "1";
 		}else{

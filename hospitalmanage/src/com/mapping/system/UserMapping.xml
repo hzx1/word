@@ -2,7 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.dao.system.UserMapping" >
 	<select id="selectEmployee" resultType="com.po.Employee">
-		SELECT * FROM  employee 
+		 SELECT e.*,aj.detailname AS jobtitlename,ap.detailname AS positionname,de.`departmentname` AS departmentname
+		 ,aps.detailname AS politicsstatusname,am.detailname AS maxeducationname,ams.detailname AS majorname
+		 FROM  employee e
+		 LEFT JOIN `attributedetail` aj ON aj.id=e.`jobtitleid`
+		 LEFT JOIN `attributedetail` ap ON ap.id=e.`positionid`
+		 LEFT JOIN `department` de ON de.id=e.`departmentid`
+		 LEFT JOIN `attributedetail` aps ON aps.id=e.`politicsstatusid`
+		 LEFT JOIN `attributedetail` am ON am.id=e.`maxeducationid`
+		 LEFT JOIN `attributedetail` ams ON ams.id=e.`majorid`
 		<where >
 			<if test="employeeCode != null and employeeCode != ''">
 				 AND `employeecode` = #{employeeCode}
@@ -12,4 +20,7 @@
 			</if>
 		</where>
 	</select>
+	<update id="updatepwe">
+		 UPDATE employee SET psw=#{psw} WHERE id=#{id}
+	</update>
 </mapper>

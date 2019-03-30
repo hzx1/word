@@ -40,7 +40,7 @@
 	  	$(function(){
 	  		//开启表单验证
 	  		formValidate(); 
-	  		 $("input[name='employeecode']")[0].focus(); 
+	  		 $("input[name='employeeCode']")[0].focus(); 
 	  	}); 
 	  	
 	  	function spsw(){
@@ -63,7 +63,7 @@
 		function formValidate(){
 			$("#validation-form").validate({
 			    rules: {
-			   	  	employeecode:{
+			   	  	employeeCode:{
 			   	  		required:true,
 			   	  		codeChar:true,
 			   	  		minlength:3,
@@ -73,7 +73,7 @@
 						    type: "post",               //数据发送方式
 						    dataType: "json",           //接受数据格式   
 						    data: {                     //要传递的数据
-						        employeecode: $("#employeecode").val()
+						        employeeCode: $("#employeeCode").val()
 						    },
 			                dataFilter: function (data, type) {
 			                //判断控制器返回的内容
@@ -99,7 +99,7 @@
 			    
 			    
 			    messages:{
-			    	employeecode:{
+			    	employeeCode:{
 			    		required:"请输入用户名",
 			    		remote:"用户名不存在"
 			    	},
@@ -128,7 +128,7 @@
 	  	function formSubmit(){
 	  	 
 	  		$.post("${ctx}/indexController/login.do",
-			{employeecode:$("input[name='employeecode']").val(),
+			{employeeCode:$("input[name='employeeCode']").val(),
 			 psw:$("input[name='psw']").val()},
 			function(data){
 				if(data == "1"){

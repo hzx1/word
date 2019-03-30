@@ -57,6 +57,62 @@ public class Employee {
 
     private Integer isValId;
 
+    //添加其他表的name值  
+    private String jobtitleName;
+	private String positionName;
+    private String departmentName;
+    private String politicsstatusName;
+    private String maxeducationName;
+    private String majorName;
+    public String getJobtitleName() {
+		return jobtitleName;
+	}
+
+	public void setJobtitleName(String jobtitleName) {
+		this.jobtitleName = jobtitleName;
+	}
+
+	public String getPositionName() {
+		return positionName;
+	}
+
+	public void setPositionName(String positionName) {
+		this.positionName = positionName;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
+
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
+	}
+
+	public String getPoliticsstatusName() {
+		return politicsstatusName;
+	}
+
+	public void setPoliticsstatusName(String politicsstatusName) {
+		this.politicsstatusName = politicsstatusName;
+	}
+
+	public String getMaxeducationName() {
+		return maxeducationName;
+	}
+
+	public void setMaxeducationName(String maxeducationName) {
+		this.maxeducationName = maxeducationName;
+	}
+
+	public String getMajorName() {
+		return majorName;
+	}
+
+	public void setMajorName(String majorName) {
+		this.majorName = majorName;
+	}
+
+
 	public Integer getId() {
 		return id;
 	}

@@ -15,10 +15,17 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	private UserMapping userMapping;
+	//登录
 	@Override
 	public List<Employee> selectEmployee(Employee employee) {
 		// TODO Auto-generated method 
 		return userMapping.selectEmployee(employee);
+	}
+	//修改密码
+	@Override
+	public int updatepwe(String psw, Integer id) {
+		// TODO Auto-generated method stub
+		return userMapping.updatepwe(psw, id);
 	}
 
 }

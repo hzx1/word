@@ -58,58 +58,58 @@
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">拼音简码</td>
-									<td class="td-r">${employye.pinyincode}</td>
+									<td class="td-r">${employye.pinYinCode}</td>
 									<td class="td-l">身份证号</td>
-									<td class="td-r">${employye.idcard}</td>
+									<td class="td-r">${employye.idCard}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">医务职称</td>
-							<%-- 		<td class="td-r">${employye.jobtitlename}</td> --%>
+									<td class="td-r">${employye.jobtitleName}</td>
 									<td class="td-l">管理职务</td>
-									<%-- <td class="td-r">${employye.positionname}</td> --%>
+									<td class="td-r">${employye.positionName}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">所属科室</td>
-								<%-- 	<td class="td-r">${employye.departmentname}</td> --%>
-								<%-- 	<td class="td-l">联系电话</td>
+									<td class="td-r">${employye.departmentName}</td>
+									<td class="td-l">联系电话</td>
 									<td class="td-r">${employye.tel}</td>
 								</tr>
 								<tr class="tr-b">
-									<td class="td-l">电子邮件</td>
+									<td class="td-l">电子邮件</td> 
 									<td class="td-r">${employye.email}</td>
 									<td class="td-l">政治面貌</td>
-									<td class="td-r">${employye.politicsstatusname}</td>
+									<td class="td-r">${employye.politicsstatusName}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">出生日期</td>
-									<td class="td-r"><fmt:formatDate value="${employye.birthday}"/></td>
+									<td class="td-r"><fmt:formatDate value="${employye.birthDay}"/></td>
 									<td class="td-l">入职时间</td>
-									<td class="td-r"><fmt:formatDate value="${employye.inductiontime}"/></td>
+									<td class="td-r"><fmt:formatDate value="${employye.inductionTime}"/></td>
 									<td class="td-l">性别</td>
 									<td class="td-r-b">${employye.sex == 1 ? "男" : "女"}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">最高学历</td>
-									<td class="td-r">${employye.maxeducationname}</td>
+									<td class="td-r">${employye.maxeducationName}</td>
 									<td class="td-l">学习专业</td>
-									<td class="td-r">${employye.majorname}</td>
+								 	<td class="td-r">${employye.majorName}</td> 
 									<td class="td-l">工作状态</td>
-									<td class="td-r-b">${employye.workstatus == 1 ? "在职" : "离职"}</td>
+									<td class="td-r-b">${employye.workStatus == 1 ? "在职" : "离职"}</td>
 								</tr>
 								<tr class="tr-b">
 									<td class="td-l">是否医生</td>
-									<td class="td-r">${employye.isdoctor == 1 ? "是" : "不是"}</td>
+									<td class="td-r">${employye.isDoctor == 1 ? "是" : "不是"}</td>
 									<td class="td-l">是否护士</td>
-									<td class="td-r">${employye.isnurse == 1 ? "是" : "不是"}</td>
+									<td class="td-r">${employye.isNurse == 1 ? "是" : "不是"}</td>
 									<td class="td-l">操作员</td>
-									<td class="td-r-b">${employye.isoperator == 1 ? "是" : "不是"}</td>
+									<td class="td-r-b">${employye.isOperator == 1 ? "是" : "不是"}</td>
 								</tr>
 								<tr>
 									<td class="td-l">备注</td>
 									<td class="td-r">${employye.note}</td>
 									<td class="td-l">联系地址</td>
 									<td colspan="3" class="td-r-b">${employye.address}</td>
-								</tr> --%>
+								</tr> 
 							</table>
 						</div>
 				</div><!--/.page-content-->
