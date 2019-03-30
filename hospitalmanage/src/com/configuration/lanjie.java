@@ -27,7 +27,7 @@ public class lanjie extends HandlerInterceptorAdapter{
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
-		Object obj = request.getSession().getAttribute("pfuserinfo");
+		Object obj = request.getSession().getAttribute("employye");
 		if(obj == null){
 			response.sendRedirect(request.getContextPath() + "/indexController/toinitial.do");
 			return false;
