@@ -19,7 +19,5 @@ public class userfoController {
 		
 		return "/user/editpsw.jsp";
 	}
-	
-	
 	//判断用户原密码是否正确
 }
