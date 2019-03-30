@@ -6,93 +6,93 @@ import java.util.Date;
 public class Drug {
     private Integer id;
 
-    private Integer chargetypeid;
+    private Integer chargeTypeId;
 
-    private String drugname;
+    private String drugName;
 
-    private String drugcode;
+    private String drugCode;
 
-    private String barcode;
+    private String barCode;
 
-    private String medicalsciencecode;
+    private String medicalScieCecode;
 
-    private String enname;
+    private String enName;
 
     private String origin;
 
-    private String approvalnumber;
+    private String approvaLnumber;
 
-    private String pinyincode;
+    private String pinyIncode;
 
-    private String wubicode;
+    private String wubiCode;
 
-    private Integer drugtypeid;
+    private Integer drugtypeId;
 
-    private Integer agenttypeid;
+    private Integer agentTypeId;
 
-    private String dosageunit;
+    private String dosaGeunit;
 
-    private String unitdosage;
+    private String unitDosage;
 
     private String norms;
 
-    private BigDecimal inbulkbuyprice;
+    private BigDecimal inbulkBuyprice;
 
-    private BigDecimal inbulkvipprice;
+    private BigDecimal inbulkVipprice;
 
-    private BigDecimal inbulksellprice;
+    private BigDecimal inbulkSellprice;
 
-    private BigDecimal packagebuyprice;
+    private BigDecimal packageBuyprice;
 
-    private BigDecimal packagesellprice;
+    private BigDecimal packageSellprice;
 
-    private BigDecimal packagevipprice;
+    private BigDecimal packageVipprice;
 
-    private Integer ismedicare;
+    private Integer ismeDicare;
 
-    private Integer medicaretypeid;
+    private Integer medicareTypeId;
 
-    private Integer medicarecode;
+    private Integer medicareCode;
 
-    private String medicareprice;
+    private String medicarePrice;
 
-    private Integer isaddwater;
+    private Integer isadDwater;
 
     private Integer isst;
 
-    private Integer isspecialdrug;
+    private Integer isSpecialDrug;
 
-    private String shelfcode;
+    private String shelFcode;
 
-    private Date productiondata;
+    private Date productIondata;
 
     private Integer expiration;
 
-    private Integer supplierid;
+    private Integer supplierId;
 
-    private Integer usestatus;
+    private Integer useStatus;
 
     private String manufacturer;
 
-    private String applysymptom;
+    private String applySymptom;
 
-    private String mainefficacy;
+    private String mainefFicacy;
 
-    private Integer inventoryquantity;
+    private Integer inventoryQuantity;
 
-    private BigDecimal inventoryprice;
+    private BigDecimal inventoryPrice;
 
-    private Integer typeinpersonnelid;
+    private Integer typeinPersonnelId;
 
-    private Date typeindatetime;
+    private Date typeinDateTime;
 
-    private Integer alterpersonnelid;
+    private Integer alterPersonnelId;
 
-    private Date alterdatetime;
+    private Date alterDateTime;
 
     private String picture;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -102,355 +102,357 @@ public class Drug {
         this.id = id;
     }
 
-    public Integer getChargetypeid() {
-        return chargetypeid;
-    }
-
-    public void setChargetypeid(Integer chargetypeid) {
-        this.chargetypeid = chargetypeid;
-    }
-
-    public String getDrugname() {
-        return drugname;
-    }
-
-    public void setDrugname(String drugname) {
-        this.drugname = drugname == null ? null : drugname.trim();
-    }
-
-    public String getDrugcode() {
-        return drugcode;
-    }
-
-    public void setDrugcode(String drugcode) {
-        this.drugcode = drugcode == null ? null : drugcode.trim();
-    }
-
-    public String getBarcode() {
-        return barcode;
-    }
-
-    public void setBarcode(String barcode) {
-        this.barcode = barcode == null ? null : barcode.trim();
-    }
-
-    public String getMedicalsciencecode() {
-        return medicalsciencecode;
-    }
-
-    public void setMedicalsciencecode(String medicalsciencecode) {
-        this.medicalsciencecode = medicalsciencecode == null ? null : medicalsciencecode.trim();
-    }
-
-    public String getEnname() {
-        return enname;
-    }
-
-    public void setEnname(String enname) {
-        this.enname = enname == null ? null : enname.trim();
-    }
-
-    public String getOrigin() {
-        return origin;
-    }
-
-    public void setOrigin(String origin) {
-        this.origin = origin == null ? null : origin.trim();
-    }
-
-    public String getApprovalnumber() {
-        return approvalnumber;
-    }
-
-    public void setApprovalnumber(String approvalnumber) {
-        this.approvalnumber = approvalnumber == null ? null : approvalnumber.trim();
-    }
-
-    public String getPinyincode() {
-        return pinyincode;
-    }
-
-    public void setPinyincode(String pinyincode) {
-        this.pinyincode = pinyincode == null ? null : pinyincode.trim();
-    }
-
-    public String getWubicode() {
-        return wubicode;
-    }
-
-    public void setWubicode(String wubicode) {
-        this.wubicode = wubicode == null ? null : wubicode.trim();
-    }
-
-    public Integer getDrugtypeid() {
-        return drugtypeid;
-    }
-
-    public void setDrugtypeid(Integer drugtypeid) {
-        this.drugtypeid = drugtypeid;
-    }
-
-    public Integer getAgenttypeid() {
-        return agenttypeid;
-    }
-
-    public void setAgenttypeid(Integer agenttypeid) {
-        this.agenttypeid = agenttypeid;
-    }
-
-    public String getDosageunit() {
-        return dosageunit;
-    }
-
-    public void setDosageunit(String dosageunit) {
-        this.dosageunit = dosageunit == null ? null : dosageunit.trim();
-    }
-
-    public String getUnitdosage() {
-        return unitdosage;
-    }
-
-    public void setUnitdosage(String unitdosage) {
-        this.unitdosage = unitdosage == null ? null : unitdosage.trim();
-    }
-
-    public String getNorms() {
-        return norms;
-    }
-
-    public void setNorms(String norms) {
-        this.norms = norms == null ? null : norms.trim();
-    }
-
-    public BigDecimal getInbulkbuyprice() {
-        return inbulkbuyprice;
-    }
-
-    public void setInbulkbuyprice(BigDecimal inbulkbuyprice) {
-        this.inbulkbuyprice = inbulkbuyprice;
-    }
-
-    public BigDecimal getInbulkvipprice() {
-        return inbulkvipprice;
-    }
-
-    public void setInbulkvipprice(BigDecimal inbulkvipprice) {
-        this.inbulkvipprice = inbulkvipprice;
-    }
-
-    public BigDecimal getInbulksellprice() {
-        return inbulksellprice;
-    }
-
-    public void setInbulksellprice(BigDecimal inbulksellprice) {
-        this.inbulksellprice = inbulksellprice;
-    }
-
-    public BigDecimal getPackagebuyprice() {
-        return packagebuyprice;
-    }
-
-    public void setPackagebuyprice(BigDecimal packagebuyprice) {
-        this.packagebuyprice = packagebuyprice;
-    }
-
-    public BigDecimal getPackagesellprice() {
-        return packagesellprice;
-    }
-
-    public void setPackagesellprice(BigDecimal packagesellprice) {
-        this.packagesellprice = packagesellprice;
-    }
-
-    public BigDecimal getPackagevipprice() {
-        return packagevipprice;
-    }
-
-    public void setPackagevipprice(BigDecimal packagevipprice) {
-        this.packagevipprice = packagevipprice;
-    }
-
-    public Integer getIsmedicare() {
-        return ismedicare;
-    }
-
-    public void setIsmedicare(Integer ismedicare) {
-        this.ismedicare = ismedicare;
-    }
-
-    public Integer getMedicaretypeid() {
-        return medicaretypeid;
-    }
-
-    public void setMedicaretypeid(Integer medicaretypeid) {
-        this.medicaretypeid = medicaretypeid;
-    }
-
-    public Integer getMedicarecode() {
-        return medicarecode;
-    }
-
-    public void setMedicarecode(Integer medicarecode) {
-        this.medicarecode = medicarecode;
-    }
-
-    public String getMedicareprice() {
-        return medicareprice;
-    }
-
-    public void setMedicareprice(String medicareprice) {
-        this.medicareprice = medicareprice == null ? null : medicareprice.trim();
-    }
-
-    public Integer getIsaddwater() {
-        return isaddwater;
-    }
-
-    public void setIsaddwater(Integer isaddwater) {
-        this.isaddwater = isaddwater;
-    }
-
-    public Integer getIsst() {
-        return isst;
-    }
-
-    public void setIsst(Integer isst) {
-        this.isst = isst;
-    }
-
-    public Integer getIsspecialdrug() {
-        return isspecialdrug;
-    }
-
-    public void setIsspecialdrug(Integer isspecialdrug) {
-        this.isspecialdrug = isspecialdrug;
-    }
-
-    public String getShelfcode() {
-        return shelfcode;
-    }
-
-    public void setShelfcode(String shelfcode) {
-        this.shelfcode = shelfcode == null ? null : shelfcode.trim();
-    }
-
-    public Date getProductiondata() {
-        return productiondata;
-    }
-
-    public void setProductiondata(Date productiondata) {
-        this.productiondata = productiondata;
-    }
-
-    public Integer getExpiration() {
-        return expiration;
-    }
-
-    public void setExpiration(Integer expiration) {
-        this.expiration = expiration;
-    }
-
-    public Integer getSupplierid() {
-        return supplierid;
-    }
-
-    public void setSupplierid(Integer supplierid) {
-        this.supplierid = supplierid;
-    }
-
-    public Integer getUsestatus() {
-        return usestatus;
-    }
-
-    public void setUsestatus(Integer usestatus) {
-        this.usestatus = usestatus;
-    }
-
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer == null ? null : manufacturer.trim();
-    }
-
-    public String getApplysymptom() {
-        return applysymptom;
-    }
-
-    public void setApplysymptom(String applysymptom) {
-        this.applysymptom = applysymptom == null ? null : applysymptom.trim();
-    }
-
-    public String getMainefficacy() {
-        return mainefficacy;
-    }
-
-    public void setMainefficacy(String mainefficacy) {
-        this.mainefficacy = mainefficacy == null ? null : mainefficacy.trim();
-    }
-
-    public Integer getInventoryquantity() {
-        return inventoryquantity;
-    }
-
-    public void setInventoryquantity(Integer inventoryquantity) {
-        this.inventoryquantity = inventoryquantity;
-    }
-
-    public BigDecimal getInventoryprice() {
-        return inventoryprice;
-    }
-
-    public void setInventoryprice(BigDecimal inventoryprice) {
-        this.inventoryprice = inventoryprice;
-    }
-
-    public Integer getTypeinpersonnelid() {
-        return typeinpersonnelid;
-    }
-
-    public void setTypeinpersonnelid(Integer typeinpersonnelid) {
-        this.typeinpersonnelid = typeinpersonnelid;
-    }
-
-    public Date getTypeindatetime() {
-        return typeindatetime;
-    }
-
-    public void setTypeindatetime(Date typeindatetime) {
-        this.typeindatetime = typeindatetime;
-    }
-
-    public Integer getAlterpersonnelid() {
-        return alterpersonnelid;
-    }
-
-    public void setAlterpersonnelid(Integer alterpersonnelid) {
-        this.alterpersonnelid = alterpersonnelid;
-    }
-
-    public Date getAlterdatetime() {
-        return alterdatetime;
-    }
-
-    public void setAlterdatetime(Date alterdatetime) {
-        this.alterdatetime = alterdatetime;
-    }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture == null ? null : picture.trim();
-    }
-
-    public Integer getIsvalid() {
-        return isvalid;
-    }
-
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public Integer getChargeTypeId() {
+		return chargeTypeId;
+	}
+
+	public void setChargeTypeId(Integer chargeTypeId) {
+		this.chargeTypeId = chargeTypeId;
+	}
+
+	public String getDrugName() {
+		return drugName;
+	}
+
+	public void setDrugName(String drugName) {
+		this.drugName = drugName;
+	}
+
+	public String getDrugCode() {
+		return drugCode;
+	}
+
+	public void setDrugCode(String drugCode) {
+		this.drugCode = drugCode;
+	}
+
+	public String getBarCode() {
+		return barCode;
+	}
+
+	public void setBarCode(String barCode) {
+		this.barCode = barCode;
+	}
+
+	public String getMedicalScieCecode() {
+		return medicalScieCecode;
+	}
+
+	public void setMedicalScieCecode(String medicalScieCecode) {
+		this.medicalScieCecode = medicalScieCecode;
+	}
+
+	public String getEnName() {
+		return enName;
+	}
+
+	public void setEnName(String enName) {
+		this.enName = enName;
+	}
+
+	public String getOrigin() {
+		return origin;
+	}
+
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+
+	public String getApprovaLnumber() {
+		return approvaLnumber;
+	}
+
+	public void setApprovaLnumber(String approvaLnumber) {
+		this.approvaLnumber = approvaLnumber;
+	}
+
+	public String getPinyIncode() {
+		return pinyIncode;
+	}
+
+	public void setPinyIncode(String pinyIncode) {
+		this.pinyIncode = pinyIncode;
+	}
+
+	public String getWubiCode() {
+		return wubiCode;
+	}
+
+	public void setWubiCode(String wubiCode) {
+		this.wubiCode = wubiCode;
+	}
+
+	public Integer getDrugtypeId() {
+		return drugtypeId;
+	}
+
+	public void setDrugtypeId(Integer drugtypeId) {
+		this.drugtypeId = drugtypeId;
+	}
+
+	public Integer getAgentTypeId() {
+		return agentTypeId;
+	}
+
+	public void setAgentTypeId(Integer agentTypeId) {
+		this.agentTypeId = agentTypeId;
+	}
+
+	public String getDosaGeunit() {
+		return dosaGeunit;
+	}
+
+	public void setDosaGeunit(String dosaGeunit) {
+		this.dosaGeunit = dosaGeunit;
+	}
+
+	public String getUnitDosage() {
+		return unitDosage;
+	}
+
+	public void setUnitDosage(String unitDosage) {
+		this.unitDosage = unitDosage;
+	}
+
+	public String getNorms() {
+		return norms;
+	}
+
+	public void setNorms(String norms) {
+		this.norms = norms;
+	}
+
+	public BigDecimal getInbulkBuyprice() {
+		return inbulkBuyprice;
+	}
+
+	public void setInbulkBuyprice(BigDecimal inbulkBuyprice) {
+		this.inbulkBuyprice = inbulkBuyprice;
+	}
+
+	public BigDecimal getInbulkVipprice() {
+		return inbulkVipprice;
+	}
+
+	public void setInbulkVipprice(BigDecimal inbulkVipprice) {
+		this.inbulkVipprice = inbulkVipprice;
+	}
+
+	public BigDecimal getInbulkSellprice() {
+		return inbulkSellprice;
+	}
+
+	public void setInbulkSellprice(BigDecimal inbulkSellprice) {
+		this.inbulkSellprice = inbulkSellprice;
+	}
+
+	public BigDecimal getPackageBuyprice() {
+		return packageBuyprice;
+	}
+
+	public void setPackageBuyprice(BigDecimal packageBuyprice) {
+		this.packageBuyprice = packageBuyprice;
+	}
+
+	public BigDecimal getPackageSellprice() {
+		return packageSellprice;
+	}
+
+	public void setPackageSellprice(BigDecimal packageSellprice) {
+		this.packageSellprice = packageSellprice;
+	}
+
+	public BigDecimal getPackageVipprice() {
+		return packageVipprice;
+	}
+
+	public void setPackageVipprice(BigDecimal packageVipprice) {
+		this.packageVipprice = packageVipprice;
+	}
+
+	public Integer getIsmeDicare() {
+		return ismeDicare;
+	}
+
+	public void setIsmeDicare(Integer ismeDicare) {
+		this.ismeDicare = ismeDicare;
+	}
+
+	public Integer getMedicareTypeId() {
+		return medicareTypeId;
+	}
+
+	public void setMedicareTypeId(Integer medicareTypeId) {
+		this.medicareTypeId = medicareTypeId;
+	}
+
+	public Integer getMedicareCode() {
+		return medicareCode;
+	}
+
+	public void setMedicareCode(Integer medicareCode) {
+		this.medicareCode = medicareCode;
+	}
+
+	public String getMedicarePrice() {
+		return medicarePrice;
+	}
+
+	public void setMedicarePrice(String medicarePrice) {
+		this.medicarePrice = medicarePrice;
+	}
+
+	public Integer getIsadDwater() {
+		return isadDwater;
+	}
+
+	public void setIsadDwater(Integer isadDwater) {
+		this.isadDwater = isadDwater;
+	}
+
+	public Integer getIsst() {
+		return isst;
+	}
+
+	public void setIsst(Integer isst) {
+		this.isst = isst;
+	}
+
+	public Integer getIsSpecialDrug() {
+		return isSpecialDrug;
+	}
+
+	public void setIsSpecialDrug(Integer isSpecialDrug) {
+		this.isSpecialDrug = isSpecialDrug;
+	}
+
+	public String getShelFcode() {
+		return shelFcode;
+	}
+
+	public void setShelFcode(String shelFcode) {
+		this.shelFcode = shelFcode;
+	}
+
+	public Date getProductIondata() {
+		return productIondata;
+	}
+
+	public void setProductIondata(Date productIondata) {
+		this.productIondata = productIondata;
+	}
+
+	public Integer getExpiration() {
+		return expiration;
+	}
+
+	public void setExpiration(Integer expiration) {
+		this.expiration = expiration;
+	}
+
+	public Integer getSupplierId() {
+		return supplierId;
+	}
+
+	public void setSupplierId(Integer supplierId) {
+		this.supplierId = supplierId;
+	}
+
+	public Integer getUseStatus() {
+		return useStatus;
+	}
+
+	public void setUseStatus(Integer useStatus) {
+		this.useStatus = useStatus;
+	}
+
+	public String getManufacturer() {
+		return manufacturer;
+	}
+
+	public void setManufacturer(String manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+
+	public String getApplySymptom() {
+		return applySymptom;
+	}
+
+	public void setApplySymptom(String applySymptom) {
+		this.applySymptom = applySymptom;
+	}
+
+	public String getMainefFicacy() {
+		return mainefFicacy;
+	}
+
+	public void setMainefFicacy(String mainefFicacy) {
+		this.mainefFicacy = mainefFicacy;
+	}
+
+	public Integer getInventoryQuantity() {
+		return inventoryQuantity;
+	}
+
+	public void setInventoryQuantity(Integer inventoryQuantity) {
+		this.inventoryQuantity = inventoryQuantity;
+	}
+
+	public BigDecimal getInventoryPrice() {
+		return inventoryPrice;
+	}
+
+	public void setInventoryPrice(BigDecimal inventoryPrice) {
+		this.inventoryPrice = inventoryPrice;
+	}
+
+	public Integer getTypeinPersonnelId() {
+		return typeinPersonnelId;
+	}
+
+	public void setTypeinPersonnelId(Integer typeinPersonnelId) {
+		this.typeinPersonnelId = typeinPersonnelId;
+	}
+
+	public Date getTypeinDateTime() {
+		return typeinDateTime;
+	}
+
+	public void setTypeinDateTime(Date typeinDateTime) {
+		this.typeinDateTime = typeinDateTime;
+	}
+
+	public Integer getAlterPersonnelId() {
+		return alterPersonnelId;
+	}
+
+	public void setAlterPersonnelId(Integer alterPersonnelId) {
+		this.alterPersonnelId = alterPersonnelId;
+	}
+
+	public Date getAlterDateTime() {
+		return alterDateTime;
+	}
+
+	public void setAlterDateTime(Date alterDateTime) {
+		this.alterDateTime = alterDateTime;
+	}
+
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+
+	public Integer getIsvalId() {
+		return isvalId;
+	}
+
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+   
 }

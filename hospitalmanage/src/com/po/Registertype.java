@@ -5,15 +5,15 @@ import java.math.BigDecimal;
 public class Registertype {
     private Integer id;
 
-    private String typecode;
+    private String typeCode;
 
-    private String typename;
+    private String typeName;
 
-    private BigDecimal typesum;
+    private BigDecimal typeSum;
 
     private String note;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -23,29 +23,7 @@ public class Registertype {
         this.id = id;
     }
 
-    public String getTypecode() {
-        return typecode;
-    }
-
-    public void setTypecode(String typecode) {
-        this.typecode = typecode == null ? null : typecode.trim();
-    }
-
-    public String getTypename() {
-        return typename;
-    }
-
-    public void setTypename(String typename) {
-        this.typename = typename == null ? null : typename.trim();
-    }
-
-    public BigDecimal getTypesum() {
-        return typesum;
-    }
-
-    public void setTypesum(BigDecimal typesum) {
-        this.typesum = typesum;
-    }
+  
 
     public String getNote() {
         return note;
@@ -55,11 +33,37 @@ public class Registertype {
         this.note = note == null ? null : note.trim();
     }
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public String getTypeCode() {
+		return typeCode;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public void setTypeCode(String typeCode) {
+		this.typeCode = typeCode;
+	}
+
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
+
+	public BigDecimal getTypeSum() {
+		return typeSum;
+	}
+
+	public void setTypeSum(BigDecimal typeSum) {
+		this.typeSum = typeSum;
+	}
+
+	public Integer getIsvalId() {
+		return isvalId;
+	}
+
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+   
 }

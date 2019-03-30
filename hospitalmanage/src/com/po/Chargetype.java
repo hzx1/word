@@ -3,17 +3,17 @@ package com.po;
 public class Chargetype {
     private Integer id;
 
-    private String typecode;
+    private String typeCode;
 
-    private String typename;
+    private String typeName;
 
-    private String itemmark;
+    private String itemMark;
 
-    private Integer discount;
+    private Integer disCount;
 
     private String note;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -24,38 +24,55 @@ public class Chargetype {
     }
 
     public String getTypecode() {
-        return typecode;
+        return typeCode;
     }
 
     public void setTypecode(String typecode) {
-        this.typecode = typecode == null ? null : typecode.trim();
+        this.typeCode = typecode == null ? null : typecode.trim();
     }
 
-    public String getTypename() {
-        return typename;
-    }
 
-    public void setTypename(String typename) {
-        this.typename = typename == null ? null : typename.trim();
-    }
+    public String getTypeCode() {
+		return typeCode;
+	}
 
-    public String getItemmark() {
-        return itemmark;
-    }
+	public void setTypeCode(String typeCode) {
+		this.typeCode = typeCode;
+	}
 
-    public void setItemmark(String itemmark) {
-        this.itemmark = itemmark == null ? null : itemmark.trim();
-    }
+	public String getTypeName() {
+		return typeName;
+	}
 
-    public Integer getDiscount() {
-        return discount;
-    }
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
 
-    public void setDiscount(Integer discount) {
-        this.discount = discount;
-    }
+	public String getItemMark() {
+		return itemMark;
+	}
 
-    public String getNote() {
+	public void setItemMark(String itemMark) {
+		this.itemMark = itemMark;
+	}
+
+	public Integer getDisCount() {
+		return disCount;
+	}
+
+	public void setDisCount(Integer disCount) {
+		this.disCount = disCount;
+	}
+
+	public Integer getIsvalId() {
+		return isvalId;
+	}
+
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+	public String getNote() {
         return note;
     }
 
@@ -63,11 +80,5 @@ public class Chargetype {
         this.note = note == null ? null : note.trim();
     }
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
-
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+  
 }

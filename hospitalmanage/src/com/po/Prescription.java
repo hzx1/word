@@ -5,27 +5,27 @@ import java.util.Date;
 public class Prescription {
     private Integer id;
 
-    private Integer registerid;
+    private Integer registerId;
 
-    private String prescriptioncode;
+    private String prescriptionCode;
 
-    private String prescriptionname;
+    private String prescriptionName;
 
-    private Integer doctorid;
+    private Integer doctorId;
 
-    private Integer natureid;
+    private Integer natureId;
 
-    private Integer prescriptiontypeid;
+    private Integer prescriptiontypeId;
 
-    private Integer classifyid;
+    private Integer classifyId;
 
     private String note;
 
     private String diagnosis;
 
-    private Date prescriptiontime;
+    private Date prescriptionTime;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -35,91 +35,92 @@ public class Prescription {
         this.id = id;
     }
 
-    public Integer getRegisterid() {
-        return registerid;
-    }
+	public Integer getRegisterId() {
+		return registerId;
+	}
 
-    public void setRegisterid(Integer registerid) {
-        this.registerid = registerid;
-    }
+	public void setRegisterId(Integer registerId) {
+		this.registerId = registerId;
+	}
 
-    public String getPrescriptioncode() {
-        return prescriptioncode;
-    }
+	public String getPrescriptionCode() {
+		return prescriptionCode;
+	}
 
-    public void setPrescriptioncode(String prescriptioncode) {
-        this.prescriptioncode = prescriptioncode == null ? null : prescriptioncode.trim();
-    }
+	public void setPrescriptionCode(String prescriptionCode) {
+		this.prescriptionCode = prescriptionCode;
+	}
 
-    public String getPrescriptionname() {
-        return prescriptionname;
-    }
+	public String getPrescriptionName() {
+		return prescriptionName;
+	}
 
-    public void setPrescriptionname(String prescriptionname) {
-        this.prescriptionname = prescriptionname == null ? null : prescriptionname.trim();
-    }
+	public void setPrescriptionName(String prescriptionName) {
+		this.prescriptionName = prescriptionName;
+	}
 
-    public Integer getDoctorid() {
-        return doctorid;
-    }
+	public Integer getDoctorId() {
+		return doctorId;
+	}
 
-    public void setDoctorid(Integer doctorid) {
-        this.doctorid = doctorid;
-    }
+	public void setDoctorId(Integer doctorId) {
+		this.doctorId = doctorId;
+	}
 
-    public Integer getNatureid() {
-        return natureid;
-    }
+	public Integer getNatureId() {
+		return natureId;
+	}
 
-    public void setNatureid(Integer natureid) {
-        this.natureid = natureid;
-    }
+	public void setNatureId(Integer natureId) {
+		this.natureId = natureId;
+	}
 
-    public Integer getPrescriptiontypeid() {
-        return prescriptiontypeid;
-    }
+	public Integer getPrescriptiontypeId() {
+		return prescriptiontypeId;
+	}
 
-    public void setPrescriptiontypeid(Integer prescriptiontypeid) {
-        this.prescriptiontypeid = prescriptiontypeid;
-    }
+	public void setPrescriptiontypeId(Integer prescriptiontypeId) {
+		this.prescriptiontypeId = prescriptiontypeId;
+	}
 
-    public Integer getClassifyid() {
-        return classifyid;
-    }
+	public Integer getClassifyId() {
+		return classifyId;
+	}
 
-    public void setClassifyid(Integer classifyid) {
-        this.classifyid = classifyid;
-    }
+	public void setClassifyId(Integer classifyId) {
+		this.classifyId = classifyId;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	public String getNote() {
+		return note;
+	}
 
-    public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
-    }
+	public void setNote(String note) {
+		this.note = note;
+	}
 
-    public String getDiagnosis() {
-        return diagnosis;
-    }
+	public String getDiagnosis() {
+		return diagnosis;
+	}
 
-    public void setDiagnosis(String diagnosis) {
-        this.diagnosis = diagnosis == null ? null : diagnosis.trim();
-    }
+	public void setDiagnosis(String diagnosis) {
+		this.diagnosis = diagnosis;
+	}
 
-    public Date getPrescriptiontime() {
-        return prescriptiontime;
-    }
+	public Date getPrescriptionTime() {
+		return prescriptionTime;
+	}
 
-    public void setPrescriptiontime(Date prescriptiontime) {
-        this.prescriptiontime = prescriptiontime;
-    }
+	public void setPrescriptionTime(Date prescriptionTime) {
+		this.prescriptionTime = prescriptionTime;
+	}
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
 }

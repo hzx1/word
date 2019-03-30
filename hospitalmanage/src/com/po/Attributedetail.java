@@ -3,15 +3,15 @@ package com.po;
 public class Attributedetail {
     private Integer id;
 
-    private Integer attributeid;
+    private Integer attriButeId;
 
-    private String detailname;
+    private String detailName;
 
-    private String detailenname;
+    private String detailenName;
 
     private String note;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -21,28 +21,53 @@ public class Attributedetail {
         this.id = id;
     }
 
-    public Integer getAttributeid() {
-        return attributeid;
-    }
+  
+    public Integer getAttriButeId() {
+		return attriButeId;
+	}
 
-    public void setAttributeid(Integer attributeid) {
-        this.attributeid = attributeid;
-    }
+	public void setAttriButeId(Integer attriButeId) {
+		this.attriButeId = attriButeId;
+	}
 
-    public String getDetailname() {
-        return detailname;
+	public String getDetailName() {
+		return detailName;
+	}
+
+	public void setDetailName(String detailName) {
+		this.detailName = detailName;
+	}
+
+	public String getDetailenName() {
+		return detailenName;
+	}
+
+	public void setDetailenName(String detailenName) {
+		this.detailenName = detailenName;
+	}
+
+	public Integer getIsvalId() {
+		return isvalId;
+	}
+
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+	public String getDetailname() {
+        return detailName;
     }
 
     public void setDetailname(String detailname) {
-        this.detailname = detailname == null ? null : detailname.trim();
+        this.detailName = detailname == null ? null : detailname.trim();
     }
 
     public String getDetailenname() {
-        return detailenname;
+        return detailenName;
     }
 
     public void setDetailenname(String detailenname) {
-        this.detailenname = detailenname == null ? null : detailenname.trim();
+        this.detailenName = detailenname == null ? null : detailenname.trim();
     }
 
     public String getNote() {
@@ -53,11 +78,5 @@ public class Attributedetail {
         this.note = note == null ? null : note.trim();
     }
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
-
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+   
 }

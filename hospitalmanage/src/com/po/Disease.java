@@ -3,13 +3,13 @@ package com.po;
 public class Disease {
     private Integer id;
 
-    private String diseasecode;
+    private String diseaseCode;
 
-    private String diseasename;
+    private String diseaseName;
 
-    private String diseaseexplain;
+    private String diseaseExplain;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -20,34 +20,34 @@ public class Disease {
     }
 
     public String getDiseasecode() {
-        return diseasecode;
+        return diseaseCode;
     }
 
     public void setDiseasecode(String diseasecode) {
-        this.diseasecode = diseasecode == null ? null : diseasecode.trim();
+        this.diseaseCode = diseasecode == null ? null : diseasecode.trim();
     }
 
     public String getDiseasename() {
-        return diseasename;
+        return diseaseName;
     }
 
     public void setDiseasename(String diseasename) {
-        this.diseasename = diseasename == null ? null : diseasename.trim();
+        this.diseaseName = diseasename == null ? null : diseasename.trim();
     }
 
     public String getDiseaseexplain() {
-        return diseaseexplain;
+        return diseaseExplain;
     }
 
     public void setDiseaseexplain(String diseaseexplain) {
-        this.diseaseexplain = diseaseexplain == null ? null : diseaseexplain.trim();
+        this.diseaseExplain = diseaseexplain == null ? null : diseaseexplain.trim();
     }
 
     public Integer getIsvalid() {
-        return isvalid;
+        return isvalId;
     }
 
     public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
+        this.isvalId = isvalid;
     }
 }

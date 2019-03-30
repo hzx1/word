@@ -6,31 +6,31 @@ import java.util.Date;
 public class Charge {
     private Integer id;
 
-    private Integer prescriptionid;
+    private Integer prescriptionId;
 
-    private String receiptcode;
+    private String receiptCode;
 
-    private String invoicecode;
+    private String invoiceCode;
 
-    private Integer chargestatus;
+    private Integer chargeStatus;
 
-    private Integer discount;
+    private Integer disCount;
 
-    private Integer privilege;
+    private Integer priviLege;
 
-    private BigDecimal beforereceivable;
+    private BigDecimal beforeReceivable;
 
-    private BigDecimal afterreceivable;
+    private BigDecimal afterReceivable;
 
-    private BigDecimal medicarecanpay;
+    private BigDecimal mediCareCanpay;
 
     private BigDecimal cost;
 
-    private Integer operationpersonid;
+    private Integer operatIonpersonId;
 
-    private Date chargetime;
+    private Date chargeTime;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -39,78 +39,120 @@ public class Charge {
     public void setId(Integer id) {
         this.id = id;
     }
+    
 
-    public Integer getPrescriptionid() {
-        return prescriptionid;
-    }
+    public Integer getPrescriptionId() {
+		return prescriptionId;
+	}
 
-    public void setPrescriptionid(Integer prescriptionid) {
-        this.prescriptionid = prescriptionid;
-    }
+	public void setPrescriptionId(Integer prescriptionId) {
+		this.prescriptionId = prescriptionId;
+	}
 
-    public String getReceiptcode() {
-        return receiptcode;
+	public String getReceiptCode() {
+		return receiptCode;
+	}
+
+	public void setReceiptCode(String receiptCode) {
+		this.receiptCode = receiptCode;
+	}
+
+	public String getInvoiceCode() {
+		return invoiceCode;
+	}
+
+	public void setInvoiceCode(String invoiceCode) {
+		this.invoiceCode = invoiceCode;
+	}
+
+	public Integer getChargeStatus() {
+		return chargeStatus;
+	}
+
+	public void setChargeStatus(Integer chargeStatus) {
+		this.chargeStatus = chargeStatus;
+	}
+
+	public Integer getDisCount() {
+		return disCount;
+	}
+
+	public void setDisCount(Integer disCount) {
+		this.disCount = disCount;
+	}
+
+	public Integer getPriviLege() {
+		return priviLege;
+	}
+
+	public void setPriviLege(Integer priviLege) {
+		this.priviLege = priviLege;
+	}
+
+	public BigDecimal getBeforeReceivable() {
+		return beforeReceivable;
+	}
+
+	public void setBeforeReceivable(BigDecimal beforeReceivable) {
+		this.beforeReceivable = beforeReceivable;
+	}
+
+	public BigDecimal getAfterReceivable() {
+		return afterReceivable;
+	}
+
+	public void setAfterReceivable(BigDecimal afterReceivable) {
+		this.afterReceivable = afterReceivable;
+	}
+
+	public BigDecimal getMediCareCanpay() {
+		return mediCareCanpay;
+	}
+
+	public void setMediCareCanpay(BigDecimal mediCareCanpay) {
+		this.mediCareCanpay = mediCareCanpay;
+	}
+
+	public Integer getOperatIonpersonId() {
+		return operatIonpersonId;
+	}
+
+	public void setOperatIonpersonId(Integer operatIonpersonId) {
+		this.operatIonpersonId = operatIonpersonId;
+	}
+
+	public Date getChargeTime() {
+		return chargeTime;
+	}
+
+	public void setChargeTime(Date chargeTime) {
+		this.chargeTime = chargeTime;
+	}
+
+	public Integer getIsvalId() {
+		return isvalId;
+	}
+
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+	public String getReceiptcode() {
+        return receiptCode;
     }
 
     public void setReceiptcode(String receiptcode) {
-        this.receiptcode = receiptcode == null ? null : receiptcode.trim();
+        this.receiptCode = receiptcode == null ? null : receiptcode.trim();
     }
 
     public String getInvoicecode() {
-        return invoicecode;
+        return invoiceCode;
     }
 
     public void setInvoicecode(String invoicecode) {
-        this.invoicecode = invoicecode == null ? null : invoicecode.trim();
+        this.invoiceCode = invoicecode == null ? null : invoicecode.trim();
     }
 
-    public Integer getChargestatus() {
-        return chargestatus;
-    }
-
-    public void setChargestatus(Integer chargestatus) {
-        this.chargestatus = chargestatus;
-    }
-
-    public Integer getDiscount() {
-        return discount;
-    }
-
-    public void setDiscount(Integer discount) {
-        this.discount = discount;
-    }
-
-    public Integer getPrivilege() {
-        return privilege;
-    }
-
-    public void setPrivilege(Integer privilege) {
-        this.privilege = privilege;
-    }
-
-    public BigDecimal getBeforereceivable() {
-        return beforereceivable;
-    }
-
-    public void setBeforereceivable(BigDecimal beforereceivable) {
-        this.beforereceivable = beforereceivable;
-    }
-
-    public BigDecimal getAfterreceivable() {
-        return afterreceivable;
-    }
-
-    public void setAfterreceivable(BigDecimal afterreceivable) {
-        this.afterreceivable = afterreceivable;
-    }
-
-    public BigDecimal getMedicarecanpay() {
-        return medicarecanpay;
-    }
-
-    public void setMedicarecanpay(BigDecimal medicarecanpay) {
-        this.medicarecanpay = medicarecanpay;
-    }
 
     public BigDecimal getCost() {
         return cost;
@@ -120,27 +162,7 @@ public class Charge {
         this.cost = cost;
     }
 
-    public Integer getOperationpersonid() {
-        return operationpersonid;
-    }
+   
 
-    public void setOperationpersonid(Integer operationpersonid) {
-        this.operationpersonid = operationpersonid;
-    }
-
-    public Date getChargetime() {
-        return chargetime;
-    }
-
-    public void setChargetime(Date chargetime) {
-        this.chargetime = chargetime;
-    }
-
-    public Integer getIsvalid() {
-        return isvalid;
-    }
-
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+  
 }

@@ -3,13 +3,13 @@ package com.po;
 public class Medicalrecordtemplate {
     private Integer id;
 
-    private String templatecode;
+    private String templateCode;
 
-    private String templatename;
+    private String templateName;
 
-    private Integer doctorid;
+    private Integer doctorId;
 
-    private Integer diseaseid;
+    private Integer diseaseId;
 
     private String fitstatus;
 
@@ -21,11 +21,11 @@ public class Medicalrecordtemplate {
 
     private String physicalstatus;
 
-    private String primarydiagnosis;
+    private String primaryDiagnosis;
 
     private String opinion;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
@@ -35,38 +35,7 @@ public class Medicalrecordtemplate {
         this.id = id;
     }
 
-    public String getTemplatecode() {
-        return templatecode;
-    }
-
-    public void setTemplatecode(String templatecode) {
-        this.templatecode = templatecode == null ? null : templatecode.trim();
-    }
-
-    public String getTemplatename() {
-        return templatename;
-    }
-
-    public void setTemplatename(String templatename) {
-        this.templatename = templatename == null ? null : templatename.trim();
-    }
-
-    public Integer getDoctorid() {
-        return doctorid;
-    }
-
-    public void setDoctorid(Integer doctorid) {
-        this.doctorid = doctorid;
-    }
-
-    public Integer getDiseaseid() {
-        return diseaseid;
-    }
-
-    public void setDiseaseid(Integer diseaseid) {
-        this.diseaseid = diseaseid;
-    }
-
+   
     public String getFitstatus() {
         return fitstatus;
     }
@@ -107,13 +76,7 @@ public class Medicalrecordtemplate {
         this.physicalstatus = physicalstatus == null ? null : physicalstatus.trim();
     }
 
-    public String getPrimarydiagnosis() {
-        return primarydiagnosis;
-    }
-
-    public void setPrimarydiagnosis(String primarydiagnosis) {
-        this.primarydiagnosis = primarydiagnosis == null ? null : primarydiagnosis.trim();
-    }
+  
 
     public String getOpinion() {
         return opinion;
@@ -123,11 +86,53 @@ public class Medicalrecordtemplate {
         this.opinion = opinion == null ? null : opinion.trim();
     }
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public String getTemplateCode() {
+		return templateCode;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public void setTemplateCode(String templateCode) {
+		this.templateCode = templateCode;
+	}
+
+	public String getTemplateName() {
+		return templateName;
+	}
+
+	public void setTemplateName(String templateName) {
+		this.templateName = templateName;
+	}
+
+	public Integer getDoctorId() {
+		return doctorId;
+	}
+
+	public void setDoctorId(Integer doctorId) {
+		this.doctorId = doctorId;
+	}
+
+	public Integer getDiseaseId() {
+		return diseaseId;
+	}
+
+	public void setDiseaseId(Integer diseaseId) {
+		this.diseaseId = diseaseId;
+	}
+
+	public String getPrimaryDiagnosis() {
+		return primaryDiagnosis;
+	}
+
+	public void setPrimaryDiagnosis(String primaryDiagnosis) {
+		this.primaryDiagnosis = primaryDiagnosis;
+	}
+
+	public Integer getIsvalId() {
+		return isvalId;
+	}
+
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+  
 }

@@ -3,7 +3,7 @@ package com.po;
 public class Attribute {
     private Integer id;
 
-    private String attributename;
+    private String attriButeName;
 
     public Integer getId() {
         return id;
@@ -14,10 +14,10 @@ public class Attribute {
     }
 
     public String getAttributename() {
-        return attributename;
+        return attriButeName;
     }
 
     public void setAttributename(String attributename) {
-        this.attributename = attributename == null ? null : attributename.trim();
+        this.attriButeName = attributename == null ? null : attributename.trim();
     }
 }

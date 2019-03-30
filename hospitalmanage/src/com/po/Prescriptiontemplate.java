@@ -3,91 +3,93 @@ package com.po;
 public class Prescriptiontemplate {
     private Integer id;
 
-    private String templatename;
+    private String templateName;
 
-    private Integer doctorid;
+    private Integer doctorId;
 
-    private Integer natureid;
+    private Integer natureId;
 
-    private Integer prescriptiontypeid;
+    private Integer prescriptiontypeId;
 
-    private Integer classifyid;
+    private Integer classifyId;
 
     private String note;
 
     private String diagnosis;
 
-    private Integer isvalid;
+    private Integer isvalId;
 
     public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public String getTemplateName() {
+		return templateName;
+	}
 
-    public String getTemplatename() {
-        return templatename;
-    }
+	public void setTemplateName(String templateName) {
+		this.templateName = templateName;
+	}
 
-    public void setTemplatename(String templatename) {
-        this.templatename = templatename == null ? null : templatename.trim();
-    }
+	public Integer getDoctorId() {
+		return doctorId;
+	}
 
-    public Integer getDoctorid() {
-        return doctorid;
-    }
+	public void setDoctorId(Integer doctorId) {
+		this.doctorId = doctorId;
+	}
 
-    public void setDoctorid(Integer doctorid) {
-        this.doctorid = doctorid;
-    }
+	public Integer getNatureId() {
+		return natureId;
+	}
 
-    public Integer getNatureid() {
-        return natureid;
-    }
+	public void setNatureId(Integer natureId) {
+		this.natureId = natureId;
+	}
 
-    public void setNatureid(Integer natureid) {
-        this.natureid = natureid;
-    }
+	public Integer getPrescriptiontypeId() {
+		return prescriptiontypeId;
+	}
 
-    public Integer getPrescriptiontypeid() {
-        return prescriptiontypeid;
-    }
+	public void setPrescriptiontypeId(Integer prescriptiontypeId) {
+		this.prescriptiontypeId = prescriptiontypeId;
+	}
 
-    public void setPrescriptiontypeid(Integer prescriptiontypeid) {
-        this.prescriptiontypeid = prescriptiontypeid;
-    }
+	public Integer getClassifyId() {
+		return classifyId;
+	}
 
-    public Integer getClassifyid() {
-        return classifyid;
-    }
+	public void setClassifyId(Integer classifyId) {
+		this.classifyId = classifyId;
+	}
 
-    public void setClassifyid(Integer classifyid) {
-        this.classifyid = classifyid;
-    }
+	public String getNote() {
+		return note;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	public void setNote(String note) {
+		this.note = note;
+	}
 
-    public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
-    }
+	public String getDiagnosis() {
+		return diagnosis;
+	}
 
-    public String getDiagnosis() {
-        return diagnosis;
-    }
+	public void setDiagnosis(String diagnosis) {
+		this.diagnosis = diagnosis;
+	}
 
-    public void setDiagnosis(String diagnosis) {
-        this.diagnosis = diagnosis == null ? null : diagnosis.trim();
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public Integer getIsvalid() {
-        return isvalid;
-    }
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalid = isvalid;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+  
 }
