@@ -15,7 +15,7 @@
         		<h1>用户登录</h1>
         		<form id="validation-form"  onsubmit="formValidate()" >
           			<div class="form-group">
-		           		<input class="form-control" placeholder="用户名" type="text" name="employeecode">
+		           		<input class="form-control" placeholder="用户名" type="text" name="employeeCode">
 		         	</div>
           			<div class="form-group">
 		            	<input class="form-control" placeholder="密码" type="password" name="psw">
