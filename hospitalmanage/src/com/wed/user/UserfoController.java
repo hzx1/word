@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("userinfoController")
-public class userfoController {
+public class UserfoController {
 	//个人信息跳转
 	@RequestMapping(value="/finduser")
 	public String finduser(HttpServletRequest request){
