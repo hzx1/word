@@ -4,7 +4,7 @@ public class Resource {
     private Integer id;
 
     private Integer resourceSuperiorId;
-
+    				
     private String resourceName;
 
     private String resourceUrl;

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.dao.resource.Resource" >
+<mapper namespace="com.dao.resource.ResourceMapping" >
 	<select id="initLogin" resultType="com.po.Resource">
-		SELECT resourcename FROM role 
+		SELECT * FROM role 
 		LEFT JOIN resource 
 		ON role.resourceid = resource.resourcesuperiorid
-		WHERE role.id={id}
+		<where>
+			<if test="id != null and id!=''">role.id=#{id}</if>
+		</where>
+	</select>
+	<select id="initLoginTwo" resultType="com.po.Resource">
+		SELECT * FROM resource 
 	</select>
 </mapper>

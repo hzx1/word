@@ -21,4 +21,9 @@ public class ResourceServiceImpl implements ResourceService {
 		return resourceMapping.initLogin(id);
 	}
 
+	@Override
+	public List<Resource> initLoginTwo() {
+		return resourceMapping.initLoginTwo();
+	}
+
 }

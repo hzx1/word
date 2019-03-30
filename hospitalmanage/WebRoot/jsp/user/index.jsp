@@ -75,22 +75,22 @@
 				</div><!--#sidebar-shortcuts-->
 
 				<ul class="nav nav-list" onresize="ulresize()" style="overflow:auto;">
-					<c:forEach var="menus" items="${menulist}">
-						<c:if test="${empty menus.resourceurl || menus.resourceurl == ''}">
+					<c:forEach var="menus" items="${pfuserinfo.menulist}">
+						<c:if test="${empty menus.resourceUrl || menus.resourceUrl == ''}">
 							<li>							
 								<a href="#" class="dropdown-toggle" >
-									<i class="${menus.resourceicon}"></i>
-									<span class="menu-text"> ${menus.resourcename} </span>
+									<i class="${menus.resourceIcon}"></i>
+									<span class="menu-text"> ${menus.resourceName} </span>
 		
 									<b class="arrow icon-angle-down"></b>
 								</a>
 								<ul class="submenu">
 									<c:forEach var="item" items="${pfuserinfo.resources}">
-										<c:if test="${item.resourcesuperiorid != 0 && item.resourcesuperiorid == menus.id}">
+										<c:if test="${item.resourceSuperiorId != 0 && item.resourceSuperiorId == menus.id}">
 											<li>
-												<a href="#" onclick="show(this,'${ctx}${item.resourceurl}')">
+												<a href="#" onclick="show(this,'${ctx}${item.resourceUrl}')">
 													<i class="icon-double-angle-right"></i>
-													${item.resourcename}
+													${item.resourceName}
 												</a>
 											</li>
 										</c:if>
@@ -98,11 +98,11 @@
 								</ul>
 							</li>
 						</c:if>
-						<c:if test="${!empty menus.resourceurl}">
+						<c:if test="${!empty menus.resourceUrl}">
 							<li>
-								<a href="#" onclick="show(this,'${ctx}${menus.resourceurl}')">
-									<i class="${menus.resourceicon}"></i>
-									<span class="menu-text"> ${menus.resourcename} </span>
+								<a href="#" onclick="show(this,'${ctx}${menus.resourceUrl}')">
+									<i class="${menus.resourceIcon}"></i>
+									<span class="menu-text"> ${menus.resourceName} </span>
 								</a>
 							</li>
 						</c:if>

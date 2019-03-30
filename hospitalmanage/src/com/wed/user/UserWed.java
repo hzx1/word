@@ -1,6 +1,8 @@
 package com.wed.user;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -82,9 +84,13 @@ public class UserWed {
 		Object obj=request.getSession().getAttribute("employye");
 		//判断是否登录
 		if(obj != null){
-//			Employee employee = (Employee) request.getSession().getAttribute("employye");
-//			List<Resource> menulist = resourceService.initLogin(employee.getId());
-//			request.getSession().setAttribute("menulist.", menulist);
+		Employee employee = (Employee) request.getSession().getAttribute("employye");
+		List<Resource> menulist = resourceService.initLogin(employee.getId());
+		List<Resource> resources = resourceService.initLoginTwo();
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("menulist", menulist);
+		map.put("resources", resources);
+		request.getSession().setAttribute("pfuserinfo", map);
 			return "/user/index";
 		}
 		//清除session
