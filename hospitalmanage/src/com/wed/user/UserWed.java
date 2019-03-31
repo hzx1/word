@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSONArray;
+import com.ov.Menu;
 import com.po.Employee;
 import com.po.Resource;
 import com.po.Role;
@@ -86,12 +87,15 @@ public class UserWed {
 		//判断是否登录
 		if(obj != null){
 		Employee employee = (Employee) request.getSession().getAttribute("employye");
-		List<Resource> menulist = resourceService.initLogin(employee.getId());
-		List<Resource> resources = resourceService.initLoginTwo();
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("menulist", menulist);
-		map.put("resources", resources);
-		request.getSession().setAttribute("pfuserinfo", map);
+		List<Menu> list = resourceService.initLoginTwo(employee.getId());
+		for (Menu menu : list) {
+			System.out.print(menu.getResource().getResourceName()+"----------");
+			List<Resource> list1 = menu.getListResource();
+			for (Resource resource : list1) {
+				System.out.println(resource.getResourceName());
+			}
+		}
+		request.getSession().setAttribute("pfuserinfo", list);
 			return "/user/index";
 		}
 		//清除session

@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,37 +75,35 @@
 				</div><!--#sidebar-shortcuts-->
 
 				<ul class="nav nav-list" onresize="ulresize()" style="overflow:auto;">
-					<c:forEach var="menus" items="${pfuserinfo.menulist}">
-						<c:if test="${empty menus.resourceUrl || menus.resourceUrl == ''}">
+					<c:forEach var="menus" items="${pfuserinfo}">
+						<c:if test="${empty menus.resource.resourceUrl || menus.resource.resourceUrl == ''}"> 
 							<li>							
 								<a href="#" class="dropdown-toggle" >
-									<i class="${menus.resourceIcon}"></i>
-									<span class="menu-text"> ${menus.resourceName} </span>
-		
+									<i class="${menus.resource.resourceIcon}"></i>
+									<span class="menu-text"> ${menus.resource.resourceName} </span>
 									<b class="arrow icon-angle-down"></b>
 								</a>
-								<ul class="submenu">
-									<c:forEach var="item" items="${pfuserinfo.resources}">
-										<c:if test="${item.resourceSuperiorId != 0 && item.resourceSuperiorId == menus.id}">
+								 <ul class="submenu">
+									<c:set value="${menus.listResource }" var="var2"/>
+									<c:forEach var="item" items="${var2}">
 											<li>
 												<a href="#" onclick="show(this,'${ctx}${item.resourceUrl}')">
 													<i class="icon-double-angle-right"></i>
 													${item.resourceName}
 												</a>
 											</li>
-										</c:if>
 									</c:forEach>
-								</ul>
+								</ul>  
 							</li>
-						</c:if>
-						<c:if test="${!empty menus.resourceUrl}">
+						</c:if> 
+						<c:if test="${!empty menus.resource.resourceUrl}">
 							<li>
-								<a href="#" onclick="show(this,'${ctx}${menus.resourceUrl}')">
-									<i class="${menus.resourceIcon}"></i>
-									<span class="menu-text"> ${menus.resourceName} </span>
+								<a href="#" onclick="show(this,'${ctx}${menus.resource.resourceUrl}')">
+									<i class="${menus.resource.resourceIcon}"></i>
+									<span class="menu-text"> ${menus.resource.resourceName} </span>
 								</a>
 							</li>
-						</c:if>
+						</c:if> 
 					</c:forEach>
 
 				</ul><!--/.nav-list-->

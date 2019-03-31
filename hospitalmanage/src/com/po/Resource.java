@@ -15,61 +15,105 @@ public class Resource {
 
     private Integer isvalId;
 
+	/**
+	 * @return the id
+	 */
 	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
+	/**
+	 * @return the resourceSuperiorId
+	 */
 	public Integer getResourceSuperiorId() {
 		return resourceSuperiorId;
 	}
 
-	public void setResourceSuperiorId(Integer resourceSuperiorId) {
-		this.resourceSuperiorId = resourceSuperiorId;
-	}
-
+	/**
+	 * @return the resourceName
+	 */
 	public String getResourceName() {
 		return resourceName;
 	}
 
-	public void setResourceName(String resourceName) {
-		this.resourceName = resourceName;
-	}
-
+	/**
+	 * @return the resourceUrl
+	 */
 	public String getResourceUrl() {
 		return resourceUrl;
 	}
 
-	public void setResourceUrl(String resourceUrl) {
-		this.resourceUrl = resourceUrl;
-	}
-
+	/**
+	 * @return the resourceIcon
+	 */
 	public String getResourceIcon() {
 		return resourceIcon;
 	}
 
-	public void setResourceIcon(String resourceIcon) {
-		this.resourceIcon = resourceIcon;
-	}
-
+	/**
+	 * @return the rank
+	 */
 	public Integer getRank() {
 		return rank;
 	}
 
-	public void setRank(Integer rank) {
-		this.rank = rank;
-	}
-
+	/**
+	 * @return the isvalId
+	 */
 	public Integer getIsvalId() {
 		return isvalId;
 	}
 
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	/**
+	 * @param resourceSuperiorId the resourceSuperiorId to set
+	 */
+	public void setResourceSuperiorId(Integer resourceSuperiorId) {
+		this.resourceSuperiorId = resourceSuperiorId;
+	}
+
+	/**
+	 * @param resourceName the resourceName to set
+	 */
+	public void setResourceName(String resourceName) {
+		this.resourceName = resourceName;
+	}
+
+	/**
+	 * @param resourceUrl the resourceUrl to set
+	 */
+	public void setResourceUrl(String resourceUrl) {
+		this.resourceUrl = resourceUrl;
+	}
+
+	/**
+	 * @param resourceIcon the resourceIcon to set
+	 */
+	public void setResourceIcon(String resourceIcon) {
+		this.resourceIcon = resourceIcon;
+	}
+
+	/**
+	 * @param rank the rank to set
+	 */
+	public void setRank(Integer rank) {
+		this.rank = rank;
+	}
+
+	/**
+	 * @param isvalId the isvalId to set
+	 */
 	public void setIsvalId(Integer isvalId) {
 		this.isvalId = isvalId;
 	}
+
+
 
    
 }

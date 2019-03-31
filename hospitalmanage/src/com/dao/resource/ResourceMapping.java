@@ -8,5 +8,5 @@ import com.po.Resource;
 
 public interface ResourceMapping {
 	public List<Resource> initLogin(@Param("id")Integer id);
-	public List<Resource> initLoginTwo();
+	public List<Resource> initLoginTwo(@Param("id")Integer id);
 }
