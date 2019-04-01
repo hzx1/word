@@ -88,13 +88,6 @@ public class UserWed {
 		if(obj != null){
 		Employee employee = (Employee) request.getSession().getAttribute("employye");
 		List<Menu> list = resourceService.initLoginTwo(employee.getId());
-		for (Menu menu : list) {
-			System.out.print(menu.getResource().getResourceName()+"----------");
-			List<Resource> list1 = menu.getListResource();
-			for (Resource resource : list1) {
-				System.out.println(resource.getResourceName());
-			}
-		}
 		request.getSession().setAttribute("pfuserinfo", list);
 			return "/user/index";
 		}

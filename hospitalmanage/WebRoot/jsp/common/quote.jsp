@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <!--inline styles related to this page-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="" />
