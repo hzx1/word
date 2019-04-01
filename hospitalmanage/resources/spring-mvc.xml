@@ -93,6 +93,7 @@
 	        <mvc:mapping path="/prescriptionController/**" />
 	        <mvc:mapping path="/prescriptiontemplateController/**" />
 	        <mvc:mapping path="/patientController/**" />
+	        <mvc:mapping path="/registerController/**" />
 	        <mvc:mapping path="/pegisterController/**" />
 	        <mvc:mapping path="/resourceController/**" />
 	        <mvc:mapping path="/roleController/**" />
