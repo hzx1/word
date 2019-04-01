@@ -23,7 +23,7 @@ import com.service.system.UserService;
 
 @Controller
 @RequestMapping("/indexController")
-public class UserWed {
+public class UserController {
 	@Autowired
 	private UserService userService;
 	@Autowired

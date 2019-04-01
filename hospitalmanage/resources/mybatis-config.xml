@@ -8,6 +8,6 @@
           <setting name="lazyLoadingEnabled" value="false" />  
       </settings>  
      <typeAliases>  
-         <package name="com.po"/>
+         <package name="com.po.*"/>
      </typeAliases>
 </configuration>  

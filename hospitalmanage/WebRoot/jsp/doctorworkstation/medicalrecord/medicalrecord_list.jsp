@@ -1,6 +1,8 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -64,9 +66,9 @@
 								<div class="controls controls-l">
 									<select id="department" class="chzn-select" onchange="finddoctor()">
 										<option value="0" />全部
-										<c:forEach var="item" items="${departments}">
+										<%-- <c:forEach var="item" items="${departments}">
 											<option value="${item.id}"  />${item.departmentname}
-										</c:forEach>
+										</c:forEach> --%>
 									</select>
 								</div>
 							</div>
@@ -78,9 +80,9 @@
 								<div class="controls controls-l">
 									<select id="doctor" class="chzn-select" onchange="search()">
 										<option id="all" value="0" />全部
-										<c:forEach var="item" items="${doctors}">
+										<%-- <c:forEach var="item" items="${doctors}">
 											<option value="${item.id}" />${item.employeename}
-										</c:forEach>
+										</c:forEach> --%>
 									</select>
 								</div>
 							</div>	
