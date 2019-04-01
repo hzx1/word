@@ -87,6 +87,7 @@
 									<c:set value="${menus.listResource }" var="var2"/>
 									<c:forEach var="item" items="${var2}">
 											<li>
+											
 												<a href="#" onclick="show(this,'${ctx}${item.resourceUrl}')">
 													<i class="icon-double-angle-right"></i>
 													${item.resourceName}
@@ -191,7 +192,7 @@
 			
 			//iframe加载内容
 			function onSrc(src){
-		
+				alert(src)
 				$("#iframe_web").attr("src",src);
 				alert(src);
 			}
