@@ -1,9 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<<<<<<< HEAD
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-=======
->>>>>>> refs/remotes/origin/master
 <c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <!--inline styles related to this page-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

@@ -192,7 +192,6 @@
 			
 			//iframe加载内容
 			function onSrc(src){
-				alert(src)
 				$("#iframe_web").attr("src",src);
 				alert(src);
 			}
