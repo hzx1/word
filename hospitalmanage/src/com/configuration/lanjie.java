@@ -33,16 +33,9 @@ public class lanjie extends HandlerInterceptorAdapter{
 			return false;
 		}
 		
-		//获取请求路径
-		String path = request.getServletPath();
-		//过滤请求，以下不设拦截
-		if(path.indexOf("tablelist.do") >= 0 || path.indexOf("finduser.do") >= 0 
-			|| path.indexOf("toeditpsw.do") >= 0 || path.indexOf("editpswnext.do") >= 0 
-			|| path.indexOf("editpsw.do") >= 0 || path.indexOf("getdptbypid.do") >= 0){
-			return true;
-		}
 		
-		return false;
+		
+		return true;
 	}
 	
 }
