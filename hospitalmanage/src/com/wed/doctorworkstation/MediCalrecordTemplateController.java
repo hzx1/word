@@ -7,16 +7,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.service.doctorworkstation.MediCalrecordTemplateService;
 
 @Controller
-@RequestMapping("medicalrecordController")
+@RequestMapping("/medicalrecordtemplateController")
 public class MediCalrecordTemplateController {
 	//
 	@Autowired
 	private MediCalrecordTemplateService mCTS;
-	@RequestMapping(value="list")
+	@RequestMapping(value="/list")
 	public String list(){
+		System.out.println("ddddddddddddddddddfffffffffffffffff");
 		mCTS.listMCT();
 		
-		return "/doctorworkstation/medicalrecordtemplate_list";
+		return "/doctorworkstation/medicalrecord/medicalrecordtemplate_list";
 	}
 	
 }
