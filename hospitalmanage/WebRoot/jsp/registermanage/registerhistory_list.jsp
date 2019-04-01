@@ -53,7 +53,7 @@
 									<select id="registerpersonid" class="chzn-select" onchange="search()">
 										<option value="0" />全部
 											<c:forEach var="item" items="${persons}">
-												<option value="${item.id}" />${item.employeename}
+												<option value="${item.id}" />${item.employeeName}
 										</c:forEach>
 									</select>
 								</div>
