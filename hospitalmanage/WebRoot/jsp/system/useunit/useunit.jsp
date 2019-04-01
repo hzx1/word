@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<%@include file="../../common/quote.jsp" %>
+		<%@include file="../../common/quo	te.jsp" %>
 		<%@include file="../../common/list-btn-limit.jsp" %>
 	</head>
 

@@ -17,4 +17,7 @@ public class RegisterController {
 		
 		return "/registermanage/registerhistory_list";
 	}
+	
+	
+	
 }

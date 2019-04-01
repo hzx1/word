@@ -193,6 +193,7 @@
 			function onSrc(src){
 		
 				$("#iframe_web").attr("src",src);
+				alert(src);
 			}
 			
 			//点击菜单获取相应路径
