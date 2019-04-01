@@ -32,9 +32,6 @@ public class lanjie extends HandlerInterceptorAdapter{
 			response.sendRedirect(request.getContextPath() + "/indexController/toinitial.do");
 			return false;
 		}
-		
-		
-		
 		return true;
 	}
 	
