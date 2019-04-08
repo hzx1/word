@@ -7,6 +7,6 @@ import com.po.Medicalrecordtemplate;
 public interface MediCalrecordTemplateMapping {
 	//查看病历模板全部
 	public List<Medicalrecordtemplate> listMCT();
-	//查询总数
+	//查询总数1
 	public Integer countMCT();
 }
