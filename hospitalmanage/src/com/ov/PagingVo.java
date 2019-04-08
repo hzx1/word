@@ -1,16 +1,36 @@
 package com.ov;
-
 public class PagingVo {
-	//总行数
+	/**
+	 * 总行数
+	 */
 	private int sumrow;
-	//当前页数
+	/**
+	 * 当前页数
+	 */
 	private int currentpage;
-	//总页数
+	/**
+	 * 总页数
+	 */
 	private int sumpage;
-	//开始页
+	/**
+	 * 开始页
+	 */
 	private int beginpage;
-	//结束页
+	/**
+	 * 结束页
+	 */
 	private int endpage;
+	public PagingVo(int sumrow, int currentpage, int sumpage, int beginpage, int endpage) {
+		super();
+		this.sumrow = sumrow;
+		this.currentpage = currentpage;
+		this.sumpage = sumpage;
+		this.beginpage = beginpage;
+		this.endpage = endpage;
+	}
+	public PagingVo() {
+		super();
+	}
 	public int getSumrow() {
 		return sumrow;
 	}
@@ -41,4 +61,5 @@ public class PagingVo {
 	public void setEndpage(int endpage) {
 		this.endpage = endpage;
 	}
+
 }
