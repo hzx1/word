@@ -1,6 +1,7 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -52,7 +53,8 @@
 									<select id="department" class="chzn-select" onchange="finddoctor()">
 										<option value="0" />全部
 										<c:forEach var="item" items="${departments}">
-											<option value="${item.id}"  />${item.departmentname}
+																				 
+											<option value="${item.id}"  />${item.deparTmentName}
 										</c:forEach>
 									</select>
 								</div>
@@ -70,7 +72,7 @@
 									<select id="doctor" class="chzn-select" onchange="search()">
 										<option id="all" value="0" />全部
 										<c:forEach var="item" items="${doctors}">
-											<option value="${item.id}" />${item.employeename}
+											<option value="${item.id}" />${item.employeeName}
 										</c:forEach>
 									</select>
 								</div>
@@ -206,7 +208,7 @@
 			}
 			
 			//查询
-			function gettable(templatecode,templatename,doctorid,departmentid,fitstatus,page){
+			function gettable(templatecode,templatename,doctorid,departmentid,fitstatus,page){			
 				$.post(ctx + controller + "/datalist.do",
 				{templatecode:templatecode, templatename:templatename, doctorid:doctorid,
 				departmentid:departmentid, fitstatus:fitstatus,pagesize:$("#pagesize").val(),

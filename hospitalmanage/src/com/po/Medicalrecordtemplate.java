@@ -27,7 +27,37 @@ public class Medicalrecordtemplate {
 
     private Integer isvalId;
 
-    public Integer getId() {
+    private String employeeName;
+    
+    private String departmentName;
+    
+    private String diseaseName;
+    
+    public String getEmployeeName() {
+		return employeeName;
+	}
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
+
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
+	}
+
+	public String getDiseaseName() {
+		return diseaseName;
+	}
+
+	public void setDiseaseName(String diseaseName) {
+		this.diseaseName = diseaseName;
+	}
+
+	public Integer getId() {
         return id;
     }
 

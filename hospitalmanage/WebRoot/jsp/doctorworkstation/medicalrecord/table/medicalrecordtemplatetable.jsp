@@ -1,18 +1,20 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <c:forEach var="item" items="${medicalrecordtemplates}">
-	<tr class="rowTr" onclick="finddetail('${item.patientappeal}','${item.medicalhistory}','${item.physicalstatus}','${item.primarydiagnosis}','${item.opinion}')">
-		<td>${item.templatecode}</td>
-		<td>${item.templatename}</td>
-		<td>${item.departmentname}</td>
-		<td>${item.employeename}</td>
-		<td>${item.diseasename}</td>
+	<tr class="rowTr" onclick="finddetail('${item.patientappeal}','${item.medicalhistory}','${item.physicalstatus}','${item.primaryDiagnosis}','${item.opinion}')">
+		<td>${item.templateCode}</td>
+		<td>${item.templateName}</td>
+		<td>${item.departmentName}</td>
+		<td> ${item.employeeName}</td>
+		<td>${item.diseaseName}</td>
 		<td>${item.fitstatus}</td>
-		<td>
-			<a class="btn btn-link btn-edit" href="javascript:location.href='${ctx}/medicalrecordtemplateController/toedit.do?id=${item.id}';">修改</a>
-			<a class="btn btn-link btn-delete" href="javascript:;" onclick="deletetemplates('${item.id}')">删除</a>
+		<td> 
+			<a href="javascript:location.href='${ctx}/medicalrecordtemplateController/toedit.do?id=${item.id}';">修改</a>
+			<a href="javascript:;" onclick="deletetemplates('${item.id}')">删除</a> 
 		</td>
 	</tr>
 </c:forEach>

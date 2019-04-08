@@ -6,16 +6,16 @@
 </style>
 <script type="text/javascript">
 	$(function(){
-		<c:forEach var="item" items="${pfuserinfo.resources}">
-			if("${item.resourceurl}".indexOf(controller + "/toedit.do") >= 0 ||
-			"${item.resourceurl}".indexOf(controller + "/edit.do") >= 0){
+		<c:forEach var="item" items="${pfuserinfo}">
+			if("${item.resource.resourceUrl}".indexOf(controller + "/toedit.do") >= 0 ||
+			"${item.resource.resourceUrl}".indexOf(controller + "/edit.do") >= 0){
 				$(".btn-edit").css("display", "inline-block");
 			}
-			if("${item.resourceurl}".indexOf(controller + "/resetpsw.do") >= 0){
+			if("${item.resource.resourceUrl}".indexOf(controller + "/resetpsw.do") >= 0){
 				$(".btn-group").css("display", "inline-block");
 				$(".btn-resetpsw").css("display", "list-item");
 			}
-			if("${item.resourceurl}".indexOf(controller + "/delete.do") >= 0){
+			if("${item.resource.resourceUrl}".indexOf(controller + "/delete.do") >= 0){
 				if($(".btn-delete").children().length){
 					$(".btn-group").css("display", "inline-block");
 					$(".btn-delete").css("display", "list-item");
@@ -23,11 +23,11 @@
 					$(".btn-delete").css("display", "inline-block");
 				}
 			}		
-			if("${item.resourceurl}".indexOf(controller + "/addInventoryquantity.do") >= 0){
+			if("${item.resource.resourceUrl}".indexOf(controller + "/addInventoryquantity.do") >= 0){
 				$(".btn-group").css("display", "inline-block");
 				$(".btn-addcount").css("display", "list-item");
 			}		
-			if("${item.resourceurl}".indexOf(controller + "/reduceInventoryquantity.do") >= 0){
+			if("${item.resource.resourceUrl}".indexOf(controller + "/reduceInventoryquantity.do") >= 0){
 				$(".btn-group").css("display", "inline-block");
 				$(".btn-reducecount").css("display", "list-item");
 			}

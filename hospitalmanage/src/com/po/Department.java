@@ -6,7 +6,7 @@ public class Department {
     private Integer id;
 
     private String deparTmentCode;
-
+    
     private String deparTmentName;
 
     private String pinyinCode;
@@ -23,83 +23,84 @@ public class Department {
 
     private String note;
 
-    public Integer getId() {
-        return id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getDepartmentcode() {
-        return deparTmentCode;
-    }
+	public String getDeparTmentCode() {
+		return deparTmentCode;
+	}
 
-    public void setDepartmentcode(String departmentcode) {
-        this.deparTmentCode = departmentcode == null ? null : departmentcode.trim();
-    }
+	public void setDeparTmentCode(String deparTmentCode) {
+		this.deparTmentCode = deparTmentCode;
+	}
 
-    public String getDepartmentname() {
-        return deparTmentName;
-    }
+	public String getDeparTmentName() {
+		return deparTmentName;
+	}
 
-    public void setDepartmentname(String departmentname) {
-        this.deparTmentName = departmentname == null ? null : departmentname.trim();
-    }
+	public void setDeparTmentName(String deparTmentName) {
+		this.deparTmentName = deparTmentName;
+	}
 
-    public String getPinyincode() {
-        return pinyinCode;
-    }
+	public String getPinyinCode() {
+		return pinyinCode;
+	}
 
-    public void setPinyincode(String pinyincode) {
-        this.pinyinCode = pinyincode == null ? null : pinyincode.trim();
-    }
+	public void setPinyinCode(String pinyinCode) {
+		this.pinyinCode = pinyinCode;
+	}
 
-    public String getWubicode() {
-        return wubiCode;
-    }
+	public String getWubiCode() {
+		return wubiCode;
+	}
 
-    public void setWubicode(String wubicode) {
-        this.wubiCode = wubicode == null ? null : wubicode.trim();
-    }
+	public void setWubiCode(String wubiCode) {
+		this.wubiCode = wubiCode;
+	}
 
-    public BigDecimal getRegistersum() {
-        return regisTersum;
-    }
+	public BigDecimal getRegisTersum() {
+		return regisTersum;
+	}
 
-    public void setRegistersum(BigDecimal registersum) {
-        this.regisTersum = registersum;
-    }
+	public void setRegisTersum(BigDecimal regisTersum) {
+		this.regisTersum = regisTersum;
+	}
 
-    public String getSite() {
-        return site;
-    }
+	public String getSite() {
+		return site;
+	}
 
-    public void setSite(String site) {
-        this.site = site == null ? null : site.trim();
-    }
+	public void setSite(String site) {
+		this.site = site;
+	}
 
-    public Integer getIsregister() {
-        return isregIster;
-    }
+	public Integer getIsregIster() {
+		return isregIster;
+	}
 
-    public void setIsregister(Integer isregister) {
-        this.isregIster = isregister;
-    }
+	public void setIsregIster(Integer isregIster) {
+		this.isregIster = isregIster;
+	}
 
-    public Integer getIsvalid() {
-        return isvalId;
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalId = isvalid;
-    }
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	public String getNote() {
+		return note;
+	}
 
-    public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
-    }
+	public void setNote(String note) {
+		this.note = note;
+	}
+
 }

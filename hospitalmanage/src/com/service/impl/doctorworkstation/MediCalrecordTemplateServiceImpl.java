@@ -21,5 +21,11 @@ public class MediCalrecordTemplateServiceImpl implements MediCalrecordTemplateSe
 			// TODO Auto-generated method stub
 			return mCTM.listMCT();
 		}
+		//查询总数
+		@Override
+		public Integer countMCT() {
+			// TODO Auto-generated method stub
+			return mCTM.countMCT();
+		}
 		
 }

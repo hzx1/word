@@ -11,4 +11,5 @@ public interface UserMapping {
 	public List<Employee> selectEmployee(Employee employee);
 	//修改密码
 	public int updatepwe(@Param("psw")String psw,@Param("id")Integer id);
+	
 }
