@@ -1,7 +1,9 @@
-/applicationContext.xml
 /com/
+<<<<<<< HEAD
 /database.properties
 /log4j.properties
 /mybatis-config.xml
 /spring-mvc.xml
 /spring-mybatis.xml
+=======
+>>>>>>> branch 'master' of https://github.com/hzx1/word.git

@@ -93,7 +93,7 @@
 									<select name="maritalstatusid" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
 										<option value="0" />
 										<c:forEach var="item" items="${politicsstatuss}">
-											<option value="${item.id}" />${item.detailname}
+											<option value="${item.id}" />${item.detailName}
 										</c:forEach>
 									</select>		
 								</div>
@@ -118,7 +118,7 @@
 									<select name="viptypeid" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
 										<option value="" />
 										<c:forEach var="item" items="${viptypes}">
-											<option value="${item.id}" />${item.typename}
+											<option value="${item.id}" />${item.typeName}
 										</c:forEach>
 									</select>
 								</div>
@@ -146,7 +146,7 @@
 									<select name="insuretypeid" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
 										<option value="0" />
 										<c:forEach var="item" items="${insuretypes}">
-											<option value="${item.id}" />${item.detailname}
+											<option value="${item.id}" />${item.detailName}
 										</c:forEach>
 									</select>
 								</div>
@@ -161,7 +161,7 @@
 									<select name="patienttypeid" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
 										<option value="" />
 										<c:forEach var="item" items="${patienttypes}">
-											<option value="${item.id}" />${item.typename}
+											<option value="${item.id}" />${item.typeName}
 										</c:forEach>
 									</select>
 								</div>
@@ -243,7 +243,7 @@
 									<select id="department" name="departmentid" class="chzn-select" data-placeholder="-请选择-" onchange="finddoctor()">
 										<option value="" />
 										<c:forEach var="item" items="${departments}">
-											<option value="${item.id}" />${item.departmentname}
+											<option value="${item.id}" />${item.deparTmentName}
 										</c:forEach>
 									</select>
 								</div>
@@ -271,7 +271,7 @@
 									<select id="doctor" name="doctorid" class="chzn-select" data-placeholder="-请选择-">
 										<option id="all" value="0" />
 										<c:forEach var="item" items="${doctors}">
-											<option value="${item.id}" />${item.employeename}
+											<option value="${item.id}" />${item.employeeName}
 										</c:forEach>
 									</select>
 								</div>
@@ -299,8 +299,8 @@
 								<div class="controls controls-l" style="border:1px dotted #e2e2e2; max-width:294px; min-width:220px;" >
 									<c:forEach var="item" items="${registertypes}">
 										<label>
-											<input id="r${item.id}" class="radioclass" name="registertype" type="radio" value="${item.id},${item.typesum}"/>
-											<span class="lbl"> ${item.typename}</span>
+											<input id="r${item.id}" class="radioclass" name="registertype" type="radio" value="${item.id},${item.typeSum}"/>
+											<span class="lbl"> ${item.typeName}</span>
 										</label>
 									</c:forEach>
 
@@ -351,13 +351,12 @@
 								<label class="control-label control-label-m">上位病员</label>
 
 								<div class="controls controls-m">
-									<input type="text" readonly="readonly" style="text-align:center;" value="${register.patientname}"/>
 								</div>
 
 								<label class="control-label control-label-m">上位时间</label>
 
 								<div class="controls controls-m">
-									<input type="text" readonly="readonly" style="text-align:center;" value='<fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${register.registertime}"/>'/>
+									<input type="text" readonly="readonly" style="text-align:center;" value='<fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${register.registerTime}"/>'/>
 								</div>
 								
 								<label class="control-label control-label-m">挂号金额</label>
@@ -387,13 +386,13 @@
 								<label class="control-label control-label-m">合计人数</label>
 
 								<div class="controls controls-m">
-									<input type="text" readonly="readonly" style="text-align:center;" value="${countinfo.countregister}"/>
+									<input type="text" readonly="readonly" style="text-align:center;" value="${countinfo.countRegister}"/>
 								</div>
 								
 								<label class="control-label control-label-m">合计金额</label>
 
 								<div class="controls controls-m">
-									<input id="" type="text" readonly="readonly" style="text-align:center;" value="${countinfo.sumregistersum}"/>
+									<input id="" type="text" readonly="readonly" style="text-align:center;" value="${countinfo.sumRegisterSum}"/>
 								</div>
 							</div>	
 						</div><!--/span-->

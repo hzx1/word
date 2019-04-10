@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.registermanage.RegisterManage">
+	<select id="getByName" resultType="com.po.Attributedetail">
+		SELECT
+		*
+		FROM attributedetail
+		<where>attributeid=(SELECT id FROM attribute WHERE
+			attributename=#{name})
+		</where>
+	</select>
+	<select id="getVipList" resultType="com.po.Viptype">
+		SELECT * FROM viptype
+	</select>
+	<select id="getTypeList" resultType="com.po.Patienttype">
+		SELECT * FROM patienttype
+	</select>
+	<select id="getDepartmentList" resultType="com.po.Department">
+		SELECT * FROM
+		department WHERE isvalid = 1 AND isregister = 1
+	</select>
+	<select id="getDoctors" resultType="com.po.Employee">
+		SELECT e.*,a.detailname AS
+		jobtitlename,a1.detailname AS
+		positionname,a2.detailname AS
+		maxeducationname,
+		a3.detailname AS majorname,a4.detailname AS
+		politicsstatusname,d.departmentname
+		FROM employee e
+		LEFT JOIN department
+		d ON d.id = e.departmentid LEFT JOIN attributedetail
+		a ON a.id =
+		e.jobtitleid
+		LEFT JOIN attributedetail a1 ON a1.id = e.positionid LEFT
+		JOIN
+		attributedetail a2 ON a2.id = e.maxeducationid
+		LEFT JOIN
+		attributedetail a3 ON a3.id = e.majorid LEFT JOIN
+		attributedetail a4 ON
+		a4.id = e.politicsstatusid
+		LEFT JOIN role r ON
+		FIND_IN_SET(e.positionid,r.positionid) WHERE e.isvalid
+		= 1
+		AND
+		d.isregister = 1 AND r.rolename = '门诊医生'
+	</select>
+	<select id="getTypeName" resultType="com.po.Registertype">
+		SELECT * FROM registertype
+		WHERE isvalid = 1
+	</select>
+	<select id="findLast" resultType="com.po.Register">
+		SELECT
+		r.*,p.cardcode,p.patientname,CASE WHEN r.registertypeid = 0 THEN
+		'自定义'
+		ELSE rt.typename END AS typename,
+		rt.typesum AS
+		typesum,d.departmentname AS departmentname ,e.employeename AS
+		doctorname,e1.employeename AS registerpersonname FROM register r
+		LEFT
+		JOIN patient p ON p.id = r.patientid LEFT JOIN registertype rt ON
+		rt.id = r.registertypeid
+		LEFT JOIN department d ON d.id =
+		r.departmentid LEFT JOIN employee e ON
+		e.id = r.doctorid
+		LEFT JOIN
+		employee e1 ON e1.id = r.registerpersonid WHERE r.isvalid = 1
+		AND
+		registertime BETWEEN CURRENT_DATE
+		AND DATE_ADD(CURRENT_DATE, INTERVAL 1
+		DAY) ORDER BY r.id DESC LIMIT 1
+	</select>
+	<select id="countinfo" resultType="com.po.Register">
+		SELECT SUM(registersum) AS sumregistersum, COUNT(*) AS countregister FROM
+		register WHERE isvalid=1 AND registertime
+		BETWEEN CURRENT_DATE AND DATE_ADD(CURRENT_DATE, INTERVAL 1 DAY)
+	</select>
+</mapper>

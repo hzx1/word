@@ -8,30 +8,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.po.Employee;
+import com.service.personnelmanage.EmployeeService;
 import com.service.resource.ResourceService;
 
 @Controller
 @RequestMapping("/registerController")
 public class RegisterController {
 	
-	/**
-	 * 查询页面
-	 * @param request
-	 * @return
-	 */
-	@RequestMapping("/registerlist")
-	public String registerList(HttpServletRequest request){
-		Employee employee = (Employee) request.getSession().getAttribute("employye");
-		request.getSession().setAttribute("persons", employee);
-		return "/registermanage/registerhistory_list";
-	}
+	@Resource
+	private EmployeeService employeeService;
+	
 	/**
 	 * 查询历史
 	 * @return
 	 */
 	@RequestMapping("tohistory")
-	public String add(){
-		return "/registermanage/register";
+	public String add(HttpServletRequest request){
+		request.getSession().setAttribute("persons",employeeService.getGuaHaoYuan());
+		return "/registermanage/registerhistory_list";
 	}
 	
 }

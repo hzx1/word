@@ -11,43 +11,75 @@ public class Viptype {
 
     private String note;
 
-    public Integer getId() {
-        return id;
-    }
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getTypecode() {
-        return typeCode;
-    }
+	/**
+	 * @return the typeCode
+	 */
+	public String getTypeCode() {
+		return typeCode;
+	}
 
-    public void setTypecode(String typecode) {
-        this.typeCode = typecode == null ? null : typecode.trim();
-    }
+	/**
+	 * @param typeCode the typeCode to set
+	 */
+	public void setTypeCode(String typeCode) {
+		this.typeCode = typeCode;
+	}
 
-    public String getTypename() {
-        return typeName;
-    }
+	/**
+	 * @return the typeName
+	 */
+	public String getTypeName() {
+		return typeName;
+	}
 
-    public void setTypename(String typename) {
-        this.typeName = typename == null ? null : typename.trim();
-    }
+	/**
+	 * @param typeName the typeName to set
+	 */
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
 
-    public Integer getTypediscount() {
-        return typeDiscount;
-    }
+	/**
+	 * @return the typeDiscount
+	 */
+	public Integer getTypeDiscount() {
+		return typeDiscount;
+	}
 
-    public void setTypediscount(Integer typediscount) {
-        this.typeDiscount = typediscount;
-    }
+	/**
+	 * @param typeDiscount the typeDiscount to set
+	 */
+	public void setTypeDiscount(Integer typeDiscount) {
+		this.typeDiscount = typeDiscount;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	/**
+	 * @return the note
+	 */
+	public String getNote() {
+		return note;
+	}
 
-    public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
-    }
+	/**
+	 * @param note the note to set
+	 */
+	public void setNote(String note) {
+		this.note = note;
+	}
+
+   
 }
