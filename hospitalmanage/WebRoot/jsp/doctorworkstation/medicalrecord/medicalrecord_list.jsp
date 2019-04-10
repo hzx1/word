@@ -182,6 +182,7 @@
 		<!--inline scripts related to this page-->
 
 		<script type="text/javascript">
+		
 			$(function() {
 				$("#tableleft").css("height", $("#tableright").height() - 10 + "px");
 				$("#tableleft").css("max-height", $("#tableright").height() - 10 + "px");
