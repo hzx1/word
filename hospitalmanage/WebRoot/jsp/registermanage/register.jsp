@@ -203,13 +203,14 @@
 						
 						<div class="span3" style="width:35%;">
 							<div class="control-group control-group-m">
-
 								<div class="controls controls-m">
-									<button type="button" class="btn btn-small btn-success btn-add-p" id="editpt" onclick="addpatient()">
+								<!-- 
+								 -->
+									<button type="button"  id="editpt" class="btn btn-small btn-success" onclick="addpatient()">
 										<i class="icon-edit"></i>
 										新增病人
 									</button>
-									<button type="submit" class="btn btn-small btn-primary" id="savept" style="display:none;">
+									<button type="submit" class="btn btn-small btn-primary"  id="savept" style="display:none;">
 										<i class="icon-save"></i>
 										保存病人
 									</button>
@@ -362,13 +363,13 @@
 								<label class="control-label control-label-m">挂号金额</label>
 
 								<div class="controls controls-m">
-									<input type="text" readonly="readonly" style="text-align:center;" value="${register.registersum}"/>
+									<input type="text" readonly="readonly" style="text-align:center;" value="${register.registerSum}"/>
 								</div>
 								
 								<label class="control-label control-label-m">挂号人员</label>
 
 								<div class="controls controls-m">
-									<input type="text" readonly="readonly" style="text-align:center;" value="${register.registerpersonname}"/>
+									<input type="text" readonly="readonly" style="text-align:center;" value="${register.registerPersonName}"/>
 								</div>
 								
 								<label class="control-label control-label-m">现在日期</label>
@@ -685,7 +686,7 @@
 			 	$.post(ctx + "/patientController/patienttablelist.do",
 				{contant:str},
 				function(data){
-					$("#patientdatas").html(data);
+					$("#patientdatas").html(data);""
 				});
 			 }
 			 

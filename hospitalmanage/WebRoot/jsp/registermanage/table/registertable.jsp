@@ -4,14 +4,14 @@
 
 <c:forEach var="item" items="${registers}">
 	<tr class="rowTr">
-		<td>${item.registercode}</td>
-		<td>${item.cardcode}</td>
-		<td>${item.patientname}</td>
-		<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.registertime}"/></td>
-		<td>${item.doctorname}</td>
-		<td>${item.departmentname}</td>
-		<td>${item.registersum}</td>
-		<td>${item.registerstatus}</td>
+		<td>${item.registerCode}</td>
+		<td>${item.cardCode}</td>
+		<td>${item.patientName}</td>
+		<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.registerTime}"/></td>
+		<td>${item.doctorName}</td>
+		<td>${item.departmentName}</td>
+		<td>${item.registerSum}</td>
+		<td>${item.registerStatus}</td>
 		<td>
 			<a class="btn btn-link btn-delete" href="#" onclick="deleterigster('${item.id}')">作废单据</a>
 		</td>

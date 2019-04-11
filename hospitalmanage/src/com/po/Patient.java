@@ -30,7 +30,13 @@ public class Patient {
     private String taboo;
 
     private String drugallergyHistory;
-
+    
+    //其他表的字段
+    private String patientTypeName;
+    private String vipTypeName;
+    private String maritalStatusName;
+    private String insureTypeName;
+    
     public Integer getId() {
         return id;
     }
@@ -157,6 +163,62 @@ public class Patient {
     public void setTaboo(String taboo) {
         this.taboo = taboo == null ? null : taboo.trim();
     }
+
+	/**
+	 * @return the patientTypeName
+	 */
+	public String getPatientTypeName() {
+		return patientTypeName;
+	}
+
+	/**
+	 * @param patientTypeName the patientTypeName to set
+	 */
+	public void setPatientTypeName(String patientTypeName) {
+		this.patientTypeName = patientTypeName;
+	}
+
+	/**
+	 * @return the vipTypeName
+	 */
+	public String getVipTypeName() {
+		return vipTypeName;
+	}
+
+	/**
+	 * @param vipTypeName the vipTypeName to set
+	 */
+	public void setVipTypeName(String vipTypeName) {
+		this.vipTypeName = vipTypeName;
+	}
+
+	/**
+	 * @return the maritalStatusName
+	 */
+	public String getMaritalStatusName() {
+		return maritalStatusName;
+	}
+
+	/**
+	 * @param maritalStatusName the maritalStatusName to set
+	 */
+	public void setMaritalStatusName(String maritalStatusName) {
+		this.maritalStatusName = maritalStatusName;
+	}
+
+	/**
+	 * @return the insureTypeName
+	 */
+	public String getInsureTypeName() {
+		return insureTypeName;
+	}
+
+	/**
+	 * @param insureTypeName the insureTypeName to set
+	 */
+	public void setInsureTypeName(String insureTypeName) {
+		this.insureTypeName = insureTypeName;
+	}
 
    
 }

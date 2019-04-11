@@ -3,18 +3,18 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <c:forEach var="item" items="${patients}">
-	<tr class="rowTr" ondblclick="selectpatient('${item.cardcode}','${item.patientname}','${item.id}',
-					'${item.sex}','${item.age}','${item.maritalstatusid}','${item.job}','${item.viptypeid}',
-					'${item.medicarecode}','${item.insuretypeid}','${item.patienttypeid}','${item.tel}','${item.address}',
-					'${item.drugallergyhistory}','${item.viptypename}')" >
-		<td>${item.cardcode}</td>
-		<td>${item.patientname}</td>
+	<tr class="rowTr" ondblclick="selectpatient('${item.cardCode}','${item.patientName}','${item.id}',
+					'${item.sex}','${item.age}','${item.maritalstatusId}','${item.job}','${item.viptypeId}',
+					'${item.medicareCode}','${item.insuretypeId}','${item.patienttypeId}','${item.tel}','${item.address}',
+					'${item.drugallergyHistory}','${item.vipTypeName}')" >
+		<td>${item.cardCode}</td>
+		<td>${item.patientName}</td>
 		<td>${item.sex == 1 ? "男" : "女"}</td>
 		<td>${item.age}</td>
-		<td>${item.insuretypename}</td>
-		<td>${item.patienttypename}</td>
+		<td>${item.insureTypeName}</td>
+		<td>${item.patientTypeName}</td>
 		<td>${item.tel}</td>
-		<td>${item.drugallergyhistory}</td>
+		<td>${item.drugallergyHistory}</td>
 	</tr>
 </c:forEach>
 
