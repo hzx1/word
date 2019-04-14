@@ -91,7 +91,8 @@
 							<div class="control-group control-group-m">
 
 								<div class="controls controls-l">
-									<button class="btn btn-small btn-success btn-add" 
+								<!-- btn btn-small btn-success btn-add -->
+									<button class="" 
 									onclick="javascript:location.href='${ctx}/medicalrecordtemplateController/toadd.do';">
 										<i class="icon-share-alt"></i>
 										新增
@@ -209,9 +210,9 @@
 			
 			//查询
 			function gettable(templatecode,templatename,doctorid,departmentid,fitstatus,page){			
-				$.post(ctx + controller + "/datalist.do",
-				{templatecode:templatecode, templatename:templatename, doctorid:doctorid,
-				departmentid:departmentid, fitstatus:fitstatus,pagesize:$("#pagesize").val(),
+				$.post(ctx + controller + "/datalist.do", 
+				{templateCode:templatecode, templateName:templatename, doctorId:doctorid,
+				departmentId:departmentid, fitstatus:fitstatus,pagesize:$("#pagesize").val(),
 				currentpage:page},
 				function(data){					
 					$("#datas").html(data);
@@ -271,7 +272,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data.msg);
+		  				hint(data);
 		  				find(1);
 					});
 				});

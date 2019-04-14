@@ -32,6 +32,7 @@
 		//赋值总行数和当前页，应用在custom_pageload.js，js文件不可用el表达式
 		sumrow = ${pagingVo.sumrow};
 		currentpage = ${pagingVo.currentpage};
+		
 		//调用加载分页信息的方法，方法体在custom_pageload.js里
 		loadfunction();
 	});

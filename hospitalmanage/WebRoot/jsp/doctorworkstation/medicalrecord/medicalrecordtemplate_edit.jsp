@@ -1,5 +1,7 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +48,7 @@
 									<label class="control-label control-label-m">模板编号</label>
 	
 									<div class="controls controls-m">
-										<input type="text" readonly="readonly" value="${medicalrecordtemples.templatecode}"/>
+										<input type="text" readonly="readonly" value="${medicalrecordtemples.templateCode}"/>
 										
 									</div>
 								</div>		
@@ -57,7 +59,7 @@
 									<label class="control-label control-label-m">模板名称</label>
 	
 									<div class="controls controls-m">
-										<input type="text" name="templatename" value="${medicalrecordtemples.templatename}"/>
+										<input type="text" name="templateName" value="${medicalrecordtemples.templateName}"/>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -67,10 +69,11 @@
 									<label class="control-label control-label-m">模板类型</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" data-placeholder="-请选择-" name="diseaseid">
+										<select class="chzn-select" data-placeholder="-请选择-" name="diseaseId">
 											<option value="0" />
 											<c:forEach var="item" items="${diseases}">
-												<option <c:if test="${medicalrecordtemples.diseaseid == item.id}">selected="selected"</c:if> value="${item.id}"/>${item.diseasename}
+												<option value="${item.id} "  <c:if test="${medicalrecordtemples.diseaseId == item.id}">selected="selected"</c:if> />${item.diseaseName}
+												
 											</c:forEach>
 										</select>
 									</div>
@@ -82,10 +85,10 @@
 									<label class="control-label control-label-m">撰写医生</label>
 	
 									<div class="controls controls-m">
-										<select id="doctor" class="chzn-select" data-placeholder="-请选择-" name="doctorid" onchange="finddepartment()">
+										<select id="doctor" class="chzn-select" data-placeholder="-请选择-" name="doctorId" onchange="finddepartment()">
 											<option value="0" />
 											<c:forEach var="item" items="${doctors}">
-												<option <c:if test="${medicalrecordtemples.doctorid == item.id}">selected="selected"</c:if> value="${item.id}" />${item.employeename}
+												<option <c:if test="${medicalrecordtemples.doctorId == item.id}">selected="selected"</c:if> value="${item.id}" />${item.employeeName}
 											</c:forEach>
 										</select>
 									</div>
@@ -100,7 +103,7 @@
 									<label class="control-label control-label-m">撰写科室</label>
 	
 									<div class="controls controls-m">
-										<input id="department" type="text" readonly="readonly" value="${departmentname}"/>
+										<input id="department" type="text" readonly="readonly" value="${departmentName}"/>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -172,7 +175,7 @@
 									<label class="control-label control-label-m">初步诊断</label>
 	
 									<div class="controls controls-m">
-										<textarea class="span12 textarea-c" name="primarydiagnosis">${medicalrecordtemples.primarydiagnosis}</textarea>
+										<textarea class="span12 textarea-c" name="primaryDiagnosis">${medicalrecordtemples.primaryDiagnosis}</textarea>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -203,10 +206,12 @@
 		
 			//根据医生查询相应科室并回填
 			function finddepartment(){
-				$.post("${ctx}/departmentController/findbydid.do",
+			
+				$.post("${ctx}/medicalrecordtemplateController/findbydid.do",
 				{did:$("#doctor").val()},
 				function(data){
-					$("#department").val(data.dpname);
+				alert(data);
+					$("#department").val(data);
 				});
 			}
 			

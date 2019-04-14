@@ -55,7 +55,7 @@
 									<label class="control-label control-label-m">模板名称</label>
 	
 									<div class="controls controls-m">
-										<input type="text" name="templatename"/>
+										<input type="text" name="templateName"/>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -65,10 +65,10 @@
 									<label class="control-label control-label-m">模板类型</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" data-placeholder="-请选择-" name="diseaseid">
+										<select class="chzn-select" data-placeholder="-请选择-" name="diseaseId">
 											<option value="" />
 											<c:forEach var="item" items="${diseases}">
-												<option value="${item.id}" />${item.diseasename}
+												<option value="${item.id}" />${item.diseaseName}
 											</c:forEach>
 										</select>
 									</div>
@@ -80,10 +80,10 @@
 									<label class="control-label control-label-m">撰写医生</label>
 	
 									<div class="controls controls-m">
-										<select id="doctor" class="chzn-select" data-placeholder="-请选择-" name="doctorid" onchange="finddepartment()">
+										<select id="doctor" class="chzn-select" data-placeholder="-请选择-" name="doctorId" onchange="finddepartment()">
 											<option value="" />
 											<c:forEach var="item" items="${doctors}">
-												<option value="${item.id}" />${item.employeename}
+												<option value="${item.id}" />${item.employeeName}
 											</c:forEach>
 										</select>
 									</div>
@@ -170,7 +170,7 @@
 									<label class="control-label control-label-m">初步诊断</label>
 	
 									<div class="controls controls-m">
-										<textarea class="span12 textarea-c" name="primarydiagnosis"></textarea>
+										<textarea class="span12 textarea-c" name="primaryDiagnosis"></textarea>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -196,15 +196,15 @@
 		<script type="text/javascript">
 			$(function(){
 				//开启表单验证
-				formValidate();				
+				formValidate();		
 			});
 			
 			//根据医生查询相应科室并回填
 			function finddepartment(){
-				$.post("${ctx}/departmentController/findbydid.do",
+				$.post("${ctx}/medicalrecordtemplateController/findbydid.do",
 				{did:$("#doctor").val()},
 				function(data){
-					$("#department").val(data.dpname);
+					$("#department").val(data);
 				});
 			}
 			

@@ -4,13 +4,16 @@
 
 <c:forEach var="item" items="${templates}">
 	<tr class="rowTr" onclick="getdetaildatas('${item.id}')">
-		<td>${item.templatename}</td>
-		<td>${item.departmentname}</td>
-		<td>${item.employeename}</td>
-		<td>${item.prescriptiontypename}</td>
-		<td>${item.classifyname}</td>
+		<td>${item.templateName}</td>
+		<td>${item.departmentName}</td>
+		<td>${item.employeeName}</td>
+		<td>${item.prescriptionTypeName}</td>
+		<td>${item.classifyName}</td>
 		<td>${item.diagnosis}</td>
 		<td>${item.note}</td>
+		
+		
+		
 		<td>
 			<a class="btn btn-link btn-edit" href="javascript:location.href='${ctx}/prescriptiontemplateController/toedit.do?id=${item.id}';">修改</a>
 			<a class="btn btn-link btn-delete" href="javascript:;" onclick="deleteprescription('${item.id}')">删除</a>			
@@ -27,7 +30,7 @@
 			$(this).addClass("xz");
 			$(this).css("color","#fff");
 		});
-		
+		alert("33");
 		//赋值总行数和当前页，应用在custom_pageload.js，js文件不可用el表达式
 		sumrow = ${pagingVo.sumrow};
 		currentpage = ${pagingVo.currentpage};

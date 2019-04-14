@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.doctorworkstation.PrescriptiontemplateMapper" >
+	
+	<select id="listPM"  resultType="com.po.Prescriptiontemplate">
+		SELECT p.*, e.employeename AS employeeName,dt.departmentname AS departmentName,ap.`detailname` AS prescriptionTypeName,ac.`detailname` AS classifyName
+		 FROM prescriptiontemplate p 
+			LEFT JOIN employee e ON e.id = p.doctorid 
+			LEFT JOIN attributedetail ap ON ap.id = p.`prescriptiontypeid`
+			LEFT JOIN attributedetail ac ON ac.id = p.`classifyid`
+			LEFT JOIN department dt ON dt.id = e.departmentid 
+			LIMIT #{currentpage},#{pagesize}
+	</select>
+	<select id="countPM" resultType="Integer">
+		select count(*) from prescriptiontemplate
+	</select>
+</mapper>

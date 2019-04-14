@@ -12,5 +12,6 @@
 		<td>${item.dosagequantity}</td>
 		<td>${item.medicineamount}</td>
 		<td>${item.note}</td>
+	
 	</tr>
 </c:forEach>

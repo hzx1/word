@@ -27,7 +27,7 @@
       	</div>
       	<div style="padding-left:15px; display:inline-block; float:right; line-height:30px;">
       		<span style="margin-top:5px; color:#777">当前页：</span>
-	    	<span id="currentpage" style=" margin-top:5px; color:black"></span>
+	    	 <span id="currentpage" style=" margin-top:5px; color:black"></span> 
       	</div>
       	<div style="padding-left:15px; display:inline-block; float:right; line-height:30px;margin-bottom:5px;">
 		    <span style="margin-top:5px; color:#777">总行数：</span>

@@ -11,43 +11,45 @@ public class Disease {
 
     private Integer isvalId;
 
-    public Integer getId() {
-        return id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getDiseasecode() {
-        return diseaseCode;
-    }
+	public String getDiseaseCode() {
+		return diseaseCode;
+	}
 
-    public void setDiseasecode(String diseasecode) {
-        this.diseaseCode = diseasecode == null ? null : diseasecode.trim();
-    }
+	public void setDiseaseCode(String diseaseCode) {
+		this.diseaseCode = diseaseCode;
+	}
 
-    public String getDiseasename() {
-        return diseaseName;
-    }
+	public String getDiseaseName() {
+		return diseaseName;
+	}
 
-    public void setDiseasename(String diseasename) {
-        this.diseaseName = diseasename == null ? null : diseasename.trim();
-    }
+	public void setDiseaseName(String diseaseName) {
+		this.diseaseName = diseaseName;
+	}
 
-    public String getDiseaseexplain() {
-        return diseaseExplain;
-    }
+	public String getDiseaseExplain() {
+		return diseaseExplain;
+	}
 
-    public void setDiseaseexplain(String diseaseexplain) {
-        this.diseaseExplain = diseaseexplain == null ? null : diseaseexplain.trim();
-    }
+	public void setDiseaseExplain(String diseaseExplain) {
+		this.diseaseExplain = diseaseExplain;
+	}
 
-    public Integer getIsvalid() {
-        return isvalId;
-    }
+	public Integer getIsvalId() {
+		return isvalId;
+	}
 
-    public void setIsvalid(Integer isvalid) {
-        this.isvalId = isvalid;
-    }
+	public void setIsvalId(Integer isvalId) {
+		this.isvalId = isvalId;
+	}
+
+ 
 }

@@ -19,5 +19,15 @@ public class DeparTmentServiceImpl implements DeparTmentService{
 		// TODO Auto-generated method stub
 		return dtm.listDTM();
 	}
+	@Override
+	public Department getDTM(Integer id) {
+		// TODO Auto-generated method stub
+		return dtm.getDTM(id);
+	}
+	@Override
+	public Department getEDTM(Integer id) {
+		// TODO Auto-generated method stub
+		return dtm.getEDTM(id);
+	}
 
 }

@@ -18,8 +18,45 @@ public class Prescriptiontemplate {
     private String diagnosis;
 
     private Integer isvalId;
+    
+    private String employeeName;
+    private String prescriptionTypeName;
+    private String classifyName;
+    private String departmentName;
+    
+    public String getEmployeeName() {
+		return employeeName;
+	}
 
-    public Integer getId() {
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+	public String getPrescriptionTypeName() {
+		return prescriptionTypeName;
+	}
+
+	public void setPrescriptionTypeName(String prescriptionTypeName) {
+		this.prescriptionTypeName = prescriptionTypeName;
+	}
+
+	public String getClassifyName() {
+		return classifyName;
+	}
+
+	public void setClassifyName(String classifyName) {
+		this.classifyName = classifyName;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
+
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
+	}
+
+	public Integer getId() {
         return id;
     }
 

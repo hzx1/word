@@ -3,15 +3,59 @@
 <mapper namespace="com.dao.doctorworkstation.MediCalrecordTemplateMapping" >
 	
 	<select id="listMCT"  resultType="com.po.Medicalrecordtemplate">
-	
 		 SELECT m.*, e.employeename AS employeeName,dt.departmentname AS departmentName,d.diseasename AS diseaseName 
 		 FROM medicalrecordtemplate m 
 			LEFT JOIN employee e ON e.id = m.doctorid 
 			LEFT JOIN disease d ON d.id = m.diseaseid 
 			LEFT JOIN department dt ON dt.id = e.departmentid 
-			LIMIT 0,1
+			<where>
+				<if test=" m.templateCode != null and m.templateCode != ''">
+					templatecode LIKE "%"#{m.templateCode}"%" 
+				</if>
+				 <if test=" m.templateName != null and m.templateName != ''">
+					 AND templatename LIKE "%"#{m.templateName}"%"     
+				</if>
+				<if test=" m.departmentId >0 ">
+					 AND e.departmentid IN (SELECT id FROM department WHERE dt.id=#{m.departmentId})  
+				</if>
+				<if test=" m.doctorId >0 ">
+					AND e.id=#{m.doctorId} 
+				</if>
+				<if test=" m.fitstatus != null and m.fitstatus != ''">
+					 AND fitstatus LIKE "%"#{m.fitstatus}"%"
+				</if>
+				
+			</where>
+			
+
+			LIMIT #{currentpage},#{pagesize}
 	</select>
 	<select id="countMCT" resultType="Integer">
 		select count(*) from medicalrecordtemplate
 	</select>
+	<insert id="addMCT">
+		INSERT INTO medicalrecordtemplate(`templatecode`,`templatename`,diseaseid,`doctorid`,note,fitstatus,patientappeal,medicalhistory,physicalstatus,primarydiagnosis,opinion,`isvalid`)
+ 		VALUE(#{templateCode},#{templateName},#{diseaseId},#{doctorId},
+ 			#{note},#{fitstatus},#{patientappeal},#{medicalhistory},#{physicalstatus},#{primaryDiagnosis},#{opinion},#{isvalId})
+		
+	</insert>
+	<select id="getMCT" resultType="com.po.Medicalrecordtemplate">
+		SELECT * FROM  `medicalrecordtemplate` WHERE templatecode=#{templatecode}
+	</select>
+	<select id="getIdMCT" resultType="com.po.Medicalrecordtemplate">
+		SELECT * FROM  `medicalrecordtemplate` WHERE id=#{id}
+	</select>
+	<update id="updatMCT">
+		UPDATE medicalrecordtemplate 
+		SET 
+			templatename=#{templateName},diseaseid = #{diseaseId},doctorid=#{doctorId},note=#{note},
+			fitstatus=#{fitstatus},patientappeal=#{patientappeal},medicalhistory=#{medicalhistory},
+			physicalstatus=#{physicalstatus},primarydiagnosis=#{primaryDiagnosis},opinion=#{opinion}
+			WHERE id=#{id}
+		
+	</update>
+	
+	<delete id="delMCT">
+		DELETE FROM `medicalrecordtemplate` WHERE id=#{id}
+	</delete>
 </mapper>

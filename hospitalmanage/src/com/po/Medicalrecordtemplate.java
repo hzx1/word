@@ -2,7 +2,7 @@ package com.po;
 
 public class Medicalrecordtemplate {
     private Integer id;
-
+    
     private String templateCode;
 
     private String templateName;
@@ -32,8 +32,16 @@ public class Medicalrecordtemplate {
     private String departmentName;
     
     private String diseaseName;
-    
-    public String getEmployeeName() {
+    private Integer departmentId;
+    public Integer getDepartmentId() {
+		return departmentId;
+	}
+
+	public void setDepartmentId(Integer departmentId) {
+		this.departmentId = departmentId;
+	}
+
+	public String getEmployeeName() {
 		return employeeName;
 	}
 
@@ -147,15 +155,14 @@ public class Medicalrecordtemplate {
 	public void setDiseaseId(Integer diseaseId) {
 		this.diseaseId = diseaseId;
 	}
-
 	public String getPrimaryDiagnosis() {
-		return primaryDiagnosis;
-	}
+        return primaryDiagnosis;
+    }
 
-	public void setPrimaryDiagnosis(String primaryDiagnosis) {
-		this.primaryDiagnosis = primaryDiagnosis;
-	}
-
+    public void setPrimaryDiagnosis(String primaryDiagnosis) {
+        this.primaryDiagnosis = primaryDiagnosis == null ? null : primaryDiagnosis.trim();
+    }
+	
 	public Integer getIsvalId() {
 		return isvalId;
 	}
