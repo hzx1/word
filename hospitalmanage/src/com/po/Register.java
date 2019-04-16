@@ -39,6 +39,20 @@ public class Register {
     private Integer countRegister;
 
     /**
+	 * @return the patientId
+	 */
+	public Integer getPatientId() {
+		return patientId;
+	}
+
+	/**
+	 * @param patientId the patientId to set
+	 */
+	public void setPatientId(Integer patientId) {
+		this.patientId = patientId;
+	}
+
+	/**
 	 * @return the typeName
 	 */
 	public String getTypeName() {
@@ -118,13 +132,7 @@ public class Register {
 
  
 
-    public Integer getPatientId() {
-		return patientId;
-	}
-
-	public void setPatientId(Integer patientId) {
-		this.patientId = patientId;
-	}
+ 
 
 	public Integer getRegisterTypeId() {
 		return registerTypeId;
