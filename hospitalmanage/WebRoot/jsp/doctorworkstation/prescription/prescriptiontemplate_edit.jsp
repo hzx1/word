@@ -2,6 +2,7 @@
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +50,7 @@
 									<label class="control-label control-label-m">模板名称</label>
 	
 									<div class="controls controls-m">
-										<input name="templatename" type="text" value="${prescription.templatename}"/>
+										<input name="templateName" type="text" value="${prescription.templateName}"/>
 									</div>
 								</div>		
 							</div><!--/span-->
@@ -59,10 +60,10 @@
 									<label class="control-label control-label-m">医生名称</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" id="doctor" name="doctorid" data-placeholder="-请选择-" onchange="finddepartment()">
+										<select class="chzn-select" id="doctor" name="doctorId" data-placeholder="-请选择-" onchange="finddepartment()">
 											<option value="0" />
 											<c:forEach var="item" items="${doctors}">
-												<option <c:if test="${prescription.doctorid == item.id}">selected="selected"</c:if> value="${item.id}" />${item.employeename}
+												<option <c:if test="${prescription.doctorId == item.id}">selected="selected"</c:if> value="${item.id}" />${item.employeeName}
 											</c:forEach>
 										</select>
 									</div>
@@ -74,10 +75,10 @@
 									<label class="control-label control-label-m">模板性质</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" name="natureid" data-placeholder="-请选择-">
+										<select class="chzn-select" name="natureId" data-placeholder="-请选择-">
 											<option value="0" />
 											<c:forEach var="item" items="${naturenames}">
-												<option <c:if test="${prescription.natureid == item.id}">selected="selected"</c:if> value="${item.id}" />${item.detailname}
+												<option <c:if test="${prescription.natureId == item.id}">selected="selected"</c:if> value="${item.id}" />${item.detailName}
 											</c:forEach>
 										</select>
 									</div>
@@ -89,10 +90,10 @@
 									<label class="control-label control-label-m">处方类型</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" name="prescriptiontypeid" data-placeholder="-请选择-">
+										<select class="chzn-select" name="prescriptiontypeId" data-placeholder="-请选择-">
 											<option value="0" />
 											<c:forEach var="item" items="${prescriptiontypes}">
-												<option <c:if test="${prescription.prescriptiontypeid == item.id}">selected="selected"</c:if> value="${item.id}" />${item.detailname}
+												<option <c:if test="${prescription.prescriptiontypeId == item.id}">selected="selected"</c:if> value="${item.id}" />${item.detailName}
 											</c:forEach>
 										</select>
 									</div>
@@ -107,7 +108,7 @@
 									<label class="control-label control-label-m">科室名称</label>
 	
 									<div class="controls controls-m">
-										<input id="department" type="text" readonly="readonly" value="${prescription.departmentname}"/>
+										<input id="department" type="text" readonly="readonly" value="${prescription.departmentName}"/>
 									</div>
 								</div>		
 							</div><!--/span-->
@@ -117,10 +118,10 @@
 									<label class="control-label control-label-m">模板分类</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" name="classifyid" data-placeholder="-请选择-">
+										<select class="chzn-select" name="classifyId" data-placeholder="-请选择-">
 											<option value="0" />
 											<c:forEach var="item" items="${classifynames}">
-												<option <c:if test="${prescription.classifyid == item.id}">selected="selected"</c:if> value="${item.id}" />${item.detailname}
+												<option <c:if test="${prescription.classifyId == item.id}">selected="selected"</c:if> value="${item.id}" />${item.detailName}
 											</c:forEach>
 										</select>
 									</div>
@@ -216,7 +217,7 @@
 										<select class="chzn-select" id="medicineform" data-placeholder="-请选择-">
 											<option value="0" />
 											<c:forEach var="item" items="${medicineforms}">
-												<option value="${item.id}" />${item.detailname}
+												<option value="${item.id}" />${item.detailName}
 											</c:forEach>
 										</select>
 									</div>
@@ -231,7 +232,7 @@
 										<select class="chzn-select" id="medicinefrequency" data-placeholder="-请选择-">
 											<option value="0" />
 											<c:forEach var="item" items="${medicinefrequencys}">
-												<option value="${item.id}" />${item.detailenname}
+												<option value="${item.id}" />${item.detailName}
 											</c:forEach>
 										</select>
 									</div>
@@ -296,12 +297,12 @@
 									<c:forEach var="item" items="${details}" varStatus="status">
 										<tr>
 											<td><input name="detail[${status.index}].id" type="hidden" value="${item.id}"/>${item.drugcode}</td>
-											<td><input name="detail[${status.index}].drugid" type="hidden" value="${item.drugid}"/>${item.drugname}</th>
-											<td><input name="detail[${status.index}].eachdosage" type="hidden" value="${item.eachdosage}"/>${item.eachdosage}</td>
-											<td><input name="detail[${status.index}].medicineformid" type="hidden" value="${item.medicineformid}"/>${item.medicineformname}</td>
-											<td><input name="detail[${status.index}].medicinefrequencyid" type="hidden" value="${item.medicinefrequencyid}"/>${item.medicinefrequencyname}</td>
-											<td><input name="detail[${status.index}].dosagequantity" type="hidden" value="${item.dosagequantity}"/>${item.dosagequantity}</td>
-											<td><input name="detail[${status.index}].medicineamount" type="hidden" value="${item.medicineamount}"/>${item.medicineamount}</td>
+											<td><input name="detail[${status.index}].drugId" type="hidden" value="${item.drugId}"/>${item.drugName}</th>
+											<td><input name="detail[${status.index}].eachDosage" type="hidden" value="${item.eachDosage}"/>${item.eachDosage}</td>
+											<td><input name="detail[${status.index}].medicineformId" type="hidden" value="${item.medicineformId}"/>${item.medicineformName}</td>
+											<td><input name="detail[${status.index}].medicineFrequencyId" type="hidden" value="${item.medicineFrequencyId}"/>${item.medicinefrequencyName}</td>
+											<td><input name="detail[${status.index}].medicineFrequencyId" type="hidden" value="${item.dosageQuantity}"/>${item.dosageQuantity}</td>
+											<td><input name="detail[${status.index}].medicineAmount" type="hidden" value="${item.medicineAmount}"/>${item.medicineAmount}</td>
 											<td><input name="detail[${status.index}].note" type="hidden" value="${item.note}"/>${item.note}</td>
 											<td>
 												<a class="btn btn-link" href="#" onclick="deletedrug(this)">删除</a>
@@ -381,10 +382,10 @@
 			
 			//根据医生查询相应科室并回填
 			function finddepartment(){
-				$.post("${ctx}/departmentController/findbydid.do",
+				$.post("${ctx}/prescriptiontemplateController/findbydid.do",
 				{did:$("#doctor").val()},
 				function(data){
-					$("#department").val(data.dpname);
+					$("#department").val(data);
 				});
 			}
 			
@@ -402,13 +403,7 @@
 				var contant = $("#drugcontant").val();
 				getdrugtable(contant);
 			}
-			
-			//药品数据回填
-			function drugbackfill(drugid,drugcode,drugname,norms){
-				$("#drugid").val(drugid);
-				$("#drugcode").val(drugcode);
-				$("#drugname").val(drugname);
-				$("#norms").val(norms);
+			function openhintModal(){
 				$("#dosagequantity").val('');
 				$("#eachdosage").val('');
 				$("#medicineform").val(0);
@@ -420,6 +415,14 @@
 				$("#medicineamount").val('');
 				$("#note").val('');
 				$('#payModal').modal('hide');
+			}
+			//药品数据回填
+			function drugbackfill(drugid,drugcode,drugname,norms){
+				$("#drugid").val(drugid);
+				$("#drugcode").val(drugcode);
+				$("#drugname").val(drugname);
+				$("#norms").val(norms);
+				
 			}			
 				
 			var row = ${not empty details ? fn:length(details) : 0};
@@ -438,13 +441,13 @@
 				var note = $("#note").val();
 				$("#detaildatas").append(
 					'<tr class="trbc trbc1">'
-						+'<td><input name="detail[' + row + '].drugid" type="hidden" value="'+ drugid +'"/>'+ drugcode +'</td>'
+						+'<td><input name="detail[' + row + '].drugId" type="hidden" value="'+ drugid +'"/>'+ drugcode +'</td>'
 						+'<td>'+ drugname +'</td>'
-						+'<td><input name="detail[' + row + '].eachdosage" type="hidden" value="'+ eachdosage +'"/>'+ eachdosage +'</td>'
-						+'<td><input name="detail[' + row + '].medicineformid" type="hidden" value="'+ medicineformid +'"/>'+ medicineform +'</td>'
-						+'<td><input name="detail[' + row + '].medicinefrequencyid" type="hidden" value="'+ medicinefrequencyid +'"/>'+ medicinefrequency +'</td>'
-						+'<td><input name="detail[' + row + '].dosagequantity" type="hidden" value="'+ dosagequantity +'"/>'+ dosagequantity +'</td>'
-						+'<td><input name="detail[' + row + '].medicineamount" type="hidden" value="'+ medicineamount +'"/>'+ medicineamount +'</td>'
+						+'<td><input name="detail[' + row + '].eachDosage" type="hidden" value="'+ eachdosage +'"/>'+ eachdosage +'</td>'
+						+'<td><input name="detail[' + row + '].medicineformId" type="hidden" value="'+ medicineformid +'"/>'+ medicineform +'</td>'
+						+'<td><input name="detail[' + row + '].medicineFrequencyId" type="hidden" value="'+ medicinefrequencyid +'"/>'+ medicinefrequency +'</td>'
+						+'<td><input name="detail[' + row + '].dosageQuantity" type="hidden" value="'+ dosagequantity +'"/>'+ dosagequantity +'</td>'
+						+'<td><input name="detail[' + row + '].medicineAmount" type="hidden" value="'+ medicineamount +'"/>'+ medicineamount +'</td>'
 						+'<td><input name="detail[' + row + '].note" type="hidden" value="'+ note +'"/>'+ note +'</td>'
 						+'<td><a class="btn btn-link" href="#" onclick="deletedrug(this)">删除</a></td>'+
 					'</tr>');

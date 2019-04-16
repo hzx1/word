@@ -27,4 +27,28 @@ public class PrescriptiontemplateServceImpl implements PrescriptiontemplateServc
 		// TODO Auto-generated method stub
 		return pm.countPM();
 	}
+
+	@Override
+	public Integer addPM(Prescriptiontemplate p) {
+		// TODO Auto-generated method stub
+		return pm.addPM(p);
+	}
+
+	@Override
+	public Prescriptiontemplate getPM(Integer id) {
+		// TODO Auto-generated method stub
+		return pm.getPM(id);
+	}
+
+	@Override
+	public Integer updatPM(Prescriptiontemplate p) {
+		// TODO Auto-generated method stub
+		return pm.updatPM(p);
+	}
+
+	@Override
+	public Integer order() {
+		// TODO Auto-generated method stub
+		return pm.order();
+	}
 }

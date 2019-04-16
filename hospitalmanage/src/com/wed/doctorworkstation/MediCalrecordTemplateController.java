@@ -46,12 +46,11 @@ public class MediCalrecordTemplateController extends BaseController{
 	}
 	@RequestMapping(value="/datalist")
 	public String datalist(HttpServletRequest request,Medicalrecordtemplate m,Integer pagesize,Integer currentpage){
-		System.out.println(pagesize+"ddd"+(currentpage-1)*pagesize);
 		setPaging(pagesize,mCTS.countMCT(),currentpage);
 	
 		request.setAttribute("medicalrecordtemplates", mCTS.listMCT(m,pagingVo.getCurrentpage(),pagesize));
 		request.setAttribute("sumrow", mCTS.countMCT());
-		return "/doctorworkstation/medicalrecord/table/medicalrecordtemplatetable";
+		return "/doctorworkstation/medicalrecord/table/medicalrecord_add";
 	}
 	
 	/**

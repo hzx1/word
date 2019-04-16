@@ -16,7 +16,7 @@
 					 AND templatename LIKE "%"#{m.templateName}"%"     
 				</if>
 				<if test=" m.departmentId >0 ">
-					 AND e.departmentid IN (SELECT id FROM department WHERE dt.id=#{m.departmentId})  
+					 AND e.departmentid IN (SELECT id FROM department WHERE id=#{m.departmentId})  
 				</if>
 				<if test=" m.doctorId >0 ">
 					AND e.id=#{m.doctorId} 

@@ -1,5 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <script type="text/javascript">
 	$(function(){
 		<c:forEach var="item" items="${pfuserinfo}">

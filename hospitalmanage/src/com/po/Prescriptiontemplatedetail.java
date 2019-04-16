@@ -20,7 +20,45 @@ public class Prescriptiontemplatedetail {
     private String note;
 
     private Integer isvalId;
+    
+    private String drugcode;
+    private String drugName;
+    private String medicineformName;
+    private String medicinefrequencyName;
+    
+	public String getDrugcode() {
+		return drugcode;
+	}
 
+	public void setDrugcode(String drugcode) {
+		this.drugcode = drugcode;
+	}
+
+	public String getDrugName() {
+		return drugName;
+	}
+
+	public void setDrugName(String drugName) {
+		this.drugName = drugName;
+	}
+
+	public String getMedicineformName() {
+		return medicineformName;
+	}
+
+	public void setMedicineformName(String medicineformName) {
+		this.medicineformName = medicineformName;
+	}
+
+	public String getMedicinefrequencyName() {
+		return medicinefrequencyName;
+	}
+
+	public void setMedicinefrequencyName(String medicinefrequencyName) {
+		this.medicinefrequencyName = medicinefrequencyName;
+	}
+
+	
     public Integer getId() {
         return id;
     }

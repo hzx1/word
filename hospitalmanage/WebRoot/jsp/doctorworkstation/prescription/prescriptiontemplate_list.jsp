@@ -97,7 +97,8 @@
 							<div class="control-group control-group-m">
 
 								<div class="controls controls-l">
-									<button class="btn btn-small btn-success btn-add" 
+								<!-- class="btn btn-small btn-success btn-add"  -->
+									<button 
 									onclick="javascript:location.href='${ctx}/prescriptiontemplateController/toadd.do';">
 										<i class="icon-share-alt"></i>
 										新增
@@ -184,8 +185,8 @@
 			//查询
 			function gettable(templatename,diagnosis,departmentid,doctorid,prescriptiontypeid,page){
 				$.post(ctx + controller + "/datalist.do",
-				{templatename:templatename, diagnosis:diagnosis, departmentid:departmentid,
-				doctorid:doctorid, prescriptiontypeid:prescriptiontypeid,pagesize:$("#pagesize").val(),
+				{templateName:templatename, diagnosis:diagnosis,departmentId:departmentid,
+				doctorId:doctorid, prescriptiontypeId:prescriptiontypeid,pagesize:$("#pagesize").val(),
 				currentpage:page},
 				function(data){
 					$("#datas").html(data);
@@ -249,7 +250,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data.msg);
+		  				hint(data);
 						search();
 					});
 				});

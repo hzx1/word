@@ -6,12 +6,12 @@
 <c:forEach var="item" items="${details}" varStatus="status">
 	<tr class="rowTr">
 		<td>${item.drugcode}</td>
-		<td><input name="detail[${status.index}].drugid" type="hidden" value="${item.drugid}"/>${item.drugname}</th>
-		<td><input name="detail[${status.index}].eachdosage" type="hidden" value="${item.eachdosage}"/>${item.eachdosage}</td>
-		<td><input name="detail[${status.index}].medicineformid" type="hidden" value="${item.medicineformid}"/>${item.medicineformname}</td>
-		<td><input name="detail[${status.index}].medicinefrequencyid" type="hidden" value="${item.medicinefrequencyid}"/>${item.medicinefrequencyname}</td>
-		<td><input name="detail[${status.index}].dosagequantity" type="hidden" value="${item.dosagequantity}"/>${item.dosagequantity}</td>
-		<td><input name="detail[${status.index}].medicineamount" type="hidden" value="${item.medicineamount}"/>${item.medicineamount}</td>
+		<td><input name="detail[${status.index}].drugid" type="hidden" value="${item.drugId}"/>${item.drugName}</th>
+		<td><input name="detail[${status.index}].eachdosage" type="hidden" value="${item.eachDosage}"/>${item.eachDosage}</td>
+		<td><input name="detail[${status.index}].medicineformid" type="hidden" value="${item.medicineformId}"/>${item.medicineformName}</td>
+		<td><input name="detail[${status.index}].medicinefrequencyid" type="hidden" value="${item.medicineFrequencyId}"/>${item.medicinefrequencyName}</td>
+		<td><input name="detail[${status.index}].dosagequantity" type="hidden" value="${item.dosageQuantity}"/>${item.dosageQuantity}</td>
+		<td><input name="detail[${status.index}].medicineamount" type="hidden" value="${item.medicineAmount}"/>${item.medicineAmount}</td>
 		<td><input name="detail[${status.index}].note" type="hidden" value="${item.note}"/>${item.note}</td>
 		<td>
 			<a class="btn btn-link" href="#" onclick="deletedrug(this)">删除</a>

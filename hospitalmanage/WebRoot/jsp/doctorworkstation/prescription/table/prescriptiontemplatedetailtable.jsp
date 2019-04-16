@@ -5,12 +5,12 @@
 <c:forEach var="item" items="${details}">
 	<tr>
 		<td>${item.drugcode}</td>
-		<td>${item.drugname}</td>
-		<td>${item.eachdosage}</td>
-		<td>${item.medicineformname}</td>
-		<td>${item.medicinefrequencyname}</td>
-		<td>${item.dosagequantity}</td>
-		<td>${item.medicineamount}</td>
+		<td>${item.drugName}</td>
+		<td>${item.eachDosage}</td>
+		<td>${item.medicineformName}</td>
+		<td>${item.medicinefrequencyName}</td>
+		<td>${item.dosageQuantity}</td>
+		<td>${item.medicineAmount}</td>
 		<td>${item.note}</td>
 	
 	</tr>

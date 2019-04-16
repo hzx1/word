@@ -37,8 +37,54 @@ public class Register {
     private BigDecimal typeSum;
     private BigDecimal sumRegisterSum;
     private Integer countRegister;
+    
+    private char sex;
+    private String drugallergyhistory;
+    private String  insuretypeName;
+    private Integer age;
+    private String tel;
 
-    /**
+    public char getSex() {
+		return sex;
+	}
+
+	public void setSex(char sex) {
+		this.sex = sex;
+	}
+
+	public String getDrugallergyhistory() {
+		return drugallergyhistory;
+	}
+
+	public void setDrugallergyhistory(String drugallergyhistory) {
+		this.drugallergyhistory = drugallergyhistory;
+	}
+
+	public String getInsuretypeName() {
+		return insuretypeName;
+	}
+
+	public void setInsuretypeName(String insuretypeName) {
+		this.insuretypeName = insuretypeName;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	/**
 	 * @return the patientId
 	 */
 	public Integer getPatientId() {

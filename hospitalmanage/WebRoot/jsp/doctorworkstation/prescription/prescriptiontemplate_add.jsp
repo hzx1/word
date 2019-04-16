@@ -46,7 +46,7 @@
 									<label class="control-label control-label-m">模板名称</label>
 	
 									<div class="controls controls-m">
-										<input name="templatename" type="text" />
+										<input name="templateName" type="text" />
 									</div>
 								</div>		
 							</div><!--/span-->
@@ -56,10 +56,10 @@
 									<label class="control-label control-label-m">医生名称</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" id="doctor" name="doctorid" data-placeholder="-请选择-" onchange="finddepartment()">
+										<select class="chzn-select" id="doctor" name="doctorId" data-placeholder="-请选择-" onchange="finddepartment()">
 											<option value="" />
 											<c:forEach var="item" items="${doctors}">
-												<option value="${item.id}" />${item.employeename}
+												<option value="${item.id}" />${item.employeeName}
 											</c:forEach>
 										</select>
 									</div>
@@ -71,10 +71,10 @@
 									<label class="control-label control-label-m">模板性质</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" name="natureid" data-placeholder="-请选择-">
+										<select class="chzn-select" name="natureId" data-placeholder="-请选择-">
 											<option value="" />
 											<c:forEach var="item" items="${naturenames}">
-												<option value="${item.id}" />${item.detailname}
+												<option value="${item.id}" />${item.detailName}
 											</c:forEach>
 										</select>
 									</div>
@@ -86,10 +86,10 @@
 									<label class="control-label control-label-m">处方类型</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" name="prescriptiontypeid" data-placeholder="-请选择-">
+										<select class="chzn-select" name="prescriptiontypeId" data-placeholder="-请选择-">
 											<option value="" />
 											<c:forEach var="item" items="${prescriptiontypes}">
-												<option value="${item.id}" />${item.detailname}
+												<option value="${item.id}" />${item.detailName}
 											</c:forEach>
 										</select>
 									</div>
@@ -114,10 +114,10 @@
 									<label class="control-label control-label-m">模板分类</label>
 	
 									<div class="controls controls-m">
-										<select class="chzn-select" name="classifyid" data-placeholder="-请选择-">
+										<select class="chzn-select" name="classifyId" data-placeholder="-请选择-">
 											<option value="" />
 											<c:forEach var="item" items="${classifynames}">
-												<option value="${item.id}" />${item.detailname}
+												<option value="${item.id}" />${item.detailName}
 											</c:forEach>
 										</select>
 									</div>
@@ -213,7 +213,7 @@
 										<select class="chzn-select" id="medicineform" data-placeholder="-请选择-">
 											<option value="" />
 											<c:forEach var="item" items="${medicineforms}">
-												<option value="${item.id}" />${item.detailname}
+												<option value="${item.id}" />${item.detailName}
 											</c:forEach>
 										</select>
 									</div>
@@ -228,7 +228,7 @@
 										<select class="chzn-select" id="medicinefrequency" data-placeholder="-请选择-">
 											<option value="0" />
 											<c:forEach var="item" items="${medicinefrequencys}">
-												<option value="${item.id}" />${item.detailenname}
+												<option value="${item.id}" />${item.detailenName}
 											</c:forEach>
 										</select>
 									</div>
@@ -363,10 +363,10 @@
 			
 			//根据医生查询相应科室并回填
 			function finddepartment(){
-				$.post("${ctx}/departmentController/findbydid.do",
+				$.post("${ctx}/prescriptiontemplateController/findbydid.do",
 				{did:$("#doctor").val()},
 				function(data){
-					$("#department").val(data.dpname);
+					$("#department").val(data);
 				});
 			}
 			
@@ -384,13 +384,9 @@
 				var contant = $("#drugcontant").val();
 				getdrugtable(contant);
 			}
-			
-			//药品数据回填
-			function drugbackfill(drugid,drugcode,drugname,norms){
-				$("#drugid").val(drugid);
-				$("#drugcode").val(drugcode);
-				$("#drugname").val(drugname);
-				$("#norms").val(norms);
+			//药品数据回填确定
+			function openhintModal(){
+				
 				$("#dosagequantity").val('');
 				$("#eachdosage").val('');
 				$("#medicineform").val(0);
@@ -402,6 +398,15 @@
 				$("#medicineamount").val('');
 				$("#note").val('');
 				$('#payModal').modal('hide');
+			} 
+			
+			//药品数据回填
+			function drugbackfill(drugid,drugcode,drugname,norms){
+			
+				$("#drugid").val(drugid);
+				$("#drugcode").val(drugcode);
+				$("#drugname").val(drugname);
+				$("#norms").val(norms);
 			}
 				
 			var row = 0;
@@ -420,13 +425,13 @@
 				var note = $("#note").val();
 				$("#detaildatas").append(
 					'<tr class="trbc trbc1">'
-						+'<td><input name="detail[' + row + '].drugid" type="hidden" value="'+ drugid +'"/>'+ drugcode +'</td>'
+						+'<td><input name="detail[' + row + '].drugId" type="hidden" value="'+ drugid +'"/>'+ drugcode +'</td>'
 						+'<td>'+ drugname +'</td>'
-						+'<td><input name="detail[' + row + '].eachdosage" type="hidden" value="'+ eachdosage +'"/>'+ eachdosage +'</td>'
-						+'<td><input name="detail[' + row + '].medicineformid" type="hidden" value="'+ medicineformid +'"/>'+ medicineform +'</td>'
-						+'<td><input name="detail[' + row + '].medicinefrequencyid" type="hidden" value="'+ medicinefrequencyid +'"/>'+ medicinefrequency +'</td>'
-						+'<td><input name="detail[' + row + '].dosagequantity" type="hidden" value="'+ dosagequantity +'"/>'+ dosagequantity +'</td>'
-						+'<td><input name="detail[' + row + '].medicineamount" type="hidden" value="'+ medicineamount +'"/>'+ medicineamount +'</td>'
+						+'<td><input name="detail[' + row + '].eachDosage" type="hidden" value="'+ eachdosage +'"/>'+ eachdosage +'</td>'
+						+'<td><input name="detail[' + row + '].medicineformId" type="hidden" value="'+ medicineformid +'"/>'+ medicineform +'</td>'
+						+'<td><input name="detail[' + row + '].medicineFrequencyId" type="hidden" value="'+ medicinefrequencyid +'"/>'+ medicinefrequency +'</td>'
+						+'<td><input name="detail[' + row + '].dosageQuantity" type="hidden" value="'+ dosagequantity +'"/>'+ dosagequantity +'</td>'
+						+'<td><input name="detail[' + row + '].medicineAmount" type="hidden" value="'+ medicineamount +'"/>'+ medicineamount +'</td>'
 						+'<td><input name="detail[' + row + '].note" type="hidden" value="'+ note +'"/>'+ note +'</td>'
 						+'<td><a class="btn btn-link" href="#" onclick="deletedrug(this)">删除</a></td>'+
 					'</tr>');

@@ -167,7 +167,7 @@
 										<select id="doctor" class="chzn-select" data-placeholder="-请选择-" name="doctorid" onchange="finddepartment()">
 											<option value="" />
 											<c:forEach var="item" items="${doctors}">
-												<option value="${item.id}" />${item.employeename}
+												<option value="${item.id}" />${item.employeeName}
 											</c:forEach>
 										</select>
 									</div>
@@ -195,7 +195,7 @@
 										<select id="disease" class="chzn-select" data-placeholder="-请选择-" name="diseaseid">
 											<option value="" />
 											<c:forEach var="item" items="${diseases}">
-												<option value="${item.id}" />${item.diseasename}
+												<option value="${item.id}" />${item.diseaseName}
 											</c:forEach>
 										</select>
 									</div>
@@ -433,10 +433,10 @@
 			
 			//根据医生查询相应科室并回填
 			function finddepartment(){
-				$.post("${ctx}/departmentController/findbydid.do",
+				$.post("${ctx}/medicalrecordController/findbydid.do",
 				{did:$("#doctor").val()},
 				function(data){
-					$("#department").val(data.dpname);
+					$("#department").val(data);
 				});
 			}
 			

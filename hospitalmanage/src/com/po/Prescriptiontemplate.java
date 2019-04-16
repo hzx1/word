@@ -1,5 +1,8 @@
 package com.po;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Prescriptiontemplate {
     private Integer id;
 
@@ -19,11 +22,28 @@ public class Prescriptiontemplate {
 
     private Integer isvalId;
     
-    private String employeeName;
+    private List<Prescriptiontemplatedetail> detail=new ArrayList<Prescriptiontemplatedetail>();
+    public List<Prescriptiontemplatedetail> getDetail() {
+		return detail;
+	}
+
+	public void setDetail(List<Prescriptiontemplatedetail> detail) {
+		this.detail = detail;
+	}
+
+	private Integer departmentId;
+	private String employeeName;
     private String prescriptionTypeName;
     private String classifyName;
     private String departmentName;
     
+    public Integer getDepartmentId() {
+		return departmentId;
+	}
+
+	public void setDepartmentId(Integer departmentId) {
+		this.departmentId = departmentId;
+	}
     public String getEmployeeName() {
 		return employeeName;
 	}

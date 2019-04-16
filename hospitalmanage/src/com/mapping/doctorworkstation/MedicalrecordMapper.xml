@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.doctorworkstation.MedicalrecordMapper" >
+	
+	<select id="listMM"  resultType="com.po.Medicalrecord">
+		  SELECT m.*,r.registercode,p.cardcode AS cardcode,p.patientname AS patientName,em.employeename AS employeeName ,
+		   dt.departmentname AS departmentName,d.diseasename AS diseaseName
+			FROM medicalrecord m 
+			LEFT JOIN register r ON r.id = m.registerid 
+			LEFT JOIN patient p ON p.id = r.patientid 
+			LEFT JOIN employee em ON em.id = m.doctorid 
+			LEFT JOIN employee e ON e.id = m.doctorid 
+			LEFT JOIN department dt ON dt.id = e.departmentid 
+			LEFT JOIN disease d ON d.id = m.diseaseid 
+			<where>
+				m.isvalid = 1
+				<if test=" m.cardcode != null and m.cardcode != '' ">
+					AND p.cardcode LIKE "%"#{m.cardcode}"%" 
+				</if>
+				<if test=" m.doctorId >0 ">
+					AND em.id= #{m.doctorId}
+				</if>
+				<if test=" m.departmentId >0 ">
+					AND e.`departmentid` = #{m.departmentId}
+				</if>
+				<if test=" m.patientName != null and m.patientName != ''">
+					AND p.`patientname` LIKE "%"#{m.patientName}"%" 
+				</if>
+				<if test=" m.medicalrecordName != null and m.medicalrecordName != ''">
+					AND m.`medicalrecordname`LIKE "%"#{m.medicalrecordName}"%"  
+				</if>
+			</where>			
+		LIMIT #{currentpage},#{pagesize}
+	</select>
+	<select id="countMM" resultType="Integer">
+		select count(*) from medicalrecord WHERE isvalid = 1
+	</select>
+</mapper>

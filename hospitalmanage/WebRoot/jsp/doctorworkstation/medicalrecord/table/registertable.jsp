@@ -3,15 +3,15 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <c:forEach var="item" items="${registers}">
-	<tr class="rowTr" ondblclick="selectregister('${item.id}','${item.registercode}','${item.patientname}','${item.sex}',
-					'${item.age}','${item.typename}','${item.insuretypename}','${item.drugallergyhistory}','${item.note}')">
-		<td>${item.registercode}</td>
-		<td>${item.cardcode}</td>
-		<td>${item.patientname}</td>
+	<tr class="rowTr" ondblclick="selectregister('${item.id}','${item.registerCode}','${item.patientName}','${item.sex}',
+					'${item.age}','${item.typeName}','${item.insuretypeName}','${item.drugallergyhistory}','${item.note}')">
+		<td>${item.registerCode}</td>
+		<td>${item.cardCode}</td>
+		<td>${item.patientName}</td>
 		<td>${item.sex == 1 ? "男" : "女"}</td>
 		<td>${item.age}</td>
-		<td>${item.insuretypename}</td>
-		<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.registertime}"/></td>
+		<td>${item.insuretypeName}</td>
+		<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.registerTime}"/></td>
 		<td>${item.tel}</td>
 	</tr>
 </c:forEach>

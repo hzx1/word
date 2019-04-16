@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.daseinfo.PrescriptiontemplatedetailMapper" >
+	
+	<select id="listPTM"  resultType="com.po.Prescriptiontemplatedetail">
+		SELECT p.*,dr.drugcode AS drugcode,dr.drugname AS drugName ,ab.`detailname` AS medicineformName,atb.`detailname` AS medicinefrequencyName 
+		FROM prescriptiontemplatedetail p			
+			LEFT JOIN `drug` dr ON dr.id = p.`drugid` 
+			LEFT JOIN `attributedetail` ab ON ab.id = p.`medicineformid`
+			LEFT JOIN `attributedetail` atb ON atb.id = p.`medicinefrequencyid`
+			WHERE prescriptiontemplateid=#{id} and  p.isvalid = 1 
+	</select>
+	<insert id="addPTM">
+		INSERT INTO `prescriptiontemplatedetail`(`prescriptiontemplateid`,`drugid`,`eachdosage`,`dosagequantity`,`medicineformid`,`medicinefrequencyid`,`medicineamount`,`note`,`isvalid`)
+			VALUE(#{prescriptiontemplateId},#{drugId},#{eachDosage},#{dosageQuantity},#{medicineformId},#{medicineFrequencyId},#{medicineAmount},#{note},#{isvalId});
+	</insert>
+	<update id="duPTM" parameterType="java.lang.Integer">
+  		UPDATE prescriptiontemplatedetail SET isvalid = 2 WHERE prescriptiontemplateid = #{id}
+  </update>
+</mapper>

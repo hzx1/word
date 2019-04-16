@@ -1,16 +1,16 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 <c:forEach var="item" items="${medicalrecords}">
-	<tr class="rowTr" onclick="finddetail('${item.patientappeal}','${item.medicalhistory}','${item.physicalstatus}','${item.primarydiagnosis}','${item.opinion}')">
+	<tr class="rowTr" onclick="finddetail('${item.patienTappeal}','${item.medicalhistory}','${item.physicalstatus}','${item.primaryDiagnosis}','${item.opinion}')">
 		<td>${item.cardcode}</td>
-		<td>${item.patientname}</td>
-		<td>${item.registercode}</td>
-		<td>${item.medicalrecordname}</td>
-		<td>${item.departmentname}</td>
-		<td>${item.employeename}</td>
-		<td>${item.diseasename}</td>
+		<td>${item.patientName}</td>
+		<td>${item.registerCode}</td>
+		<td>${item.medicalrecordName}</td>
+		<td>${item.departmentName}</td>
+		<td>${item.employeeName}</td>
+		<td>${item.diseaseName}</td>
 		<td>${item.note}</td>
 		<td>
 			<a class="btn btn-link btn-edit" href="javascript:location.href='${ctx}/medicalrecordController/toedit.do?id=${item.id}';">修改</a>

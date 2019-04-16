@@ -3,14 +3,14 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <c:forEach var="item" items="${drugs}">
-	<tr class="rowTr" ondblclick="drugbackfill('${item.id}','${item.drugcode}','${item.drugname}','${item.norms}','${item.inventoryquantity}')">
-		<td>${item.drugcode}</td>
-		<td>${item.drugname}</td>
-		<td>${item.pinyincode}</td>
-		<td>${item.drugtypename}</td>
+	<tr class="rowTr" onclick="drugbackfill('${item.id}','${item.drugCode}','${item.drugName}','${item.norms}','${item.inbulkSellprice}')">
+		<td>${item.drugCode}</td>
+		<td>${item.drugName}</td>
+		<td>${item.pinyIncode}</td>
+		<td>${item.drugtypeName}</td>
 		<td>${item.norms}</td>
-		<td>${item.virtualinventory}</td>
-		<td>${item.inbulksellprice}</td>
+		<td>${item.virtuaLinventory}</td>
+		<td>${item.inbulkSellprice}</td>
 	</tr>
 </c:forEach>
 

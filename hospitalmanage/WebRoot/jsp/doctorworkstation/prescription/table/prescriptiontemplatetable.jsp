@@ -1,6 +1,7 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>
 
 <c:forEach var="item" items="${templates}">
 	<tr class="rowTr" onclick="getdetaildatas('${item.id}')">
@@ -15,8 +16,8 @@
 		
 		
 		<td>
-			<a class="btn btn-link btn-edit" href="javascript:location.href='${ctx}/prescriptiontemplateController/toedit.do?id=${item.id}';">修改</a>
-			<a class="btn btn-link btn-delete" href="javascript:;" onclick="deleteprescription('${item.id}')">删除</a>			
+			<a class="" href="javascript:location.href='${ctx}/prescriptiontemplateController/toedit.do?id=${item.id}';">修改</a>
+			<a class="" href="javascript:;" onclick="deleteprescription('${item.id}')">删除</a>			
 		</td>
 	</tr>
 </c:forEach>
@@ -30,7 +31,6 @@
 			$(this).addClass("xz");
 			$(this).css("color","#fff");
 		});
-		alert("33");
 		//赋值总行数和当前页，应用在custom_pageload.js，js文件不可用el表达式
 		sumrow = ${pagingVo.sumrow};
 		currentpage = ${pagingVo.currentpage};

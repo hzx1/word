@@ -93,8 +93,26 @@ public class Drug {
     private String picture;
 
     private Integer isvalId;
+    
+    private String drugtypeName;
+    private double virtuaLinventory;
+    public String getDrugtypeName() {
+		return drugtypeName;
+	}
 
-    public Integer getId() {
+	public void setDrugtypeName(String drugtypeName) {
+		this.drugtypeName = drugtypeName;
+	}
+
+	public double getVirtuaLinventory() {
+		return virtuaLinventory;
+	}
+
+	public void setVirtuaLinventory(double virtuaLinventory) {
+		this.virtuaLinventory = virtuaLinventory;
+	}
+
+	public Integer getId() {
         return id;
     }
 

@@ -66,9 +66,9 @@
 								<div class="controls controls-l">
 									<select id="department" class="chzn-select" onchange="finddoctor()">
 										<option value="0" />全部
-										<%-- <c:forEach var="item" items="${departments}">
-											<option value="${item.id}"  />${item.departmentname}
-										</c:forEach> --%>
+										 <c:forEach var="item" items="${departments}">
+											<option value="${item.id}"  />${item.deparTmentName}
+										</c:forEach>
 									</select>
 								</div>
 							</div>
@@ -80,9 +80,9 @@
 								<div class="controls controls-l">
 									<select id="doctor" class="chzn-select" onchange="search()">
 										<option id="all" value="0" />全部
-										<%-- <c:forEach var="item" items="${doctors}">
-											<option value="${item.id}" />${item.employeename}
-										</c:forEach> --%>
+										<c:forEach var="item" items="${doctors}">
+											<option value="${item.id}" />${item.employeeName}
+										</c:forEach>
 									</select>
 								</div>
 							</div>	
@@ -92,7 +92,7 @@
 							<div class="control-group control-group-m">
 
 								<div class="controls controls-l">
-									<button class="btn btn-small btn-success btn-add" 
+									<button class="" 
 									onclick="javascript:location.href='${ctx}/medicalrecordController/toadd.do';">
 										<i class="icon-edit"></i>
 										病历录入
@@ -211,11 +211,11 @@
 				gettable(cardcode,patientname,medicalrecordname,doctorid,departmentid,page);
 			}
 			
-			//查询
+			//查询 
 			function gettable(cardcode,patientname,medicalrecordname,doctorid,departmentid,page){
 				$.post(ctx + controller + "/datalist.do",
-				{cardcode:cardcode, patientname:patientname, medicalrecordname:medicalrecordname,
-				doctorid:doctorid, departmentid:departmentid,pagesize:$("#pagesize").val(),
+				{cardcode:cardcode, patientName:patientname, medicalrecordName:medicalrecordname,
+				doctorId:doctorid, departmentId:departmentid,pagesize:$("#pagesize").val(),
 				currentpage:page},
 				function(data){					
 					$("#datas").html(data);

@@ -16,9 +16,9 @@ public class Medicalrecord {
     private Integer diseaseId;
 
     private String note;
-
-    private String patienappeal;
-
+    			   
+    private String patienTappeal;
+    			   
     private String medicalhistory;
 
     private String physicalstatus;
@@ -30,8 +30,80 @@ public class Medicalrecord {
     private Date recordTime;
 
     private Integer isvalId;
+    
+    private String cardcode;
+    private String patientName;
+    private String registerCode;
+    private String departmentName;
+    private String employeeName;
+    private String diseaseName;
+    private Integer departmentId;
+    
+    public Integer getDepartmentId() {
+		return departmentId;
+	}
 
-    public Integer getId() {
+	public void setDepartmentId(Integer departmentId) {
+		this.departmentId = departmentId;
+	}
+
+	public String getPatienTappeal() {
+		return patienTappeal;
+	}
+
+	public void setPatienTappeal(String patienTappeal) {
+		this.patienTappeal = patienTappeal;
+	}
+
+	public String getCardcode() {
+		return cardcode;
+	}
+
+	public void setCardcode(String cardcode) {
+		this.cardcode = cardcode;
+	}
+
+	public String getPatientName() {
+		return patientName;
+	}
+
+	public void setPatientName(String patientName) {
+		this.patientName = patientName;
+	}
+
+	public String getRegisterCode() {
+		return registerCode;
+	}
+
+	public void setRegisterCode(String registerCode) {
+		this.registerCode = registerCode;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
+
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
+	}
+
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+	public String getDiseaseName() {
+		return diseaseName;
+	}
+
+	public void setDiseaseName(String diseaseName) {
+		this.diseaseName = diseaseName;
+	}
+
+	public Integer getId() {
         return id;
     }
 
@@ -87,13 +159,6 @@ public class Medicalrecord {
 		this.note = note;
 	}
 
-	public String getPatienappeal() {
-		return patienappeal;
-	}
-
-	public void setPatienappeal(String patienappeal) {
-		this.patienappeal = patienappeal;
-	}
 
 	public String getMedicalhistory() {
 		return medicalhistory;
