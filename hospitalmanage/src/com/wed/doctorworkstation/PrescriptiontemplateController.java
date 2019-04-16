@@ -83,16 +83,19 @@ public class PrescriptiontemplateController extends BaseController{
 		 * @return
 		 */
 		@RequestMapping(value="add")
-		public String add(Prescriptiontemplate p){
+		public String add(Prescriptiontemplate p ){
 			p.setIsvalId(1);
 			int i= pm.addPM(p);
-			
-			for (Prescriptiontemplatedetail pd : p.getDetail()) {				
-				pd.setPrescriptiontemplateId(pm.order());
-				pd.setIsvalId(1);
-				ptm.addPTM(pd);
-				
+			int d=pm.order();//id
+			if(i>0){
+				for (Prescriptiontemplatedetail pd : p.getDetail()) {				
+					pd.setPrescriptiontemplateId(d);
+					pd.setIsvalId(1);
+					ptm.addPTM(pd);
+					
+				}
 			}
+			
 			
 			return list();
 		}
@@ -129,7 +132,7 @@ public class PrescriptiontemplateController extends BaseController{
 			ptm.duPTM(p.getId());
 			System.out.println(i);
 			for (Prescriptiontemplatedetail pr : p.getDetail()) {
-				if(pr.getDrugId() > 0 ){
+				if(pr.getDrugId() !=null  && pr.getDrugId() >0){
 					pr.setPrescriptiontemplateId(p.getId());
 					pr.setIsvalId(1);
 					ptm.addPTM(pr);
