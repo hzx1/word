@@ -19,4 +19,8 @@ public interface RegisterManageService {
 	public List<Registertype> getTypeName();
 	public List<Register> findLast();
 	public Register countinfo();
+	//查看挂号信息和病人信息
+	public List<Register> listr(String contant);
+	//id查询
+	public Register getIdR(Integer id);
 }

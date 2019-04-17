@@ -275,7 +275,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data.msg);
+		  				hint(data);
 		  				find(1);
 					});
 				});

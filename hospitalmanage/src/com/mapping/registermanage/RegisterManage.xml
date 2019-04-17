@@ -52,7 +52,7 @@
 		SELECT
 		r.*,p.cardcode,p.patientname,CASE WHEN r.registertypeid = 0 THEN
 		'自定义'
-		ELSE rt.typename END AS typename,
+		ELSE rt.typename END AS typeName,
 		rt.typesum AS
 		typesum,d.departmentname AS departmentname ,e.employeename AS
 		doctorname,e1.employeename AS registerpersonname FROM register r
@@ -73,5 +73,36 @@
 		SELECT SUM(registersum) AS sumregistersum, COUNT(*) AS countregister FROM
 		register WHERE isvalid=1 AND registertime
 		BETWEEN CURRENT_DATE AND DATE_ADD(CURRENT_DATE, INTERVAL 1 DAY)
+	</select>
+	<select id="listr" resultType="com.po.Register">
+		SELECT r.* ,p.`patientname` AS patientName,p.`cardcode` AS cardCode,p.`sex` AS sex,p.`age` AS age ,p.`tel` AS tel ,a.`detailname` AS insuretypeName,
+		rt.typename  AS typeName,p.`insuretypeid`,p.`drugallergyhistory` AS drugallergyhistory
+		 FROM`register` r 
+		 LEFT JOIN patient p ON p.id=r.`patientid`
+		 LEFT JOIN  `attributedetail` a ON a.id=p.`insuretypeid`
+		 LEFT JOIN registertype rt ON rt.id = r.registertypeid
+		 <where>
+		 	 r.isvalid = 1
+		 	 <if test=" contant != null and contant != ''">
+		 	 		 AND r.`registercode`  LIKE "%"#{contant}"%"  	
+					OR  p.`patientname` LIKE "%"#{contant}"%"
+					OR  p.`cardcode`  LIKE "%"#{contant}"%"
+			</if>
+
+		 </where>
+		  
+	</select>
+	<select id="getIdR" resultType="com.po.Register">
+		SELECT r.* ,p.`patientname` AS patientName,p.`cardcode` AS cardCode,p.`sex` AS sex,p.`age` AS age ,p.`tel` AS tel ,a.`detailname` AS insuretypeName,
+		rt.typename  AS typeName,p.`insuretypeid`,p.`drugallergyhistory` AS drugallergyhistory
+		 FROM`register` r 
+		 LEFT JOIN patient p ON p.id=r.`patientid`
+		 LEFT JOIN  `attributedetail` a ON a.id=p.`insuretypeid`
+		 LEFT JOIN registertype rt ON rt.id = r.registertypeid
+		 <where>
+		 	 r.isvalid = 1
+		 	and r.id=#{id}
+		 </where>
+		  
 	</select>
 </mapper>

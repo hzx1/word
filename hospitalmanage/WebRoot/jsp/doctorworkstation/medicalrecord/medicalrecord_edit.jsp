@@ -51,8 +51,8 @@
 									<label class="control-label control-label-m">挂号单号</label>
 	
 									<div class="controls controls-m">
-										<input id="registerid" type="hidden" name="registerid" value="${medicalrecord.registerid}">
-										<input id="registercode" name="registercodeid" type="text" value="${register.registercode}" onfocus="findregister()"/>
+										<input id="registerid" type="hidden" name="registerid" value="${medicalrecord.registerId}">
+										<input id="registercode" name="registercodeid" type="text" value="${register.registerCode}" onfocus="findregister()"/>
 									</div>
 								</div>		
 							</div><!--/span-->
@@ -62,7 +62,7 @@
 									<label class="control-label control-label-m">病人姓名</label>
 	
 									<div class="controls controls-m">
-										<input id="patientname" type="text" readonly="readonly" value="${register.patientname}"/>
+										<input id="patientname" type="text" readonly="readonly" value="${register.patientName}"/>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -95,7 +95,7 @@
 									<label class="control-label control-label-m">挂号类型</label>
 	
 									<div class="controls controls-m">
-										<input id="typename" type="text" readonly="readonly" value="${register.typename}"/>
+										<input id="typename" type="text" readonly="readonly" value="${register.typeName}"/>
 									</div>
 								</div>		
 							</div><!--/span-->
@@ -105,7 +105,7 @@
 									<label class="control-label control-label-m">参保类型</label>
 	
 									<div class="controls controls-m">
-										<input id="insuretypename" type="text" readonly="readonly" value="${register.insuretypename}"/>
+										<input id="insuretypename" type="text" readonly="readonly" value="${register.insuretypeName}"/>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -156,7 +156,7 @@
 									<label class="control-label control-label-m">病历名称</label>
 	
 									<div class="controls controls-m">
-										<input id="medicalrecordname" type="text" name="medicalrecordname" value="${medicalrecord.medicalrecordname}"/>
+										<input id="medicalrecordname" type="text" name="medicalrecordname" value="${medicalrecord.medicalrecordName}"/>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -169,7 +169,7 @@
 										<select id="doctor" class="chzn-select" data-placeholder="-请选择-" name="doctorid" onchange="finddepartment()">
 											<option value="0" />
 											<c:forEach var="item" items="${doctors}">
-												<option <c:if test="${medicalrecord.doctorid == item.id}">selected="selected"</c:if> value="${item.id}" />${item.employeename}
+												<option <c:if test="${medicalrecord.doctorId == item.id}">selected="selected"</c:if> value="${item.id}" />${item.employeeName}
 											</c:forEach>
 										</select>
 									</div>
@@ -194,10 +194,10 @@
 									<label class="control-label control-label-m">病历类型</label>
 	
 									<div class="controls controls-m">
-										<select id="disease" class="chzn-select" data-placeholder="-请选择-" name="diseaseid">
+										<select id="disease" class="chzn-select" data-placeholder="-请选择-" name="diseaseId">
 											<option value="0" />
 											<c:forEach var="item" items="${diseases}">
-												<option <c:if test="${medicalrecord.diseaseid == item.id}">selected="selected"</c:if> value="${item.id}" />${item.diseasename}
+												<option <c:if test="${medicalrecord.diseaseId == item.id}">selected="selected"</c:if> value="${item.id}" />${item.diseaseName}
 											</c:forEach>
 										</select>
 									</div>
@@ -271,7 +271,7 @@
 									<label class="control-label control-label-m">初步诊断</label>
 	
 									<div class="controls controls-m">
-										<textarea class="span12 textarea-c" id="primarydiagnosis" name="primarydiagnosis">${medicalrecord.primarydiagnosis}</textarea>
+										<textarea class="span12 textarea-c" id="primarydiagnosis" name="primaryDiagnosis">${medicalrecord.primaryDiagnosis}</textarea>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -333,7 +333,6 @@
 					</div>
 					<div class="modal-footer">
 						<button style="width:110px;" type="button" class="btn btn-small btn-default" data-dismiss="modal">取消</button>
-						<button style="width:110px;" class="btn btn-small btn-primary" data-dismiss="modal" onclick="openhintModal()">确定</button>
 					</div>
 				</div>
 			</div>
@@ -376,7 +375,6 @@
 					</div>
 					<div class="modal-footer">
 						<button style="width:110px;" type="button" class="btn btn-small btn-default" data-dismiss="modal">取消</button>
-						<button style="width:110px;" class="btn btn-small btn-primary" data-dismiss="modal" onclick="openhintModal()">确定</button>
 					</div>
 				</div>
 			</div>
@@ -438,7 +436,7 @@
 				$.post("${ctx}/departmentController/findbydid.do",
 				{did:$("#doctor").val()},
 				function(data){
-					$("#department").val(data.dpname);
+					$("#department").val(data);
 				});
 			}
 			

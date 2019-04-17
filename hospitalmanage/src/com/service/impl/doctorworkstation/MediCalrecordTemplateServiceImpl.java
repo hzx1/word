@@ -54,5 +54,15 @@ public class MediCalrecordTemplateServiceImpl implements MediCalrecordTemplateSe
 			// TODO Auto-generated method stub
 			return mCTM.delMCT(id);
 		}
+		@Override
+		public List<Medicalrecordtemplate> listnameMCT(String contant) {
+			// TODO Auto-generated method stub
+			return mCTM.listnameMCT(contant);
+		}
+		@Override
+		public Medicalrecordtemplate getNameMCT(String templatename) {
+			// TODO Auto-generated method stub
+			return mCTM.getNameMCT(templatename);
+		}
 		
 }

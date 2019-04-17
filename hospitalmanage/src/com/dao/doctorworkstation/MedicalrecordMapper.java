@@ -11,4 +11,12 @@ public interface MedicalrecordMapper {
 	public List<Medicalrecord> listMM(@Param("m")Medicalrecord m,@Param("currentpage")Integer currentpage,@Param("pagesize")Integer pagesize);
 	//查看有多少条数据
 	public Integer countMM();
+	//添加
+	public Integer addmm(Medicalrecord m);
+	//病例编号
+	public Medicalrecord getMM(@Param("medicalrecordcode")String medicalrecordcode);
+	//id查询
+	public Medicalrecord getIdMM(@Param("id")Integer id);
+	//x修改
+	public Integer updateMM(Medicalrecord m);
 }

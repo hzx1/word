@@ -63,5 +63,17 @@ public class RegisterManageServiceImpl implements RegisterManageService{
 	public Register countinfo() {
 		return registerManage.countinfo();
 	}
+	//查看挂号信息和病人信息
+	@Override
+	public List<Register> listr(String contant) {
+		// TODO Auto-generated method stub
+		return registerManage.listr(contant);
+	}
+	//id查询
+	@Override
+	public Register getIdR(Integer id) {
+		// TODO Auto-generated method stub
+		return registerManage.getIdR(id);
+	}
 	
 }
