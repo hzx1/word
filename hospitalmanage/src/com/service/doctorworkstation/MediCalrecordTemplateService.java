@@ -2,8 +2,6 @@ package com.service.doctorworkstation;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.ov.PagingVo;
 import com.po.Medicalrecordtemplate;
 
@@ -23,8 +21,4 @@ public interface MediCalrecordTemplateService {
 	public Integer updatMCT(Medicalrecordtemplate m);
 	//删除
 	public Integer delMCT(Integer id);
-	//模糊查询
-	public List<Medicalrecordtemplate> listnameMCT(String contant); 
-	//名字查询
-	public Medicalrecordtemplate getNameMCT(String templatename);
 }

@@ -37,15 +37,50 @@ public class Register {
     private BigDecimal typeSum;
     private BigDecimal sumRegisterSum;
     private Integer countRegister;
-    
-    private char sex;
+	private String begintime;
+	private String endtime;
+	private String insureTypeName;
+	private int sex;
+	private int age;
+	private String tel;
     private String drugallergyhistory;
     private String  insuretypeName;
-    private Integer age;
-    private String tel;
-
-    public char getSex() {
+    
+	public int getSex() {
 		return sex;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public void setSex(int sex) {
+		this.sex = sex;
+	}
+
+	public String getInsureTypeName() {
+		return insureTypeName;
+	}
+
+	public void setInsureTypeName(String insureTypeName) {
+		this.insureTypeName = insureTypeName;
+	}
+
+	public String getBegintime() {
+		return begintime;
+	}
+
+	public void setBegintime(String begintime) {
+		this.begintime = begintime;
+	}
+
+	public String getEndtime() {
+		return endtime;
+	}
+
+	public void setEndtime(String endtime) {
+		this.endtime = endtime;
 	}
 
 	public void setSex(char sex) {
@@ -78,10 +113,6 @@ public class Register {
 
 	public String getTel() {
 		return tel;
-	}
-
-	public void setTel(String tel) {
-		this.tel = tel;
 	}
 
 	/**

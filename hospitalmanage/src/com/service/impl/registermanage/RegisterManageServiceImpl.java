@@ -11,6 +11,7 @@ import com.dao.registermanage.RegisterManage;
 import com.po.Attributedetail;
 import com.po.Department;
 import com.po.Employee;
+import com.po.Patient;
 import com.po.Patienttype;
 import com.po.Register;
 import com.po.Registertype;
@@ -55,7 +56,7 @@ public class RegisterManageServiceImpl implements RegisterManageService{
 	}
 
 	@Override
-	public List<Register> findLast() {
+	public Register findLast() {
 		return registerManage.findLast();
 	}
 
@@ -63,17 +64,43 @@ public class RegisterManageServiceImpl implements RegisterManageService{
 	public Register countinfo() {
 		return registerManage.countinfo();
 	}
-	//查看挂号信息和病人信息
+
 	@Override
-	public List<Register> listr(String contant) {
-		// TODO Auto-generated method stub
-		return registerManage.listr(contant);
+	public List<Register> pageFind(Integer currentpage, Integer pageSize) {
+		return registerManage.pageFind(currentpage, pageSize);
 	}
-	//id查询
+
 	@Override
-	public Register getIdR(Integer id) {
-		// TODO Auto-generated method stub
-		return registerManage.getIdR(id);
+	public int addPatient(Patient pt) {
+		return registerManage.addPatient(pt);
 	}
+
+	@Override
+	public List<Patient> getPatientByCode(String code) {
+		return registerManage.getPatientByCode(code);
+	}
+
+	@Override
+	public int add(Register rs) {
+		return registerManage.add(rs);
+	}
+
+	@Override
+	public List<Employee> getDoctorsTwo(Integer id) {
+		return registerManage.getDoctorsTwo(id);
+	}
+
+	@Override
+	public int delect(Integer id) {
+		return registerManage.delect(id);
+	}
+
+	@Override
+	public List<Register> getLiShi(Register rs, Integer pageSize, Integer currentpage) {
+		return registerManage.getLiShi(rs, pageSize, currentpage);
+	}
+	
+	
+	
 	
 }

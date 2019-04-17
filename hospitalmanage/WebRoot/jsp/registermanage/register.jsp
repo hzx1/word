@@ -41,13 +41,13 @@
 								</div>
 							</div>		
 						</div><!--/span-->
-
+						
 						<div class="span3">
 							<div class="control-group control-group-m">
 								<label class="control-label control-label-m">病人名称</label>
 
 								<div class="controls controls-m">
-									<input name="patientname" type="text" readonly="readonly"/>
+									<input name="patientName" type="text" readonly="readonly"/>
 								</div>
 							</div>	
 						</div><!--/span-->
@@ -90,7 +90,7 @@
 								<label class="control-label control-label-m">婚姻状况</label>
 
 								<div class="controls controls-m">
-									<select name="maritalstatusid" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
+									<select name="maritalstatusId" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
 										<option value="0" />
 										<c:forEach var="item" items="${politicsstatuss}">
 											<option value="${item.id}" />${item.detailName}
@@ -115,7 +115,7 @@
 								<label class="control-label control-label-m">会员类型</label>
 
 								<div class="controls controls-m">
-									<select name="viptypeid" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
+									<select name="viptypeId" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
 										<option value="" />
 										<c:forEach var="item" items="${viptypes}">
 											<option value="${item.id}" />${item.typeName}
@@ -130,7 +130,7 @@
 								<label class="control-label control-label-m">医保卡号</label>
 
 								<div class="controls controls-m">
-									<input name="medicarecode" type="text" readonly="readonly"/>
+									<input name="medicareCode" type="text" readonly="readonly"/>
 								</div>
 							</div>	
 						</div><!--/span-->
@@ -143,7 +143,7 @@
 								<label class="control-label control-label-m">参保类型</label>
 
 								<div class="controls controls-m">
-									<select name="insuretypeid" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
+									<select name="insuretypeId" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
 										<option value="0" />
 										<c:forEach var="item" items="${insuretypes}">
 											<option value="${item.id}" />${item.detailName}
@@ -158,7 +158,7 @@
 								<label class="control-label control-label-m">病人类别</label>
 
 								<div class="controls controls-m">
-									<select name="patienttypeid" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
+									<select name="patienttypeId" class="chzn-select" data-placeholder="-请选择-" disabled="disabled">
 										<option value="" />
 										<c:forEach var="item" items="${patienttypes}">
 											<option value="${item.id}" />${item.typeName}
@@ -196,7 +196,7 @@
 								<label class="control-label control-label-m">药过敏史</label>
 
 								<div class="controls controls-m">
-									<input name="drugallergyhistory" type="text" readonly="readonly"/>
+									<input name="drugallergyHistory" type="text" readonly="readonly"/>
 								</div>
 							</div>		
 						</div><!--/span-->
@@ -241,7 +241,7 @@
 								<label class="control-label control-label-m">选择科室</label>
 
 								<div class="controls controls-m">
-									<select id="department" name="departmentid" class="chzn-select" data-placeholder="-请选择-" onchange="finddoctor()">
+									<select id="department" name="departmentId" class="chzn-select" data-placeholder="-请选择-" onchange="finddoctor()">
 										<option value="" />
 										<c:forEach var="item" items="${departments}">
 											<option value="${item.id}" />${item.deparTmentName}
@@ -262,14 +262,14 @@
 								<label class="control-label control-label-m">病人姓名</label>
 
 								<div class="controls controls-m">
-									<input id="patientname" type="text" readonly="readonly"/>
-									<input name="patientid" type="hidden"/>
+									<input id="patientName" type="text" readonly="readonly"/>
+									<input name="patientId" type="hidden"/>
 								</div>
 								
 								<label class="control-label control-label-m">选择医生</label>
 
 								<div class="controls controls-m">
-									<select id="doctor" name="doctorid" class="chzn-select" data-placeholder="-请选择-">
+									<select id="doctor" name="doctorId" class="chzn-select" data-placeholder="-请选择-">
 										<option id="all" value="0" />
 										<c:forEach var="item" items="${doctors}">
 											<option value="${item.id}" />${item.employeeName}
@@ -284,7 +284,7 @@
 								<label class="control-label control-label-m">挂号金额</label>
 
 								<div class="controls controls-m">
-									<input id="registersum" name="registersum" type="text" readonly />
+									<input id="registerSum" name="registerSum" type="text" readonly />
 								</div>
 								
 								<label class="control-label control-label-m">会员类型</label>
@@ -310,7 +310,7 @@
 										<span class="lbl"> 自定义挂号费</span>
 										<input id="isum" type="text" readonly="readonly" style="width:33%;" onkeyup="isumchange()"/>
 									</label>
-									<input id="registertypeid" type="hidden" name="registertypeid">
+									<input id="registerTypeId" type="hidden" name="registerTypeId">
 								</div>
 							</div>	
 						</div><!--/span-->						
@@ -350,8 +350,8 @@
 									<span style="margin-left:15px;">统计信息</span>
 								</div>
 								<label class="control-label control-label-m">上位病员</label>
-
 								<div class="controls controls-m">
+									<input type="text" readonly="readonly" style="text-align:center;" value="${register.patientName}"/>
 								</div>
 
 								<label class="control-label control-label-m">上位时间</label>
@@ -403,7 +403,7 @@
 						<div class="span12">	
 							<div class="modal-footer" style="background:#f5f5f5; width:96%; position:fixed;bottom:0; z-index:4000;">
 								<div id="bigbtn">
-									<button type="submit" class="btn btn-small btn-success btn-add">
+									<button type="submit" class="btn btn-small btn-success ">
 										<i class="icon-check"></i>
 										挂号
 									</button>
@@ -497,8 +497,8 @@
 				//挂号类别，内含挂号id和类别金额，需根据逗号分隔，分别赋值
 				$("input[name='registertype']").click(function(){
 				 	var arr = $("input[name='registertype']:checked").val().split(',');
-				 	$("#registertypeid").val(arr[0]);
-				  	$("#registersum").val(arr[1]);
+				 	$("#registerTypeId").val(arr[0]);
+				  	$("#registerSum").val(arr[1]);
 			 	});
 			 	
 			 	//获取日期
@@ -542,7 +542,7 @@
 			function addpatient(){
 				$("#editpt").css("display","none");
 				$("#savept").css("display","");
-				$("#patientname").val("");
+				$("#patientName").val("");
 				$("#viptype").val("");
 				$("#patientform").find("input[type='text']").val("");
 				$("#patientform").find("select").val(0);
@@ -550,25 +550,25 @@
 				$("input[name='cardcode']").val("自动生成");
 				$("input[name='cardcode']").css("text-align","center");
 				$("input[name='cardcode']").attr("readonly", "readonly");
-				$("input[name='patientname']").removeAttr("readonly");
+				$("input[name='patientName']").removeAttr("readonly");
 				$("input[name='age']").removeAttr("readonly");
-				$("select[name='maritalstatusid']").removeAttr("disabled");
-				$("select[name='maritalstatusid']").trigger("liszt:updated");
-            	$("select[name='maritalstatusid']").chosen();
+				$("select[name='maritalstatusId']").removeAttr("disabled");
+				$("select[name='maritalstatusId']").trigger("liszt:updated");
+            	$("select[name='maritalstatusId']").chosen();
 				$("input[name='job']").removeAttr("readonly");
-				$("select[name='viptypeid']").removeAttr("disabled");
-				$("select[name='viptypeid']").trigger("liszt:updated");
-            	$("select[name='viptypeid']").chosen();
-				$("input[name='medicarecode']").removeAttr("readonly");
-				$("select[name='insuretypeid']").removeAttr("disabled");
-				$("select[name='insuretypeid']").trigger("liszt:updated");
-            	$("select[name='insuretypeid']").chosen();
-				$("select[name='patienttypeid']").removeAttr("disabled");
-				$("select[name='patienttypeid']").trigger("liszt:updated");
-            	$("select[name='patienttypeid']").chosen();
+				$("select[name='viptypeId']").removeAttr("disabled");
+				$("select[name='viptypeId']").trigger("liszt:updated");
+            	$("select[name='viptypeId']").chosen();
+				$("input[name='medicareCode']").removeAttr("readonly");
+				$("select[name='insuretypeId']").removeAttr("disabled");
+				$("select[name='insuretypeId']").trigger("liszt:updated");
+            	$("select[name='insuretypeId']").chosen();
+				$("select[name='patienttypeId']").removeAttr("disabled");
+				$("select[name='patienttypeId']").trigger("liszt:updated");
+            	$("select[name='patienttypeId']").chosen();
 				$("input[name='tel']").removeAttr("readonly");
 				$("input[name='address']").removeAttr("readonly");
-				$("input[name='drugallergyhistory']").removeAttr("readonly");
+				$("input[name='drugallergyHistory']").removeAttr("readonly");
 			}
 			
 			//表单验证-病人信息
@@ -578,25 +578,25 @@
 					errorClass: 'help-inline',
 					focusInvalid: false,
 				    rules: {
-				   	  	patientname:"required",
+				   	  	patientName:"required",
 				   	  	sex:"required",
 				   	  	age:{
 				   	  		required:true,
 				   	  		number:true
 				   	  	},
-				   	  	viptypeid:"required",
-				   	  	patienttypeid:"required",
+				   	  	viptypeId:"required",
+				   	  	patienttypeId:"required",
 				   	  	tel:{
 				   	  		required:true,
 				   	  		phone:true
 				   	  	},
 				   	  	address:"required",
-				   	  	drugallergyhistory:"required"
+				   	  	drugallergyHistory:"required"
 				    },
 				    messages:{
 				      	sex:"这是必选字段",
-				      	viptypeid:"这是必选字段",
-				      	patienttypeid:"这是必选字段"		      	
+				      	viptypeId:"这是必选字段",
+				      	patienttypeId:"这是必选字段"		      	
 				    },
 				    
 				    highlight: function (e) {
@@ -640,32 +640,32 @@
 			}
 			
 			//病人信息回填
-			function selectpatient(cardcode,patientname,patientid,sex,age,maritalstatusid,
-			job,viptypeid,medicarecode,insuretypeid,patienttypeid,tel,address,drugallergyhistory,vipname){
+			function selectpatient(cardcode,patientName,patientId,sex,age,maritalstatusId,
+			job,viptypeId,medicareCode,insuretypeId,patienttypeId,tel,address,drugallergyHistory,vipname){
 				$("input[name='sex'][value="+ sex +"]").prop("checked","checked"); 
 				$("input[name='cardcode']").val(cardcode);
-				$("input[name='patientname']").val(patientname);
-				$("input[name='patientid']").val(patientid);
-				$("#patientname").val(patientname);
+				$("input[name='patientName']").val(patientName);
+				$("input[name='patientId']").val(patientId);
+				$("#patientName").val(patientName);
 				$("input[name='age']").val(age);
-				$("select[name='maritalstatusid']").val(maritalstatusid);
-				$("select[name='maritalstatusid']").trigger("liszt:updated");
-            	$("select[name='maritalstatusid']").chosen();
+				$("select[name='maritalstatusId']").val(maritalstatusId);
+				$("select[name='maritalstatusId']").trigger("liszt:updated");
+            	$("select[name='maritalstatusId']").chosen();
 				$("input[name='job']").val(job);
-				$("select[name='viptypeid']").val(viptypeid);
-				$("select[name='viptypeid']").trigger("liszt:updated");
-            	$("select[name='viptypeid']").chosen();
+				$("select[name='viptypeId']").val(viptypeId);
+				$("select[name='viptypeId']").trigger("liszt:updated");
+            	$("select[name='viptypeId']").chosen();
 				$("#viptype").val(vipname);
-				$("input[name='medicarecode']").val(medicarecode);
-				$("select[name='insuretypeid']").val(insuretypeid);
-				$("select[name='insuretypeid']").trigger("liszt:updated");
-            	$("select[name='insuretypeid']").chosen();
-				$("select[name='patienttypeid']").val(patienttypeid);
-				$("select[name='patienttypeid']").trigger("liszt:updated");
-            	$("select[name='patienttypeid']").chosen();
+				$("input[name='medicareCode']").val(medicareCode);
+				$("select[name='insuretypeId']").val(insuretypeId);
+				$("select[name='insuretypeId']").trigger("liszt:updated");
+            	$("select[name='insuretypeId']").chosen();
+				$("select[name='patienttypeId']").val(patienttypeId);
+				$("select[name='patienttypeId']").trigger("liszt:updated");
+            	$("select[name='patienttypeId']").chosen();
 				$("input[name='tel']").val(tel);
 				$("input[name='address']").val(address);
-				$("input[name='drugallergyhistory']").val(drugallergyhistory);
+				$("input[name='drugallergyHistory']").val(drugallergyHistory);
 				$('#payModal').modal('hide');
 				$(".modal-backdrop").css("z-index","1040");
 				$("#payModal").css("z-index","1050");
@@ -673,7 +673,7 @@
 			 
 			 //自定义挂号费文本框值改变时挂号费文本框相应改变
 			 function isumchange(){
-			 	$("#registersum").val($("#isum").val());
+			 	$("#registerSum").val($("#isum").val());
 			 }
 			 
 			 //模糊查询病人
@@ -712,7 +712,7 @@
 				{id:$("#department").val() == "" ? 0 : $("#department").val()},
 				function(data){					
 					$.each(data,function(name,value) {
-						$("#doctor").append("<option value='"+value['id']+"'>"+value['employeename'] + "</option>");
+						$("#doctor").append("<option value='"+value['id']+"'>"+value['employeeName'] + "</option>");
 					});
 					$("#doctor").val(0);
 					$("#doctor").trigger("liszt:updated");
@@ -732,10 +732,10 @@
 					errorClass: 'help-inline',
 					focusInvalid: false,
 				    rules: {
-				   	  	departmentid:"required"
+				   	  	departmentId:"required"
 				    },
 				    messages:{
-				      	departmentid:"这是必选字段"	      	
+				      	departmentId:"这是必选字段"	      	
 				    },
 				    
 				    highlight: function (e) {
@@ -787,7 +787,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data.msg);
+		  				hint(data);
 		  				find(1);
 					});		  			
 				});

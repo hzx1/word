@@ -49,7 +49,7 @@
 									<label class="control-label control-label-m">挂号单号</label>
 	
 									<div class="controls controls-m">
-										<input id="registerid" type="hidden" name=registerId>
+										<input id="registerid" type="hidden" name="registerid">
 										<input id="registercode" name="registercodeid" type="text" onfocus="findregister()"/>
 									</div>
 								</div>		
@@ -154,7 +154,7 @@
 									<label class="control-label control-label-m">病历名称</label>
 	
 									<div class="controls controls-m">
-										<input id="medicalrecordname" type="text" name="medicalrecordName"/>
+										<input id="medicalrecordname" type="text" name="medicalrecordname"/>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -164,7 +164,7 @@
 									<label class="control-label control-label-m">录入医生</label>
 	
 									<div class="controls controls-m">
-										<select id="doctor" class="chzn-select" data-placeholder="-请选择-" name="doctorId" onchange="finddepartment()">
+										<select id="doctor" class="chzn-select" data-placeholder="-请选择-" name="doctorid" onchange="finddepartment()">
 											<option value="" />
 											<c:forEach var="item" items="${doctors}">
 												<option value="${item.id}" />${item.employeeName}
@@ -192,7 +192,7 @@
 									<label class="control-label control-label-m">病历类型</label>
 	
 									<div class="controls controls-m">
-										<select id="disease" class="chzn-select" data-placeholder="-请选择-" name="diseaseId">
+										<select id="disease" class="chzn-select" data-placeholder="-请选择-" name="diseaseid">
 											<option value="" />
 											<c:forEach var="item" items="${diseases}">
 												<option value="${item.id}" />${item.diseaseName}
@@ -269,7 +269,7 @@
 									<label class="control-label control-label-m">初步诊断</label>
 	
 									<div class="controls controls-m">
-										<textarea class="span12 textarea-c" id="primarydiagnosis" name="primaryDiagnosis"></textarea>
+										<textarea class="span12 textarea-c" id="primarydiagnosis" name="primarydiagnosis"></textarea>
 									</div>
 								</div>	
 							</div><!--/span-->
@@ -331,7 +331,7 @@
 					</div>
 					<div class="modal-footer">
 						<button style="width:110px;" type="button" class="btn btn-small btn-default" data-dismiss="modal">取消</button>
-						
+						<button style="width:110px;" class="btn btn-small btn-primary" data-dismiss="modal" onclick="openhintModal()">确定</button>
 					</div>
 				</div>
 			</div>
@@ -374,7 +374,7 @@
 					</div>
 					<div class="modal-footer">
 						<button style="width:110px;" type="button" class="btn btn-small btn-default" data-dismiss="modal">取消</button>
-						
+						<button style="width:110px;" class="btn btn-small btn-primary" data-dismiss="modal" onclick="openhintModal()">确定</button>
 					</div>
 				</div>
 			</div>
@@ -417,7 +417,8 @@
 			}
 			
 			//挂号数据回填
-			function selectregister(registerid,registercode,patientname,sex,age,typename,insuretypename,drugallergyhistory,note){
+			function selectregister(registerid,registercode,patientname,sex,age,
+				typename,insuretypename,drugallergyhistory,note){
 				$("#registerid").val(registerid);
 				$("#registercode").val(registercode);
 				$("#patientname").val(patientname);

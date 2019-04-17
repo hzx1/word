@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.doctorworkstation.PrescriptiontemplateMapper" >
+	
+	<select id="listPM"  resultType="com.po.Prescriptiontemplate">
+		SELECT p.*, e.employeename AS employeeName,dt.departmentname AS departmentName,ap.`detailname` AS prescriptionTypeName,ac.`detailname` AS classifyName
+		 FROM prescriptiontemplate p 
+			LEFT JOIN employee e ON e.id = p.doctorid 
+			LEFT JOIN attributedetail ap ON ap.id = p.`prescriptiontypeid`
+			LEFT JOIN attributedetail ac ON ac.id = p.`classifyid`
+			LEFT JOIN department dt ON dt.id = e.departmentid 
+			<where>
+				<if test=" p.templateName != null and p.templateName != ''">
+					templatename LIKE "%"#{p.templateName}"%"
+				</if>
+				<if test=" p.diagnosis != null and p.diagnosis != ''">
+					and diagnosis LIKE "%"#{p.diagnosis}"%"
+				</if>
+				<if test=" p.departmentId > 0">
+					and e.departmentid IN (SELECT id FROM department WHERE dt.id=#{p.departmentId}) 
+				</if>
+				<if test=" p.doctorId > 0">
+					AND doctorId =#{p.doctorId} 
+				</if>
+				<if test=" p.prescriptiontypeId > 0 ">
+					and prescriptiontypeId = #{p.prescriptiontypeId}
+				</if>
+				and   p.isvalid = 1
+			</where>
+			LIMIT #{currentpage},#{pagesize}
+	</select>
+	<select id="getPM" resultType="com.po.Prescriptiontemplate">
+		SELECT p.*, e.employeename AS employeeName,dt.departmentname AS departmentName,ap.`detailname`
+		 AS prescriptionTypeName,ac.`detailname` AS classifyName
+		 FROM prescriptiontemplate p 
+			LEFT JOIN employee e ON e.id = p.doctorid 
+			LEFT JOIN attributedetail ap ON ap.id = p.`prescriptiontypeid`
+			LEFT JOIN attributedetail ac ON ac.id = p.`classifyid`
+			LEFT JOIN department dt ON dt.id = e.departmentid 
+			 where p.id=#{id}
+	</select>
+	<select id="countPM" resultType="Integer">
+		select count(*) from prescriptiontemplate  where isvalid = 1
+	</select>
+	<select id="order" resultType="Integer">
+		SELECT id FROM  `prescriptiontemplate`   ORDER BY id DESC LIMIT 1
+	</select>
+	<insert id="addPM">
+		INSERT INTO `prescriptiontemplate`(`templatename`,`doctorid`,`natureid`,`prescriptiontypeid`,`classifyid`,`note`,`diagnosis`,isvalid)
+		VALUE(#{templateName},#{doctorId},#{natureId},#{prescriptiontypeId},#{classifyId},#{note},#{diagnosis},#{isvalId})
+	</insert>
+	 <update id="updatPM" parameterType="com.po.Prescriptiontemplate" >
+		    update prescriptiontemplate
+		    <set >
+		      <if test="templateName != null" >
+		        templatename = #{templateName},
+		      </if>
+		      <if test="doctorId >0" >
+		        doctorid = #{doctorId},
+		      </if>
+		      <if test="natureId >0" >
+		        natureid = #{natureId},
+		      </if>
+		      <if test="prescriptiontypeId >0" >
+		        prescriptiontypeid = #{prescriptiontypeId},
+		      </if>
+		      <if test="classifyId >0" >
+		        classifyid = #{classifyId},
+		      </if>
+		      <if test="note != null" >
+		        note = #{note},
+		      </if>
+		      <if test="diagnosis != null" >
+		        diagnosis = #{diagnosis},
+		      </if>
+		      <if test="isvalId >0" >
+		       isvalid = #{isvalId},
+		      </if>
+		    </set>
+    	where id = #{id}
+  </update>
+	
+</mapper>

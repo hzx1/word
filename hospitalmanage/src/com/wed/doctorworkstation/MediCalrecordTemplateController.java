@@ -50,7 +50,7 @@ public class MediCalrecordTemplateController extends BaseController{
 	
 		request.setAttribute("medicalrecordtemplates", mCTS.listMCT(m,pagingVo.getCurrentpage(),pagesize));
 		request.setAttribute("sumrow", mCTS.countMCT());
-		return "/doctorworkstation/medicalrecord/table/medicalrecordtemplatetable";
+		return "/doctorworkstation/medicalrecord/table/medicalrecord_add";
 	}
 	
 	/**

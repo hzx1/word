@@ -13,7 +13,7 @@
 		<td>${item.registerSum}</td>
 		<td>${item.registerStatus}</td>
 		<td>
-			<a class="btn btn-link btn-delete" href="#" onclick="deleterigster('${item.id}')">作废单据</a>
+			<a class="" href="javascript:;" onclick="deleterigster('${item.id}')">作废单据</a>
 		</td>
 	</tr>
 </c:forEach>

@@ -334,6 +334,7 @@
 					</div>
 					<div class="modal-footer">
 						<button style="width:110px;" type="button" class="btn btn-small btn-default" data-dismiss="modal">取消</button>
+						<button style="width:110px;" class="btn btn-small btn-primary" data-dismiss="modal" onclick="openhintModal()">确定</button>
 					</div>
 				</div>
 			</div>
@@ -383,15 +384,9 @@
 				var contant = $("#drugcontant").val();
 				getdrugtable(contant);
 			}
-		
-			
-			//药品数据回填
-			function drugbackfill(drugid,drugcode,drugname,norms){
-			
-				$("#drugid").val(drugid);
-				$("#drugcode").val(drugcode);
-				$("#drugname").val(drugname);
-				$("#norms").val(norms);
+			//药品数据回填确定
+			function openhintModal(){
+				
 				$("#dosagequantity").val('');
 				$("#eachdosage").val('');
 				$("#medicineform").val(0);
@@ -403,7 +398,15 @@
 				$("#medicineamount").val('');
 				$("#note").val('');
 				$('#payModal').modal('hide');
-				
+			} 
+			
+			//药品数据回填
+			function drugbackfill(drugid,drugcode,drugname,norms){
+			
+				$("#drugid").val(drugid);
+				$("#drugcode").val(drugcode);
+				$("#drugname").val(drugname);
+				$("#norms").val(norms);
 			}
 				
 			var row = 0;

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.dispensingmanage.DrugMapper" >
+	
+	<select id="listD"  resultType="com.po.Drug">
+		SELECT d.* ,a1.detailname AS drugtypeName,
+	(CASE WHEN (d.inventoryquantity - (SELECT SUM(pd.medicineamount) AS medicineamout FROM prescriptiondetail pd 
+	LEFT JOIN prescription p ON p.id = pd.prescriptionid LEFT JOIN register r ON r.id = p.registerid WHERE p.isvalid = 1 
+	AND (r.registerstatus = 3 OR r.registerstatus = 4) AND pd.drugid = d.id)) IS NULL THEN d.inventoryquantity ELSE 
+	(d.inventoryquantity - (SELECT SUM(pd.medicineamount) AS medicineamout FROM prescriptiondetail pd LEFT JOIN 
+	prescription p ON p.id = pd.prescriptionid LEFT JOIN register r ON r.id = p.registerid WHERE p.isvalid = 1 AND 
+	(r.registerstatus = 3 OR r.registerstatus = 4) AND pd.drugid = d.id)) END) AS virtuaLinventory 
+	FROM drug d
+	LEFT JOIN attributedetail a1 ON a1.id = d.drugtypeid 
+		<where>
+		<if test="contant != null and contant != ''">
+			 drugname LIKE "%"#{contant}"%"  OR pinyincode LIKE "%"#{contant}"%"  OR drugcode LIKE "%"#{contant}"%" 
+		</if>
+			
+		</where> 
+
+	</select>
+	
+</mapper>

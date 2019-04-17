@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.personnelmanage.EmployeeMapper">
+	<select id="getGuaHaoYuan" resultType="com.po.Employee">
+		SELECT e.* FROM employee e
+		LEFT JOIN role r ON FIND_IN_SET(e.positionid,r.positionid) WHERE
+		e.isvalid = 1 AND r.rolename = '挂号员'
+	</select>
+</mapper>

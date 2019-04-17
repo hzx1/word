@@ -4,22 +4,22 @@
 
 <c:forEach var="item" items="${registers}">
 	<tr class="rowTr">
-		<td>${item.registercode}</td>
-		<td>${item.cardcode}</td>
-		<td>${item.patientname}</td>
-		<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.registertime}"/></td>
+		<td>${item.registerCode}</td>
+		<td>${item.cardCode}</td>
+		<td>${item.patientName}</td>
+		<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.registerTime}"/></td>
 		<td>${item.sex == 1 ? "男" : "女"}</td>
 		<td>${item.age}</td>
 		<td>${item.tel}</td>
-		<td>${item.insuretypename}</td>
-		<td>${item.doctorname}</td>
-		<td>${item.departmentname}</td>
-		<td>${item.registersum}</td>
-		<td>${item.registerpersonname}</td>
-		<td>${item.registerstatus == 1 ? "挂号" : item.registerstatus == 2 ? "就诊中" : item.registerstatus == 3 
-		? "已就诊" : item.registerstatus == 4 ? "已付费" : item.registerstatus == 5 ? "已发药" : item.registerstatus == 6 ? "已退药" : "已退款"}</td>
+		<td>${item.insureTypeName}</td>
+		<td>${item.doctorName}</td>
+		<td>${item.departmentName}</td>
+		<td>${item.registerSum}</td>
+		<td>${item.registerPersonName}</td>
+		<td>${item.registerStatus == 1 ? "挂号" : item.registerStatus == 2 ? "就诊中" : item.registerStatus == 3 
+		? "已就诊" : item.registerStatus == 4 ? "已付费" : item.registerStatus == 5 ? "已发药" : item.registerStatus == 6 ? "已退药" : "已退款"}</td>
 		<td>
-			<a class="btn btn-link btn-delete" href="#" onclick="deletehistory('${item.id}')">作废单据</a>
+			<a class="" href="#" onclick="deletehistory('${item.id}')">作废单据</a>
 		</td>
 	</tr>
 </c:forEach>

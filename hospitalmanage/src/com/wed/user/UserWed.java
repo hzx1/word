@@ -87,7 +87,7 @@ public class UserWed {
 		//判断是否登录
 		if(obj != null){
 		Employee employee = (Employee) request.getSession().getAttribute("employye");
-		List<Menu> list = resourceService.initLoginTwo(employee.getId());
+		List<Menu> list = resourceService.initLoginTwo(employee.getPositionId());
 		request.getSession().setAttribute("pfuserinfo", list);
 			return "/user/index";
 		}

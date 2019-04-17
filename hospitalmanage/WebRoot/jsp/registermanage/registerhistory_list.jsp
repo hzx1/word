@@ -194,10 +194,10 @@
 			//获取挂号历史列表
 			function gettable(cardcode,patientname,registerpersonid,registerstatus,begintime,endtime,page){
 				$.post(ctx + controller + "/historydatalist.do",
-				{cardcode:cardcode,
-				patientname:patientname,
-				registerpersonid:registerpersonid,
-				registerstatus:registerstatus,
+				{cardCode:cardcode,
+				patientName:patientname,
+				registerPersonId:registerpersonid,
+				registerStatus:registerstatus,
 				begintime:begintime,
 				endtime:endtime,
 				pagesize:$("#pagesize").val(),

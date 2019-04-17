@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.dao.resource.ResourceMapping;
 import com.ov.Menu;
 import com.po.Resource;
+import com.po.Role;
 import com.service.resource.ResourceService;
 
 
@@ -19,7 +20,8 @@ public class ResourceServiceImpl implements ResourceService {
 	private  ResourceMapping resourceMapping;
 	@Override
 	public List<Menu> initLoginTwo(Integer id) {
-		List<Resource> resource = resourceMapping.initLogin(id);
+		Role role = resourceMapping.getRole(id);
+		List<Resource> resource = resourceMapping.initLogin(role.getResourceid());
 		List<Menu> menuResource = new ArrayList<Menu>();
 		for (int i = 0; i < resource.size(); i++) {
 			Menu menu = new Menu();
