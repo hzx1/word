@@ -17,7 +17,7 @@ public class Medicalrecord {
 
     private String note;
     			   
-    private String patienTappeal;
+    private String patientappeal;
     			   
     private String medicalhistory;
 
@@ -30,7 +30,7 @@ public class Medicalrecord {
     private Date recordTime;
 
     private Integer isvalId;
-    
+    //fitstatus
     private String cardcode;
     private String patientName;
     private String registerCode;
@@ -47,12 +47,13 @@ public class Medicalrecord {
 		this.departmentId = departmentId;
 	}
 
-	public String getPatienTappeal() {
-		return patienTappeal;
+
+	public String getPatientappeal() {
+		return patientappeal;
 	}
 
-	public void setPatienTappeal(String patienTappeal) {
-		this.patienTappeal = patienTappeal;
+	public void setPatientappeal(String patientappeal) {
+		this.patientappeal = patientappeal;
 	}
 
 	public String getCardcode() {

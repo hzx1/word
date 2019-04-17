@@ -27,4 +27,28 @@ public class MedicalrecordServiceImpl implements MedicalrecordService{
 		// TODO Auto-generated method stub
 		return mm.countMM();
 	}
+
+	@Override
+	public Integer addmm(Medicalrecord m) {
+		// TODO Auto-generated method stub
+		return mm.addmm(m);
+	}
+
+	@Override
+	public Medicalrecord getMM(String medicalrecordcode) {
+		// TODO Auto-generated method stub
+		return mm.getMM(medicalrecordcode);
+	}
+
+	@Override
+	public Medicalrecord getIdMM(Integer id) {
+		// TODO Auto-generated method stub
+		return mm.getIdMM(id);
+	}
+
+	@Override
+	public Integer updateMM(Medicalrecord m) {
+		// TODO Auto-generated method stub
+		return mm.updateMM(m);
+	}
 }

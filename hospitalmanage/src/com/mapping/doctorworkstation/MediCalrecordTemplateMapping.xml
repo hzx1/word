@@ -30,6 +30,12 @@
 
 			LIMIT #{currentpage},#{pagesize}
 	</select>
+	<select id="listnameMCT"  resultType="com.po.Medicalrecordtemplate">
+			SELECT m.*, e.employeename AS employeeName,dt.departmentname AS departmentName,d.diseasename AS diseaseName    
+		 FROM medicalrecordtemplate m     LEFT JOIN employee e ON e.id = m.doctorid     
+		LEFT JOIN disease d ON d.id = m.diseaseid     LEFT JOIN department dt ON dt.id = e.departmentid  
+	
+	</select>
 	<select id="countMCT" resultType="Integer">
 		select count(*) from medicalrecordtemplate
 	</select>
@@ -42,15 +48,28 @@
 	<select id="getMCT" resultType="com.po.Medicalrecordtemplate">
 		SELECT * FROM  `medicalrecordtemplate` WHERE templatecode=#{templatecode}
 	</select>
+	<select id="getNameMCT" resultType="com.po.Medicalrecordtemplate">
+		SELECT * FROM  `medicalrecordtemplate` WHERE templatename=#{templatename}
+	</select>
 	<select id="getIdMCT" resultType="com.po.Medicalrecordtemplate">
 		SELECT * FROM  `medicalrecordtemplate` WHERE id=#{id}
 	</select>
-	<update id="updatMCT">
+	<update id="updatMCT" >
 		UPDATE medicalrecordtemplate 
-		SET 
-			templatename=#{templateName},diseaseid = #{diseaseId},doctorid=#{doctorId},note=#{note},
-			fitstatus=#{fitstatus},patientappeal=#{patientappeal},medicalhistory=#{medicalhistory},
-			physicalstatus=#{physicalstatus},primarydiagnosis=#{primaryDiagnosis},opinion=#{opinion}
+		<set>
+			<if test="templateCode != null" > templatecode = #{templateCode}, </if>
+    	  <if test="templateName != null" >templatename=#{templateName},  </if>
+    	  <if test="diseaseId != null" >diseaseid = #{diseaseId},  </if>
+    	  <if test="doctorId != null" >doctorid=#{doctorId},  </if>
+    	  <if test="note != null" >note=#{note},  </if>
+    	  <if test="fitstatus != null" >fitstatus=#{fitstatus},  </if>
+    	  <if test="patientappeal != null" >patientappeal=#{patientappeal},  </if>
+    	  <if test="medicalhistory != null" >medicalhistory=#{medicalhistory},  </if>
+    	  <if test="physicalstatus != null" >physicalstatus=#{physicalstatus},  </if>
+    	  <if test="primaryDiagnosis != null" >primarydiagnosis=#{primaryDiagnosis},  </if>
+    	  <if test="opinion != null" >opinion=#{opinion}  </if>		
+		</set>
+			
 			WHERE id=#{id}
 		
 	</update>

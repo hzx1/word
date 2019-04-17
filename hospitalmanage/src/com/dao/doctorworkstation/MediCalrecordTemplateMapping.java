@@ -22,4 +22,8 @@ public interface MediCalrecordTemplateMapping {
 	public Integer updatMCT(Medicalrecordtemplate m);
 	//删除
 	public Integer delMCT(Integer id);
+	//模糊查询
+	public List<Medicalrecordtemplate> listnameMCT(@Param("contant")String contant); 
+	//名字查询
+	public Medicalrecordtemplate getNameMCT(@Param("templatename")String templatename);
 }

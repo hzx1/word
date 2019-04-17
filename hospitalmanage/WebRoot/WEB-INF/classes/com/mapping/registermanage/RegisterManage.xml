@@ -198,4 +198,36 @@
 		limit #{currentpage},#{pageSize}
 	</if>
 	</select>
+	
+	<select id="listr" resultType="com.po.Register">
+		SELECT r.* ,p.`patientname` AS patientName,p.`cardcode` AS cardCode,p.`sex` AS sex,p.`age` AS age ,p.`tel` AS tel ,a.`detailname` AS insureTypeName,
+		rt.typename  AS typeName,p.`insuretypeid`,p.`drugallergyhistory` AS drugallergyhistory
+		 FROM`register` r 
+		 LEFT JOIN patient p ON p.id=r.`patientid`
+		 LEFT JOIN  `attributedetail` a ON a.id=p.`insuretypeid`
+		 LEFT JOIN registertype rt ON rt.id = r.registertypeid
+		 <where>
+		 	 r.isvalid = 1
+		 	 <if test=" contant != null and contant != ''">
+		 	 		 AND r.`registercode`  LIKE "%"#{contant}"%"  	
+					OR  p.`patientname` LIKE "%"#{contant}"%"
+					OR  p.`cardcode`  LIKE "%"#{contant}"%"
+			</if>
+
+		 </where>
+		  
+	</select>
+	<select id="getIdR" resultType="com.po.Register">
+		SELECT r.* ,p.`patientname` AS patientName,p.`cardcode` AS cardCode,p.`sex` AS sex,p.`age` AS age ,p.`tel` AS tel ,a.`detailname` AS insureTypeName,
+		rt.typename  AS typeName,p.`insuretypeid`,p.`drugallergyhistory` AS drugallergyhistory
+		 FROM`register` r 
+		 LEFT JOIN patient p ON p.id=r.`patientid`
+		 LEFT JOIN  `attributedetail` a ON a.id=p.`insuretypeid`
+		 LEFT JOIN registertype rt ON rt.id = r.registertypeid
+		 <where>
+		 	 r.isvalid = 1
+		 	and r.id=#{id}
+		 </where>
+		  
+	</select>
 </mapper>

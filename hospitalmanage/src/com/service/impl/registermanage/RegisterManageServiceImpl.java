@@ -99,6 +99,18 @@ public class RegisterManageServiceImpl implements RegisterManageService{
 	public List<Register> getLiShi(Register rs, Integer pageSize, Integer currentpage) {
 		return registerManage.getLiShi(rs, pageSize, currentpage);
 	}
+
+	@Override
+	public List<Register> listr(String contant) {
+		// TODO Auto-generated method stub
+		return registerManage.listr(contant);
+	}
+
+	@Override
+	public Register getIdR(Integer id) {
+		// TODO Auto-generated method stub
+		return registerManage.getIdR(id);
+	}
 	
 	
 	

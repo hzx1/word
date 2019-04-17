@@ -35,4 +35,41 @@
 	<select id="countMM" resultType="Integer">
 		select count(*) from medicalrecord WHERE isvalid = 1
 	</select>
+	<select id="getMM"  resultType="com.po.Medicalrecord">
+		SELECT * FROM  medicalrecord WHERE medicalrecordcode LIKE "%"#{medicalrecordcode}"%"  
+	</select>
+	<select id="getIdMM"  resultType="com.po.Medicalrecord">
+		SELECT * FROM  medicalrecord WHERE id=#{id}
+	</select>
+	
+	<insert id="addmm">
+		INSERT INTO medicalrecord (registerid, medicalrecordcode, medicalrecordname,  doctorid, diseaseid, note, 
+      patientappeal, medicalhistory, physicalstatus,  primarydiagnosis, opinion, recordtime,  isvalid)
+    VALUES (#{registerId}, #{medicalrecordCode}, #{medicalrecordName}, 
+      #{doctorId}, #{diseaseId}, #{note}, 
+      #{patientappeal}, #{medicalhistory}, #{physicalstatus}, 
+      #{primaryDiagnosis}, #{opinion}, #{recordTime}, 
+      #{isvalId})
+	</insert>
+	
+	<update id="updateMM"  parameterType="com.po.Medicalrecord">
+		 UPDATE medicalrecord
+	    <set>
+	      <if test="registerId != null" >   registerid = #{registerId},  </if>
+	      <if test="medicalrecordCode != null" >  medicalrecordcode = #{medicalrecordCode}, </if>
+	      <if test="medicalrecordName != null" > medicalrecordname = #{medicalrecordName},  </if>
+	      <if test="doctorId != null" > doctorid = #{doctorId}, </if>
+	      <if test="diseaseId != null" >   diseaseid = #{diseaseId}, </if>
+	      <if test="note != null" >  note = #{note}, </if>
+	      <if test="patientappeal != null" > patientappeal = #{patientappeal},</if>
+	      <if test="medicalhistory != null" >  medicalhistory = #{medicalhistory},  </if>
+	      <if test="physicalstatus != null" > physicalstatus = #{physicalstatus},</if>
+	      <if test="primaryDiagnosis != null" > primarydiagnosis = #{primaryDiagnosis},  </if>
+	      <if test="opinion != null" >opinion = #{opinion},  </if>
+	      <if test="recordTime != null" > recordtime = #{recordTime}, </if>
+	      <if test="isvalId != null" > isvalid = #{isvalId}, </if>
+	    </set>
+	    WHERE id = #{id}
+		
+	</update>
 </mapper>

@@ -29,4 +29,8 @@ public interface RegisterManage {
 	public int add(Register rs);
 	public int delect(@Param("id")Integer id);
 	public List<Register> getLiShi(@Param("rs")Register rs,@Param("pageSize")Integer pageSize,@Param("currentpage")Integer currentpage);
+	//查看挂号信息和病人信息
+	public List<Register> listr(@Param("contant")String contant);
+	//id查询
+	public Register getIdR(@Param("id")Integer id);
 }
