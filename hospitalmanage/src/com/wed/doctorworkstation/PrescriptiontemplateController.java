@@ -37,7 +37,7 @@ public class PrescriptiontemplateController extends BaseController{
 		public String list(){
 			request().setAttribute("prescriptiontypes", as.listABDM(15));
 			request().setAttribute("departments", dts.listDTM());
-			request().setAttribute("doctors", us.doctor());
+			request().setAttribute("doctors", us.doctor(1));
 			return "/doctorworkstation/prescription/prescriptiontemplate_list";
 		}
 		//分页
@@ -57,7 +57,7 @@ public class PrescriptiontemplateController extends BaseController{
 		//添加页面跳转
 		@RequestMapping(value="toadd")
 		public String toadd(){
-			request().setAttribute("doctors", us.doctor());
+			request().setAttribute("doctors", us.doctor(1));
 			request().setAttribute("naturenames", as.listABDM(14));
 			request().setAttribute("prescriptiontypes", as.listABDM(15));
 			request().setAttribute("classifynames", as.listABDM(16));
@@ -107,7 +107,7 @@ public class PrescriptiontemplateController extends BaseController{
 		@RequestMapping(value="toedit" ,method= RequestMethod.GET)
 		public String toedit(Integer id){
 			
-			request().setAttribute("doctors", us.doctor());
+			request().setAttribute("doctors", us.doctor(1));
 			request().setAttribute("naturenames", as.listABDM(14));
 			request().setAttribute("prescriptiontypes", as.listABDM(15));
 			request().setAttribute("classifynames", as.listABDM(16));

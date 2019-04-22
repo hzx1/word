@@ -40,7 +40,7 @@
 			</if>	
 	</select>
 	
-	<select id="doctor">
-		 SELECT * FROM `employee` WHERE `isdoctor` =1 ;
+	<select id="doctor" resultType="com.po.Employee">
+		 SELECT * FROM `employee` WHERE `isdoctor` =#{isdoctor} and isvalid = 1  ;
 	</select>
 </mapper>

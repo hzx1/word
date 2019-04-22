@@ -14,6 +14,6 @@ public interface UserMapping {
 	//科室id查询
 	public List<Employee> listidUM(Integer id);
 	//查看医生
-	public List<Employee> doctor();
+	public List<Employee> doctor(@Param("isdoctor")Integer isdoctor);
 	
 }

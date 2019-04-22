@@ -1,5 +1,6 @@
 package com.wed.pass;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -48,7 +49,13 @@ public class PassController {
 	@ResponseBody
 	@RequestMapping(value="/getdoctorbydptid",produces="application/json")
 	public Object dataselect(int id){
-		List<Employee> list =userService.listidUM(id);
+		List<Employee> list =new ArrayList<Employee>();
+		if(id>0){
+			list=userService.listidUM(id);
+		}else{
+			list=userService.doctor(1);
+		}
+		
 		return list;
 	}
 }

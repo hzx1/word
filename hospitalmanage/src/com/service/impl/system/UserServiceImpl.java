@@ -33,9 +33,9 @@ public class UserServiceImpl implements UserService{
 		return userMapping.listidUM(id);
 	}
 	@Override
-	public List<Employee> doctor() {
+	public List<Employee> doctor(Integer isdoctor) {
 		// TODO Auto-generated method stub
-		return userMapping.doctor();
+		return userMapping.doctor(isdoctor);
 	}
 
 }

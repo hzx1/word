@@ -43,7 +43,7 @@ public class MedicalrecordController extends BaseController {
 	@RequestMapping(value="list")
 	public String list(){	
 		request().setAttribute("departments", dts.listDTM());
-		request().setAttribute("doctors", us.doctor());
+		request().setAttribute("doctors", us.doctor(1));
 		return "/doctorworkstation/medicalrecord/medicalrecord_list";
 	}
 	/**
@@ -68,7 +68,7 @@ public class MedicalrecordController extends BaseController {
 	@RequestMapping(value="toadd")
 	public String toadd(){
 		request().setAttribute("diseases", ds.listDisease());
-		request().setAttribute("doctors", us.doctor());
+		request().setAttribute("doctors", us.doctor(1));
 		return "/doctorworkstation/medicalrecord/medicalrecord_add";
 	}
 	/**
@@ -160,7 +160,7 @@ public class MedicalrecordController extends BaseController {
 		request().setAttribute("register", rs.getIdR(m.getRegisterId())); 
 		request().setAttribute("medicalrecord",m);
 		request().setAttribute("diseases", ds.listDisease());
-		request().setAttribute("doctors", us.doctor());
+		request().setAttribute("doctors", us.doctor(1));
 		return "/doctorworkstation/medicalrecord/medicalrecord_edit";
 	}
 	/**
