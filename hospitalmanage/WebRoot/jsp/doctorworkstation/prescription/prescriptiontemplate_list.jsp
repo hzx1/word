@@ -165,9 +165,9 @@
 				find(1);
 				//右上角提示信息
 				if("${resulttext}" == "add"){
-					hint("新增成功！");
+					alert("新增成功！");
 				}else if("${resulttext}" == "edit"){
-					hint("修改成功！");
+					alert("修改成功！");
 				}
 			});
 			
@@ -205,7 +205,7 @@
 				{id:$("#department").val()},
 				function(data){					
 					$.each(data,function(name,value) {
-						$("#doctor").append("<option value='"+value['id']+"'>"+value['employeename'] + "</option>");
+						$("#doctor").append("<option value='"+value['id']+"'>"+value['employeeName'] + "</option>");
 					});
 					$("#doctor").val(0);
 					$("#doctor").trigger("liszt:updated");
@@ -250,7 +250,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data);
+		  				alert(data);
 						search();
 					});
 				});

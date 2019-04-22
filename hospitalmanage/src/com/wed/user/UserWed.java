@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSONArray;
+import com.configuration.MD5Util;
 import com.ov.Menu;
 import com.po.Employee;
 import com.po.Resource;
@@ -64,6 +65,8 @@ public class UserWed {
 	@RequestMapping(value="/login", produces="application/json;charset=utf-8")
 	public Object login( Employee bo,HttpServletRequest request){	
 		String msg = "";
+		String psw= MD5Util.GetMD5Code32(bo.getPsw());
+		bo.setPsw(psw);
 		List<Employee>  em = userService.selectEmployee(bo);
 		if(em != null && em.size()>0){
 			Employee ems=em.get(0);

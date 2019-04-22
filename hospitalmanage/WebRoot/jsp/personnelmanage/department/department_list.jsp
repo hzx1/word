@@ -83,9 +83,9 @@
 				find(1);
 				//右上角提示信息
 				if("${resulttext}" == "add"){
-					hint("新增成功！");
+					alert("新增成功！");
 				}else if("${resulttext}" == "edit"){
-					hint("修改成功！");
+					alert("修改成功！");
 				}
 			});
 			
@@ -128,7 +128,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data.msg);
+		  				alert(data.msg);
 		  				search();
 					});	
 				});

@@ -9,4 +9,9 @@ public interface UserService {
 	public List<Employee> selectEmployee(Employee employee);
 	//修改密码
 	public int updatepwe(String psw,Integer id);
+	//科室id查询
+	public List<Employee> listidUM(Integer id);
+	//查看医生
+	public List<Employee> doctor();
+		
 }

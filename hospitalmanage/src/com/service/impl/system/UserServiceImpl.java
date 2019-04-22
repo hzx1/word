@@ -27,5 +27,15 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		return userMapping.updatepwe(psw, id);
 	}
+	@Override
+	public List<Employee> listidUM(Integer id) {
+		// TODO Auto-generated method stub
+		return userMapping.listidUM(id);
+	}
+	@Override
+	public List<Employee> doctor() {
+		// TODO Auto-generated method stub
+		return userMapping.doctor();
+	}
 
 }

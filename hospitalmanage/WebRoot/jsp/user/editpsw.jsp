@@ -136,7 +136,7 @@
 							$("#validation-form2").show();
 							$("#loginpsw")[0].focus();
 						}else{
-							hint(data);
+							alert(data);
 							$("#formerpsw").val("");
 						}
 					});				
@@ -204,10 +204,11 @@
 					$.post("${ctx}/userinfoController/editpsw.do",
 					{psw:$("input[name='psw']").val()},
 					function(data){
-						$("#validation-form1").show();
+					/* 	$("#validation-form1").show();
 						$("#validation-form2").hide();
 						$("#formerpsw").val("");
-						hint(data);
+						alert(data); */
+						top.location.href="/hospitalmanage/jsp/user/login.jsp";
 					});	
 				});
 			}

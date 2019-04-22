@@ -134,7 +134,7 @@
 				if(data == "1"){
 					document.forms[1].submit();
 	 			}else{ 				
-	 				hint(data);
+	 				alert(data);
 	 				$("input[name='psw']").val("");
 	 			}
 			});

@@ -70,7 +70,7 @@ public class RegisterController extends BaseController{
 	
 	@RequestMapping("historydatalist")
 	public String historydatalist(Register rs,Integer pagesize, Integer currentpage){
-		int num = registerManageService.getLiShi(rs, 0, 99999999).size();
+		int num = registerManageService.getLiShi(rs, 99999999,0 ).size();
 		setPaging(pagesize, num, currentpage);
 		request().getSession().setAttribute("registers", registerManageService.getLiShi(rs, pagesize, (currentpage-1)*pagesize));
 		return "registermanage/table/registerhistorytable";

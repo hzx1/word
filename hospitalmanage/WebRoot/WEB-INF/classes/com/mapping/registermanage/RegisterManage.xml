@@ -192,7 +192,7 @@
 	UNIX_TIMESTAMP (registerTime) &lt;= UNIX_TIMESTAMP(CASE WHEN #{rs.endtime,jdbcType=VARCHAR} = '' THEN 
 	registerTime ELSE DATE_ADD(#{rs.endtime,jdbcType=VARCHAR},INTERVAL 1 DAY) END) ORDER BY r.id DESC
 	<if test="currentpage==0">
-		limit 0, #{pageSize,jdbcType=INTEGER}
+		limit 0, #{pageSize}
 	</if>
 	<if test="currentpage&gt;0">
 		limit #{currentpage},#{pageSize}

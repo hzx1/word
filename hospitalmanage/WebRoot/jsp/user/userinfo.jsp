@@ -50,10 +50,10 @@
 								<tr class="tr-b">
 									<td class="td-l">个人编号</td>
 									<td class="td-r">${employye.employeeCode}</td>
-									<td class="td-l">真实姓名</td>
+									<td class="td-l">真实姓名 </td>
 									<td class="td-r">${employye.employeeName}</td>
 									<td rowspan="5" colspan="2">
-										<img style="min-width:210px; width:100%; height:262px;" src="${employye.picture}"/>
+										<img style="min-width:210px; width:100%; height:262px;" src="${ctx}${employye.picture}"/>
 									</td>
 								</tr>
 								<tr class="tr-b">

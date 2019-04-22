@@ -189,9 +189,9 @@
 				find(1);
 				//右上角提示信息
 				if("${resulttext}" == "add"){
-					hint("录入成功！");
+					alert("录入成功！");
 				}else if("${resulttext}" == "edit"){
-					hint("修改成功！");
+					alert("修改成功！");
 				}			
 			});
 			
@@ -233,9 +233,9 @@
 				$("#all").nextAll().remove();
 				$.post(ctx + "/passController/getdoctorbydptid.do",
 				{id:$("#department").val()},
-				function(data){					
+				function(data){				
 					$.each(data,function(name,value) {
-						$("#doctor").append("<option value='"+value['id']+"'>"+value['employeename'] + "</option>");
+						$("#doctor").append("<option value='"+value['id']+"'>"+value['employeeName'] + "</option>");
 					});
 					$("#doctor").val(0);
 					$("#doctor").trigger("liszt:updated");
@@ -275,7 +275,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data);
+		  				alert(data);
 		  				find(1);
 					});
 				});

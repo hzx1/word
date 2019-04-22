@@ -508,9 +508,9 @@
 				
 	    		//提交返回信息
 				if("${resulttext}" == "addpt"){
-					hint("新增病人成功！");
+					alert("新增病人成功！");
 				}else if("${resulttext}" == "addrgt"){
-					hint("挂号成功！");
+					alert("挂号成功！");
 				}
 				
 				//开启表单验证-病人信息
@@ -787,7 +787,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data);
+		  				alert(data);
 		  				find(1);
 					});		  			
 				});

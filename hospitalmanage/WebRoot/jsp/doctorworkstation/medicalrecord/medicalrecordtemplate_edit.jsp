@@ -210,7 +210,6 @@
 				$.post("${ctx}/medicalrecordtemplateController/findbydid.do",
 				{did:$("#doctor").val()},
 				function(data){
-				alert(data);
 					$("#department").val(data);
 				});
 			}

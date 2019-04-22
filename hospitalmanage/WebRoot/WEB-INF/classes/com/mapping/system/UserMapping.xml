@@ -12,6 +12,7 @@
 		 LEFT JOIN `attributedetail` am ON am.id=e.`maxeducationid`
 		 LEFT JOIN `attributedetail` ams ON ams.id=e.`majorid`
 		<where >
+			 e.isvalid=1
 			<if test="employeeCode != null and employeeCode != ''">
 				 AND `employeecode` = #{employeeCode}
 			</if>
@@ -23,4 +24,23 @@
 	<update id="updatepwe">
 		 UPDATE employee SET psw=#{psw} WHERE id=#{id}
 	</update>
+	<select id="listidUM" resultType="com.po.Employee">
+		 SELECT e.*,aj.detailname AS jobtitlename,ap.detailname AS positionname,de.`departmentname` AS departmentname
+		 ,aps.detailname AS politicsstatusname,am.detailname AS maxeducationname,ams.detailname AS majorname
+		 FROM  employee e
+		 LEFT JOIN `attributedetail` aj ON aj.id=e.`jobtitleid`
+		 LEFT JOIN `attributedetail` ap ON ap.id=e.`positionid`
+		 LEFT JOIN `department` de ON de.id=e.`departmentid`
+		 LEFT JOIN `attributedetail` aps ON aps.id=e.`politicsstatusid`
+		 LEFT JOIN `attributedetail` am ON am.id=e.`maxeducationid`
+		 LEFT JOIN `attributedetail` ams ON ams.id=e.`majorid`
+			WHERE e.isvalid = 1 
+			<if test="id >0 ">
+				AND #{id}=departmentid
+			</if>	
+	</select>
+	
+	<select id="doctor">
+		 SELECT * FROM `employee` WHERE `isdoctor` =1 ;
+	</select>
 </mapper>

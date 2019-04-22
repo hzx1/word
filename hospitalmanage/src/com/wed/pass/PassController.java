@@ -1,20 +1,26 @@
 package com.wed.pass;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.alibaba.fastjson.JSONArray;
+
+import com.po.Employee;
 import com.service.registermanage.RegisterManageService;
+import com.service.system.UserService;
 
 @Controller
 @RequestMapping("/passController")
 public class PassController {
 	@Resource
 	private RegisterManageService registerManageService;
+	@Autowired
+	private UserService userService;
 	/**
 	 * 分页界面
 	 * 
@@ -33,5 +39,16 @@ public class PassController {
 	public Object getdoctorbydptid(String id) {
 		return registerManageService.getDoctorsTwo(Integer.parseInt(id));
 	}
-
+	
+	/**
+	 * 根据科室id查询医生
+	 * @param id
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/getdoctorbydptid",produces="application/json")
+	public Object dataselect(int id){
+		List<Employee> list =userService.listidUM(id);
+		return list;
+	}
 }

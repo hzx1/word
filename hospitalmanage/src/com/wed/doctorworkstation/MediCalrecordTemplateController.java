@@ -41,7 +41,7 @@ public class MediCalrecordTemplateController extends BaseController{
 	@RequestMapping(value="/list")
 	public String list(HttpServletRequest request){
 		request.setAttribute("departments", dts.listDTM());
-		request.setAttribute("doctors", us.selectEmployee(null));
+		request.setAttribute("doctors", us.doctor());
 		return "/doctorworkstation/medicalrecord/medicalrecordtemplate_list";
 	}
 	@RequestMapping(value="/datalist")
@@ -60,7 +60,7 @@ public class MediCalrecordTemplateController extends BaseController{
 	 */
 	@RequestMapping(value="/toadd")
 	public String toadd(HttpServletRequest request){
-		request.setAttribute("doctors", us.selectEmployee(null));
+		request.setAttribute("doctors", us.doctor());
 		request.setAttribute("diseases", ds.listDisease());
 		return "/doctorworkstation/medicalrecord/medicalrecordtemplate_add";
 	}
@@ -106,7 +106,7 @@ public class MediCalrecordTemplateController extends BaseController{
 	public String toedit(HttpServletRequest request,Integer id){
 		Medicalrecordtemplate m= mCTS.getIdMCT(id);	
 		request.setAttribute("departmentName",dts.getEDTM(m.getDoctorId()).getDeparTmentName());
-		request.setAttribute("doctors", us.selectEmployee(null));
+		request.setAttribute("doctors", us.doctor());
 		request.setAttribute("diseases", ds.listDisease());
 		request.setAttribute("medicalrecordtemples",m );
 		return "/doctorworkstation/medicalrecord/medicalrecordtemplate_edit";

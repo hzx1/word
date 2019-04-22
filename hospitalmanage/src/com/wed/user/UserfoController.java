@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSONArray;
+import com.configuration.MD5Util;
 import com.po.Employee;
 import com.po.Role;
 import com.service.system.RoleService;
@@ -38,10 +39,11 @@ public class UserfoController {
 	@ResponseBody
 	@RequestMapping(value="/editpswnext", produces="application/json;charset=utf-8")
 	public Object editpswnext( Employee bo,HttpServletRequest request){	
-		System.out.println(bo.getPsw());
+	
 		String msg="true";
+		String pwd= MD5Util.GetMD5Code32(bo.getPsw());
 		Employee e=(Employee) request.getSession().getAttribute("employye");
-		if(bo.getPsw().equals(e.getPsw())){
+		if(pwd.equals(e.getPsw())){
 			return JSONArray.toJSONString(msg);
 		}
 		msg="原密码错误! 请你从新输入";
@@ -54,6 +56,8 @@ public class UserfoController {
 	public Object editpsw( String psw,HttpServletRequest request){	
 		System.out.println(psw);
 		String msg="修改成功";
+		
+		psw= MD5Util.GetMD5Code32(psw);
 		Employee e=(Employee) request.getSession().getAttribute("employye");
 		int i= userService.updatepwe(psw,e.getId());
 		if(i>0){

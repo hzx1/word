@@ -80,7 +80,7 @@
 									<select id="doctor" class="chzn-select" onchange="search()">
 										<option id="all" value="0" />全部
 										<c:forEach var="item" items="${doctors}">
-											<option value="${item.id}" />${item.employeename}
+											<option value="${item.id}" />${item.employeeName}
 										</c:forEach>
 									</select>
 								</div>								
@@ -157,9 +157,9 @@
 				find(1);
 				//提交返回信息
 				if("${resulttext}" == "add"){
-					hint("开方成功！");
+					alert("开方成功！");
 				}else if("${resulttext}" == "edit"){
-					hint("修改成功！");
+					alert("修改成功！");
 				}
 			});
 			
@@ -197,7 +197,7 @@
 				{id:$("#department").val()},
 				function(data){					
 					$.each(data,function(name,value) {
-						$("#doctor").append("<option value='"+value['id']+"'>"+value['employeename'] + "</option>");
+						$("#doctor").append("<option value='"+value['id']+"'>"+value['employeeName'] + "</option>");
 					});
 					$("#doctor").val(0);
 					$("#doctor").trigger("liszt:updated");
@@ -242,7 +242,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data.msg);
+		  				alert(data.msg);
 		  				search();
 					});
 				});

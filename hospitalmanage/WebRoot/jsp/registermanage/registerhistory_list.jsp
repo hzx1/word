@@ -224,7 +224,7 @@
 					$.post(ctx + controller + "/delete.do",
 					{id:id},
 					function(data){
-		  				hint(data.msg);
+		  				alert(data.msg);
 		  				find(1);
 					});
 				});
