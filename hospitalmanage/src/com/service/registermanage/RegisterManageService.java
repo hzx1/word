@@ -96,9 +96,17 @@ public interface RegisterManageService {
 	 * @return
 	 */
 	public List<Register> getLiShi(Register rs,Integer pageSize,Integer currentpage);
-	//查看挂号信息和病人信息
+	/**
+	 * 查看挂号信息和病人信息
+	 * @param contant
+	 * @return
+	 */
 	public List<Register> listr(String contant);
-	//id查询
+	/**
+	 * id查询
+	 * @param id
+	 * @return
+	 */
 	public Register getIdR(Integer id);
 	
 }
